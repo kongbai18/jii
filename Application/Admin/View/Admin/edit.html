@@ -1,0 +1,32 @@
+<layout name="layout" />
+<div class="main-div">
+    <form method="post" action="__SELF__"enctype="multipart/form-data" >
+        <table cellspacing="1" cellpadding="3" width="100%">
+        <input type="hidden" name="id" value="<?php echo $data['id'] ?>">
+            <tr>
+                <td class="label">用户名称 :</td>
+                <td>
+                    <input type="text" name="username" maxlength="60" value="<?php echo $data['username'] ?>" />
+                    <span class="require-field">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">密码 :</td>
+                <td>
+                    <input type="password" name="password" maxlength="60" value="" />
+                     <span> 密码为空默认为不修改</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">确认密码 :</td>
+                <td>
+                    <input type="password" name="password1" maxlength="60" value="" />
+                </td>
+            </tr>
+        </table>
+        <div class="button-div">
+                    <input type="submit" class="button" value=" 确定 " />
+                    <input type="reset" class="button" value=" 重置 " />
+        </div>
+    </form>
+</div>
