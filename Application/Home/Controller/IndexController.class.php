@@ -141,7 +141,7 @@ class IndexController extends Controller {
     //获取文章二维码
     public function get_artcode(){
         $model = D('Admin/Article');
-        echo json_encode($model->get_qrcode());
+        echo json_encode($model->get_artcode());
     }
     //获取商品二维码
     public function get_prcode(){
