@@ -405,7 +405,7 @@ class GoodsModel extends Model {
 
         //价格
         $gnModel = D('goods_number');
-        $goodsPrice = $gnModel->field('min(goods_attr_id) as goods_attr_id,max(goods_price) as max_goods_price,min(goods_price) as min_goods_price,max(discount_price) as max_discount_price,min(discount_price) as min_discount_price')
+        $goodsPrice = $gnModel->field('min(goods_attr_id) as goods_attr_id,max(goods_price) as max_goods_price,min(goods_price) as min_goods_price,max(discount_price) as max_discount_price,min(discount_price) as min_discount_price,max(img_src) as img_src')
                               ->group('goods_id')
                               ->where(array('goods_id' => array('eq',$id)))
                               ->find();
