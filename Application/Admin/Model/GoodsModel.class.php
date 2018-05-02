@@ -535,6 +535,8 @@ class GoodsModel extends Model {
         //获取商品所有可选属性
         $att = array();
         $max = count($attrData);
+
+
         foreach ($attrData as $k => $v){
             foreach ($v as $v3){
                 $att[$k][] = $v3['id'];
@@ -554,6 +556,7 @@ class GoodsModel extends Model {
         }else if($n=1){
             $sub_array[] = $attr;
         }
+
         if($max > 1){
             if($n>=1){
                 foreach ($sub_array as $k4 => $v4) {
@@ -588,7 +591,8 @@ class GoodsModel extends Model {
                 }
             }
         }
-        if($max = 1){
+
+        if($max == 1){
             foreach ($attrData as $k3 => $v3){
                 foreach ($v as $k4 => $v4){
                     $gn = $gnModel->field('goods_number')->where(array('goods_attr_id'=>$v4['id'],'goods_id'=>$goodsId))->select();
@@ -617,7 +621,7 @@ class GoodsModel extends Model {
             'attrNouniData' => $attrNouniData,
             'attrColData' => $attrColData
         );
-        return $data    ;
+        return $data;
     }
     //获得商品二维码
     public function get_prcode() {

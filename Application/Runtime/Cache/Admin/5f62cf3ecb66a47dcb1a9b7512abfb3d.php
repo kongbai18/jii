@@ -3,7 +3,7 @@
 <head>
 <title>ECSHOP Menu</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="/jiimade/Public/Admin/Styles/general.css" rel="stylesheet" type="text/css" />
+<link href="/jiimadeeee/Public/Admin/Styles/general.css" rel="stylesheet" type="text/css" />
 
 <style type="text/css">
 body {
@@ -79,15 +79,15 @@ body {
   color:#EB8A3D;
 }
 .explode {
-  background:url(/jiimade/Public/Admin/Images/menu_minus.gif) no-repeat 0px 3px;
+  background:url(/jiimadeeee/Public/Admin/Images/menu_minus.gif) no-repeat 0px 3px;
   font-weight:bold;
 }
 .collapse {
-  background:url(/jiimade/Public/Admin/Images/menu_plus.gif) no-repeat 0px 3px;
+  background:url(/jiimadeeee/Public/Admin/Images/menu_plus.gif) no-repeat 0px 3px;
   font-weight:bold;
 }
 .menu-item {
-  background:url(/jiimade/Public/Admin/Images/menu_arrow.gif) no-repeat 0px 3px;
+  background:url(/jiimadeeee/Public/Admin/Images/menu_arrow.gif) no-repeat 0px 3px;
   font-weight:normal;
 }
 #help-title {
@@ -114,7 +114,7 @@ body {
     <p>
         <span style="float:right; padding:3px 5px;" >
             <a href="javascript:toggleCollapse();">
-                <img id="toggleImg" src="/jiimade/Public/Admin/Images/menu_minus.gif" width="9" height="9" border="0" alt="闭合" />
+                <img id="toggleImg" src="/jiimadeeee/Public/Admin/Images/menu_minus.gif" width="9" height="9" border="0" alt="闭合" />
             </a>
         </span>
         <span class="tab-front" id="menu-tab">菜单</span>
@@ -167,9 +167,9 @@ body {
         <div id="help-content"></div>
     </div>
 </div>
-<script type="text/javascript" src="/jiimade/Public/Admin/Js/global.js"></script>
-<script type="text/javascript" src="/jiimade/Public/Admin/Js/utils.js"></script>
-<script type="text/javascript" src="/jiimade/Public/Admin/Js/transport.js"></script>
+<script type="text/javascript" src="/jiimadeeee/Public/Admin/Js/global.js"></script>
+<script type="text/javascript" src="/jiimadeeee/Public/Admin/Js/utils.js"></script>
+<script type="text/javascript" src="/jiimadeeee/Public/Admin/Js/transport.js"></script>
 <script language="JavaScript">
     var collapse_all = "闭合";
     var expand_all = "展开";
@@ -190,7 +190,7 @@ body {
             }
         }
         collapse = !collapse;
-        document.getElementById('toggleImg').src = collapse ? '/jiimade/Public/Admin/Images/menu_minus.gif' : '/jiimade/Public/Admin/Images/menu_plus.gif';
+        document.getElementById('toggleImg').src = collapse ? '/jiimadeeee/Public/Admin/Images/menu_minus.gif' : '/jiimadeeee/Public/Admin/Images/menu_plus.gif';
         document.getElementById('toggleImg').alt = collapse ? collapse_all : expand_all;
     }
 
@@ -310,7 +310,7 @@ body {
                         }
                     }
                 }
-                document.getElementById('toggleImg').src = collapse ? '/jiimade/Public/Admin/Images/menu_minus.gif' : '/jiimade/Public/Admin/Images/menu_plus.gif';
+                document.getElementById('toggleImg').src = collapse ? '/jiimadeeee/Public/Admin/Images/menu_minus.gif' : '/jiimadeeee/Public/Admin/Images/menu_plus.gif';
                 document.getElementById('toggleImg').alt = collapse ? collapse_all : expand_all;
             }
         }

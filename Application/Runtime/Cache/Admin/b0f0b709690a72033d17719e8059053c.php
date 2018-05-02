@@ -4,8 +4,8 @@
 <title>JiiHOME 管理中心</title>
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="/jiimade/Public/Admin/Styles/general.css" rel="stylesheet" type="text/css" />
-<link href="/jiimade/Public/Admin/Styles/main.css" rel="stylesheet" type="text/css" />
+<link href="/jiimadeeee/Public/Admin/Styles/general.css" rel="stylesheet" type="text/css" />
+<link href="/jiimadeeee/Public/Admin/Styles/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <h1>

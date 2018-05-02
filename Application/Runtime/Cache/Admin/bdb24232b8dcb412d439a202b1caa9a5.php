@@ -3,7 +3,7 @@
 <head>
 <title></title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="/jiimade/Public/Admin/Styles/general.css" rel="stylesheet" type="text/css" />
+<link href="/jiimadeeee/Public/Admin/Styles/general.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
 #header-div {
   background:#278296;

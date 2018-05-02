@@ -3,15 +3,15 @@
 <head>
 <title>JiiHOME 管理中心 - 添加新商品 </title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="/jiimade/Public/Admin/Styles/general.css" rel="stylesheet" type="text/css" />
-<link href="/jiimade/Public/Admin/Styles/main.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/jiimade/Public/Admin/Js/jquery-1.10.2.min.js"></script>
+<link href="/jiimadeeee/Public/Admin/Styles/general.css" rel="stylesheet" type="text/css" />
+<link href="/jiimadeeee/Public/Admin/Styles/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/jiimadeeee/Public/Admin/Js/jquery-1.10.2.min.js"></script>
 </head>
 <body>
 <h1>
     <span class="action-span"><a href="<?php echo $btn_url; ?>"><?php echo $btn_name; ?></a>
     </span>
-    <span class="action-span1"><a href="/jiimade/index.php/Admin/index/index">JiiHOME 管理中心</a></span>
+    <span class="action-span1"><a href="/jiimadeeee/index.php/Admin/index/index">JiiHOME 管理中心</a></span>
     <span id="search_id" class="action-span1"> - <?php echo $title ?> </span>
     <div style="clear:both"></div>
 </h1>
@@ -19,7 +19,7 @@
 
 <div class="form-div">
     <form action="" name="searchForm">
-        <img src="/jiimade/Public/Admin/Images/icon_search.gif" width="26" height="22" border="0" alt="search" />
+        <img src="/jiimadeeee/Public/Admin/Images/icon_search.gif" width="26" height="22" border="0" alt="search" />
         <!-- 分类 -->
         <select name="cat_id">
             <option value="0">所有分类</option>
@@ -63,9 +63,9 @@
                 <td align="center"><?php echo $v['id'] ?></td>
                 <td align="center"><?php echo $v['goods_name'] ?></td>
                 <td align="center"><?php echo $v['cat_name'] ?></td>
-                <td align="center"><img src="<?php echo ($v['is_on_sale'] == 1)?'/jiimade/Public/Admin/Images/yes.gif':'/jiimade/Public/Admin/Images/no.gif'; ?>"/></td>
-                <td align="center"><img src="<?php echo ($v['is_new'] == 1)?'/jiimade/Public/Admin/Images/yes.gif':'/jiimade/Public/Admin/Images/no.gif'; ?>"/></td>
-                <td align="center"><img src="<?php echo ($v['is_hot'] == 1)?'/jiimade/Public/Admin/Images/yes.gif':'/jiimade/Public/Admin/Images/no.gif'; ?>"/></td>
+                <td align="center"><img src="<?php echo ($v['is_on_sale'] == 1)?'/jiimadeeee/Public/Admin/Images/yes.gif':'/jiimadeeee/Public/Admin/Images/no.gif'; ?>"/></td>
+                <td align="center"><img src="<?php echo ($v['is_new'] == 1)?'/jiimadeeee/Public/Admin/Images/yes.gif':'/jiimadeeee/Public/Admin/Images/no.gif'; ?>"/></td>
+                <td align="center"><img src="<?php echo ($v['is_hot'] == 1)?'/jiimadeeee/Public/Admin/Images/yes.gif':'/jiimadeeee/Public/Admin/Images/no.gif'; ?>"/></td>
                 <td align="center"><?php echo $v['sort_id'] ?></td>
                 <td align="center">
                 <a href="<?php echo U('goods_number?id='.$v['id']) ?>"  >库存</a> |
@@ -88,7 +88,7 @@
     </div>
 </form>
  <!--引入高亮显示-->
-<script type="text/javascript" src="/jiimade/Public/Admin/Js/tron.js"></script>
+<script type="text/javascript" src="/jiimadeeee/Public/Admin/Js/tron.js"></script>
 <script>
     function delGoods() {
         if(confirm("确认删除嘛？")){

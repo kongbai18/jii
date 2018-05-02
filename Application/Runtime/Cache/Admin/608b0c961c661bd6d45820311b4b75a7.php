@@ -3,15 +3,15 @@
 <head>
 <title>JiiHOME 管理中心 - 添加新商品 </title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="/jiimade/Public/Admin/Styles/general.css" rel="stylesheet" type="text/css" />
-<link href="/jiimade/Public/Admin/Styles/main.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/jiimade/Public/Admin/Js/jquery-1.10.2.min.js"></script>
+<link href="/jiimadeeee/Public/Admin/Styles/general.css" rel="stylesheet" type="text/css" />
+<link href="/jiimadeeee/Public/Admin/Styles/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/jiimadeeee/Public/Admin/Js/jquery-1.10.2.min.js"></script>
 </head>
 <body>
 <h1>
     <span class="action-span"><a href="<?php echo $btn_url; ?>"><?php echo $btn_name; ?></a>
     </span>
-    <span class="action-span1"><a href="/jiimade/index.php/Admin/index/index">JiiHOME 管理中心</a></span>
+    <span class="action-span1"><a href="/jiimadeeee/index.php/Admin/index/index">JiiHOME 管理中心</a></span>
     <span id="search_id" class="action-span1"> - <?php echo $title ?> </span>
     <div style="clear:both"></div>
 </h1>
@@ -49,7 +49,7 @@
         </p>
     </div>
     <div id="tabbody-div">
-        <form enctype="multipart/form-data" action="/jiimade/index.php/Admin/Goods/edit" method="post">
+        <form enctype="multipart/form-data" action="/jiimadeeee/index.php/Admin/Goods/edit" method="post">
             <!--通用信息-->
             <table width="90%" class="general-table" align="center">
             <input type="hidden" name="id" value="<?php echo $data['id'] ?>">

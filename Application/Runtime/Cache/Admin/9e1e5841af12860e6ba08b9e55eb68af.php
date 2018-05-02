@@ -3,23 +3,23 @@
 <head>
 <title>JiiHOME 管理中心 - 添加新商品 </title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="/jiiMade/Public/Admin/Styles/general.css" rel="stylesheet" type="text/css" />
-<link href="/jiiMade/Public/Admin/Styles/main.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/jiiMade/Public/Admin/Js/jquery-1.10.2.min.js"></script>
+<link href="/jiimadeeee/Public/Admin/Styles/general.css" rel="stylesheet" type="text/css" />
+<link href="/jiimadeeee/Public/Admin/Styles/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/jiimadeeee/Public/Admin/Js/jquery-1.10.2.min.js"></script>
 </head>
 <body>
 <h1>
     <span class="action-span"><a href="<?php echo $btn_url; ?>"><?php echo $btn_name; ?></a>
     </span>
-    <span class="action-span1"><a href="/jiiMade/index.php/Admin/index/index">JiiHOME 管理中心</a></span>
+    <span class="action-span1"><a href="/jiimadeeee/index.php/Admin/index/index">JiiHOME 管理中心</a></span>
     <span id="search_id" class="action-span1"> - <?php echo $title ?> </span>
     <div style="clear:both"></div>
 </h1>
 
 
 <div class="form-div">
-    <form action="/jiiMade/index.php/Admin/Type/lst.html" name="searchForm">
-    <img src="/jiiMade/Public/Admin/Images/icon_search.gif" width="26" height="22" border="0" alt="search" />
+    <form action="/jiimadeeee/index.php/Admin/Type/lst.html" name="searchForm">
+    <img src="/jiimadeeee/Public/Admin/Images/icon_search.gif" width="26" height="22" border="0" alt="search" />
     <input type="text" name="type_name" size="15" value="<?php echo I('get.type_name'); ?>" />
     <input type="submit" value=" 搜索 " class="button" />
     </form>
@@ -54,7 +54,7 @@
             </tr>
         </table>
  <!--引入高亮显示-->
-<script type="text/javascript" src="/jiiMade/Public/Admin/Js/tron.js"></script>
+<script type="text/javascript" src="/jiimadeeee/Public/Admin/Js/tron.js"></script>
 <script>
     function delTyp() {
         if(confirm("确认删除嘛？")){
