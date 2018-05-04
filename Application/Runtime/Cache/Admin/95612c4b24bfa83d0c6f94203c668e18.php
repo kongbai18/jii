@@ -1,24 +1,24 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>JiiHOME 管理中心 - 添加新商品 </title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="/jiimade/Public/Admin/Styles/general.css" rel="stylesheet" type="text/css" />
-<link href="/jiimade/Public/Admin/Styles/main.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/jiimade/Public/Admin/Js/jquery-1.10.2.min.js"></script>
+<link href="/jiimadeeee/Public/Admin/Styles/general.css" rel="stylesheet" type="text/css" />
+<link href="/jiimadeeee/Public/Admin/Styles/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/jiimadeeee/Public/Admin/Js/jquery-1.10.2.min.js"></script>
 </head>
 <body>
 <h1>
     <span class="action-span"><a href="<?php echo $btn_url; ?>"><?php echo $btn_name; ?></a>
     </span>
-    <span class="action-span1"><a href="/jiimade/index.php/Admin/index/index">JiiHOME 管理中心</a></span>
+    <span class="action-span1"><a href="/jiimadeeee/index.php/Admin/index/index">JiiHOME 管理中心</a></span>
     <span id="search_id" class="action-span1"> - <?php echo $title ?> </span>
     <div style="clear:both"></div>
 </h1>
 
 
 <div class="main-div">
-    <form action="/jiimade/index.php/Admin/Category/add.html" method="post" name="theForm" enctype="multipart/form-data">
+    <form action="/jiimadeeee/index.php/Admin/Category/add.html" method="post" name="theForm" enctype="multipart/form-data">
         <table width="100%" id="general-table">
             <tr>
                 <td class="label">分类名称:</td>

@@ -40,7 +40,7 @@ class ColorModel extends Model {
         /*************处理IMG*********************/
         if($_FILES['img_src']['error']==0){
             $file = $_FILES['img_src']['tmp_name'];
-            $key = 'jiimade/view/images/color/'.date("Y/m/d").'/'.rand().$_FILES['img_src']['name'];
+            $key = 'jiimade/view/images/color/'.date("Y/m/d").'/'.rand();
             $ret = qiniu_img_upload($key,$file);
             $data['img_src'] = $ret['img'];
         }
@@ -50,7 +50,7 @@ class ColorModel extends Model {
         /*************处理IMG*********************/
         if($_FILES['img_src']['error']==0){
             $file = $_FILES['img_src']['tmp_name'];
-            $key = 'jiimade/view/images/color/'.date("Y/m/d").'/'.rand().$_FILES['img_src']['name'];
+            $key = 'jiimade/view/images/color/'.date("Y/m/d").'/'.rand();
             $ret = qiniu_img_upload($key,$file);
 
             if($ret['flag'] == 1){

@@ -72,7 +72,7 @@ class GoodsModel extends Model {
         foreach ($imgs as $k => $v) {
             if ($v['error'] == 0) {
                 $file = $v['tmp_name'];
-                $key = 'jiimade/view/images/goodsdesc/' . date("Y/m/d") . '/' . rand() . $v['name'];
+                $key = 'jiimade/view/images/goodsdesc/' . date("Y/m/d") . '/' . rand();
                 $ret = qiniu_img_upload($key, $file);
                 if ($ret['flag'] == 1) {
                     $goodsDescModel->add(array(
@@ -226,7 +226,7 @@ class GoodsModel extends Model {
         foreach ($imgs as $k => $v) {
             if ($v['error'] == 0) {
                 $file = $v['tmp_name'];
-                $key = 'jiimade/view/images/goodsdesc/' . date("Y/m/d") . '/' . rand() . $v['name'];
+                $key = 'jiimade/view/images/goodsdesc/' . date("Y/m/d") . '/' . rand();
                 $ret = qiniu_img_upload($key, $file);
                 if ($ret['flag'] == 1) {
                     $goodsDescModel->add(array(

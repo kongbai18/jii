@@ -238,7 +238,7 @@ class GoodsController extends BaseController {
 
                 if($_FILES['goods_img']['error'][$k] == '0'){
                     $file = $_FILES['goods_img']['tmp_name'][$k];
-                    $key = 'jiimade/view/images/goodsNumImg/'.date("Y/m/d").'/'.rand().$_FILES['goods_img']['name'][$k];
+                    $key = 'jiimade/view/images/goodsNumImg/'.date("Y/m/d").'/'.rand();
                     $ret = qiniu_img_upload($key,$file);
                     if($ret['flag'] == 1){
                         if($id[$k] != ''){

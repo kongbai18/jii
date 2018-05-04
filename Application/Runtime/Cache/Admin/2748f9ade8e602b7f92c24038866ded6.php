@@ -20,7 +20,7 @@
 <div class="list-div" id="listDiv">
 <!--<?php
 $CombineCount = 1; foreach($gaData as $k => $v) { $CombineCount *= count($v); } $RepeatTime = $CombineCount; foreach($gaData as $k => $v) { $RepeatTime = $RepeatTime / count($v); $StartPosition = 1; foreach($v as $v1) { $TempStartPosition = $StartPosition; $SpaceCount = $CombineCount / count($v) / $RepeatTime; for($J = 1; $J <= $SpaceCount; $J ++) { for($I = 0; $I < $RepeatTime; $I ++) { $Result[$TempStartPosition + $I][$k] = $v1['id']; } $TempStartPosition += $RepeatTime * count($v); } $StartPosition += $RepeatTime; } } ?>-->
- <form method="post" action="/jiimadeeee/index.php/Admin/Goods/goods_number/id/5.html" name="listForm" enctype="multipart/form-data">
+ <form method="post" action="/jiimadeeee/index.php/Admin/Goods/goods_number/id/6.html" name="listForm" enctype="multipart/form-data">
        <table id="num-tal">
             <tr>
                 <?php foreach($glData as $k => $v): ?>

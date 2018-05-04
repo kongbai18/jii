@@ -3,15 +3,15 @@
 <head>
     <title>ECSHOP 管理中心</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="/jiimade/Public/Admin/Styles/general.css" rel="stylesheet" type="text/css" />
-    <link href="/jiimade/Public/Admin/Styles/main.css" rel="stylesheet" type="text/css" />
+    <link href="/jiimadeeee/Public/Admin/Styles/general.css" rel="stylesheet" type="text/css" />
+    <link href="/jiimadeeee/Public/Admin/Styles/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body style="background: #278296;color:white">
 <form method="post" action=""onsubmit="return validate()">
     <table cellspacing="0" cellpadding="0" style="margin-top:100px" align="center">
         <tr>
             <td>
-                <img src="/jiimade/Public/Admin/Images/login.png" width="178" height="256" border="0" alt="ECSHOP" />
+                <img src="/jiimadeeee/Public/Admin/Images/login.png" width="178" height="256" border="0" alt="ECSHOP" />
             </td>
             <td style="padding-left: 50px">
                 <table>

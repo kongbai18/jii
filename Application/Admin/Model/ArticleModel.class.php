@@ -43,7 +43,7 @@ class ArticleModel extends Model {
         }
         $data['add_time'] = time();
         $file = $_FILES['pic']['tmp_name'];
-        $key = 'jiimade/view/images/article/' . date("Y/m/d") . '/' . rand() . $_FILES['pic']['name'];
+        $key = 'jiimade/view/images/article/' . date("Y/m/d") . '/' . rand();
         $ret = qiniu_img_upload($key, $file);
         if ($ret['flag'] == 1) {
             $data['img_src'] = $ret['img'];
@@ -64,7 +64,7 @@ class ArticleModel extends Model {
         foreach ($imgs as $k => $v) {
             if ($v['error'] == 0) {
                 $file = $v['tmp_name'];
-                $key = 'jiimade/view/images/articledesc/' . date("Y/m/d") . '/' . rand() . $v['name'];
+                $key = 'jiimade/view/images/articledesc/' . date("Y/m/d") . '/' . rand();
                 $ret = qiniu_img_upload($key, $file);
                 if ($ret['flag'] == 1) {
                     $articleDescModel->add(array(
@@ -94,7 +94,7 @@ class ArticleModel extends Model {
             }
 
             $file = $_FILES['pic']['tmp_name'];
-            $key = 'jiimade/view/images/article/' . date("Y/m/d") . '/' . rand() . $_FILES['pic']['name'];
+            $key = 'jiimade/view/images/article/' . date("Y/m/d") . '/' . rand();
             $ret = qiniu_img_upload($key, $file);
             if ($ret['flag'] == 1) {
                 $data['img_src'] = $ret['img'];
@@ -114,7 +114,7 @@ class ArticleModel extends Model {
         foreach ($imgs as $k => $v) {
             if ($v['error'] == 0) {
                 $file = $v['tmp_name'];
-                $key = 'jiimade/view/images/articledesc/' . date("Y/m/d") . '/' . rand() . $v['name'];
+                $key = 'jiimade/view/images/articledesc/' . date("Y/m/d") . '/' . rand();
                 $ret = qiniu_img_upload($key, $file);
                 if ($ret['flag'] == 1) {
                     $articleDescModel->add(array(

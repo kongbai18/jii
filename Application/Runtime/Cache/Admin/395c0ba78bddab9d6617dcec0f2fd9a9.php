@@ -3,15 +3,15 @@
 <head>
 <title>JiiHOME 管理中心 - 添加新商品 </title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="/jiiMade/Public/Admin/Styles/general.css" rel="stylesheet" type="text/css" />
-<link href="/jiiMade/Public/Admin/Styles/main.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/jiiMade/Public/Admin/Js/jquery-1.10.2.min.js"></script>
+<link href="/jiimadeeee/Public/Admin/Styles/general.css" rel="stylesheet" type="text/css" />
+<link href="/jiimadeeee/Public/Admin/Styles/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/jiimadeeee/Public/Admin/Js/jquery-1.10.2.min.js"></script>
 </head>
 <body>
 <h1>
     <span class="action-span"><a href="<?php echo $btn_url; ?>"><?php echo $btn_name; ?></a>
     </span>
-    <span class="action-span1"><a href="/jiiMade/index.php/Admin/index/index">JiiHOME 管理中心</a></span>
+    <span class="action-span1"><a href="/jiimadeeee/index.php/Admin/index/index">JiiHOME 管理中心</a></span>
     <span id="search_id" class="action-span1"> - <?php echo $title ?> </span>
     <div style="clear:both"></div>
 </h1>
@@ -46,7 +46,7 @@
     </div>
 </form>
 <!--引入高亮显示-->
-<script type="text/javascript" src="/jiiMade/Public/Admin/Js/tron.js"></script>
+<script type="text/javascript" src="/jiimadeeee/Public/Admin/Js/tron.js"></script>
 <script type="text/javascript">
         $('.tron').click(function() {
             var pa = $(this).attr("dat");
