@@ -1,0 +1,76 @@
+<layout name="layout" />
+<style>
+    #main-box{
+        background: white;
+        overflow: hidden;
+    }
+    #main-box img{
+        float: left;
+        box-sizing: border-box;
+        background: #f3f3f3;
+        width: 340px;
+        height: 340px;
+        padding: 20px;
+        margin: 20px;
+    }
+    #mou-tal{
+        float: left;
+        margin: 40px 100px;
+    }
+</style>
+<div id="main-box">
+    <img src="<?php echo $img; ?>" alt="">
+    <div id="mou-tal">
+        <form method="post" action="__SELF__"enctype="multipart/form-data" >
+            <table cellspacing="1" cellpadding="3" width="100%">
+                <tr>
+                    <td class="label">产品位置：</td>
+                    <td>
+                        <input type="text" name="space" placeholder="例如：卧室1" maxlength="60" />
+                        <span class="require-field">*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">产品类型：</td>
+                    <td >
+                        <input type="text" name="type" placeholder="例如：衣柜" maxlength="60" />
+                        <span class="require-field">*</span>
+                    </td>
+                </tr>
+                <?php foreach($material as $k => $v): ?>
+                <tr>
+                    <?php foreach($v as $k1 => $v1): ?>
+                        <td class="label"><?php echo $k1; ?>：</td>
+                        <td >
+                            <?php foreach($v1 as $k2 => $v2): ?>
+                            <input type="radio" class="radio" value="<?php echo $v2['id']; ?>" name="<?php echo $k; ?>" /><label class="radio-val"><?php echo $v2['goods_name']; ?></label>
+                            <?php endforeach; ?>
+                        </td>
+                    <?php endforeach; ?>
+                </tr>
+                <?php endforeach; ?>
+                <tr>
+                    <td class="label">根据图示输入参数：</td>
+                    <td >
+                        <?php foreach($parameter as $k => $v): ?>
+                        <input type="text" name="<?php echo $v; ?>" placeholder="<?php echo $v; ?>" style="width: 80px;margin-right: 10px;" />
+                        <?php endforeach; ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">折扣：</td>
+                    <td >
+                        <input type="text" name="agio" value="1" maxlength="60" style="width: 80px;" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><br />
+                        <input type="submit" class="button" value=" 确定 " />
+                        <input type="reset" class="button" value=" 重置 " />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+</div>

@@ -9,8 +9,8 @@ namespace Admin\Model;
 use Think\Model;
 class GoodsModel extends Model {
     //添加商品时接收的字段
-    protected $insertFields = array('goods_name', 'cat_id', 'type_id', 'is_on_sale', 'is_new', 'is_hot', 'sort_id','tag');
-    protected $updateFields = array('id','goods_name', 'cat_id', 'type_id', 'is_on_sale', 'is_new', 'is_hot', 'sort_id','tag');
+    protected $insertFields = array('goods_name', 'cat_id', 'type_id', 'is_on_sale', 'is_new', 'is_hot','is_quote','sort_id','tag');
+    protected $updateFields = array('id','goods_name', 'cat_id', 'type_id', 'is_on_sale', 'is_new', 'is_hot','is_quote', 'sort_id','tag');
     protected $_validate = array(
         array('goods_name', 'require', '商品名称不能为空！', 1),
         array('cat_id', 'require', '请选择商品分类！', 1),
@@ -628,7 +628,7 @@ class GoodsModel extends Model {
         $access = json_decode(get_access_token(),true);
         $access_token= $access['access_token'];
         $id = I('get.id');
-        $path="pages/art/article/article?id=".$id;
+        $path="pages/product/product?goodsId=".$id;
         $width=430;
         $post_data='{"path":"'.$path.'","width":'.$width.'}';
         $url="https://api.weixin.qq.com/wxa/getwxacode?access_token=".$access_token;

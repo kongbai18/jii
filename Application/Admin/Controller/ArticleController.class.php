@@ -30,7 +30,7 @@ class ArticleController extends BaseController {
       	if($model->create(I('post.'),1)){
       		//判断是否添加成功
       		if($model->add()){
-      			$this->success('文章添加成功！',U('lst'));
+      			$this->success('文章添加成功！');
       		}
       	}
       	//添加失败
@@ -58,7 +58,7 @@ class ArticleController extends BaseController {
       	if($model->create(I('post.'),2)){
       		//判断是否修改成功
       		if(FALSE !== $model->save()){
-      			$this->success('文章修改成功！',U('lst'));
+      			$this->success('文章修改成功！');
       		}
       	}
       	//添加失败

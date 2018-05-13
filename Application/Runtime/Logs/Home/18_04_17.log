@@ -1,9 +1,0 @@
-[ 2018-04-17T16:37:53+08:00 ] ::1 /jiiMade/index.php/home/goods/ajaxGetAttr/type_id/2
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000883s ]
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000979s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001134s ]
-ERR: 无法加载控制器:Goods
-

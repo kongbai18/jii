@@ -159,8 +159,8 @@ class IndexController extends Controller {
         echo $model->showImg();
     }
     public function test(){
-        $model = D('Admin/Order');
-        var_dump($model->test());
+        $model = D('Admin/Model');
+        var_dump($model->getModel());
     }
 
 }

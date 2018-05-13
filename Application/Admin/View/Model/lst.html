@@ -1,0 +1,38 @@
+<layout name="layout" />
+
+<form method="post" action="" name="listForm">
+ 
+    <div class="list-div" id="listDiv">
+        <table cellpadding="3" cellspacing="1">
+            <tr>
+                <th>模型编号</th>
+                <th>模型名称</th>
+                <th>模型图</th>
+                <th>模型类</th>
+                <th>操作</th>
+            </tr>
+            <?php foreach($data as $k => $v): ?>
+            <tr class="tron">
+                <td align="center"><?php echo $v['id'] ?></td>
+                <td align="center"><?php echo $v['model_name'] ?></td>
+                <td align="center"><image src="<?php echo $v['img_src'] ?>" style="width: 50px;height: 50px;" /></td>
+                <td align="center"><?php if($v['model_cate'] == 1){echo '柜体';} if($v['model_cate'] == 2){echo '饰面';} if($v['model_cate'] == 3){echo '门';} ?></td>
+                <td align="center">
+                <a href="<?php echo U('edit?id='.$v['id']) ?>" >编辑</a> |
+                <a href="<?php echo U('delete?id='.$v['id']) ?>" onclick="return delMol()">移除</a>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+
+ <!--引入高亮显示-->
+<script type="text/javascript" src="__PUBLIC__/Admin/Js/tron.js"></script>
+<script>
+    function delMol() {
+        if(confirm("确认删除嘛？")){
+            return true;
+        }else {
+            return false;
+        }
+    }
+</script>

@@ -188,7 +188,7 @@ class ArticleModel extends Model {
         $access = json_decode(get_access_token(),true);
         $access_token= $access['access_token'];
         $id = I('get.artId');
-        $path="pages/art/article/article?id=".$id;
+        $path="pages/art/article/article?artId=".$id;
         $width=430;
         $post_data='{"path":"'.$path.'","width":'.$width.'}';
         $url="https://api.weixin.qq.com/wxa/getwxacode?access_token=".$access_token;
