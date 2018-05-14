@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b8f0d28-43ca-4f73-9bdb-a816208d00ec" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Application/Admin/Controller/ModelController.class.php" afterPath="$PROJECT_DIR$/Application/Admin/Controller/ModelController.class.php" />
-      <change beforePath="$PROJECT_DIR$/Application/Admin/Model/ModelModel.class.php" afterPath="$PROJECT_DIR$/Application/Admin/Model/ModelModel.class.php" />
-      <change beforePath="$PROJECT_DIR$/Application/Admin/View/Model/add.html" afterPath="$PROJECT_DIR$/Application/Admin/View/Model/add.html" />
-      <change beforePath="$PROJECT_DIR$/Application/Admin/View/Model/edit.html" afterPath="$PROJECT_DIR$/Application/Admin/View/Model/edit.html" />
+      <change beforePath="$PROJECT_DIR$/Public/modify.sql" afterPath="$PROJECT_DIR$/Public/modify.sql" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,11 +16,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ModelController.class.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ModelController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/ModelController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="63" column="13" lean-forward="true" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
+            <state relative-caret-position="486">
+              <caret line="32" column="54" lean-forward="false" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modify.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Public/modify.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="702">
+              <caret line="35" column="50" lean-forward="false" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -34,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/Application/Admin/Model/ModelModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="541">
-              <caret line="78" column="43" lean-forward="true" selection-start-line="78" selection-start-column="43" selection-end-line="78" selection-end-column="43" />
+              <caret line="78" column="43" lean-forward="false" selection-start-line="78" selection-start-column="43" selection-end-line="78" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -44,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/Application/Admin/Model/CategoryModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="93" column="8" lean-forward="true" selection-start-line="93" selection-start-column="8" selection-end-line="100" selection-end-column="9" />
+              <caret line="93" column="8" lean-forward="false" selection-start-line="93" selection-start-column="8" selection-end-line="100" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -64,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/Application/Admin/View/Model/edit.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="351">
-              <caret line="130" column="16" lean-forward="true" selection-start-line="130" selection-start-column="16" selection-end-line="130" selection-end-column="16" />
+              <caret line="130" column="16" lean-forward="false" selection-start-line="130" selection-start-column="16" selection-end-line="130" selection-end-column="16" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#div#1;n#td#1;n#tr#3;n#table#0;n#form#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#1;n#div#1;n#td#1;n#tr#3;n#table#0;n#form#0;n#div#0;n#!!top" expanded="true" />
@@ -79,7 +85,7 @@
         <entry file="file://$PROJECT_DIR$/Application/Admin/View/Goods/add.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1593">
-              <caret line="59" column="131" lean-forward="true" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="131" />
+              <caret line="59" column="131" lean-forward="false" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="131" />
               <folding />
             </state>
           </provider>
@@ -89,7 +95,7 @@
         <entry file="file://$PROJECT_DIR$/Application/Admin/View/Model/add.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1728">
-              <caret line="64" column="17" lean-forward="true" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
+              <caret line="64" column="17" lean-forward="false" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#li#0;n#td#1;n#tr#4;n#table#0;n#form#0;n#div#0;n#!!top" expanded="true" />
                 <marker date="1526201962605" expanded="true" signature="5131:5161" ph="..." />
@@ -198,11 +204,11 @@
         <option value="$PROJECT_DIR$/Application/Admin/Controller/QuoteController.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/Model/ModuleModel.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Quote/detail.html" />
-        <option value="$PROJECT_DIR$/Public/modify.sql" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Model/add.html" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Model/edit.html" />
         <option value="$PROJECT_DIR$/Application/Admin/Model/ModelModel.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/Controller/ModelController.class.php" />
+        <option value="$PROJECT_DIR$/Public/modify.sql" />
       </list>
     </option>
   </component>
@@ -376,12 +382,12 @@
       <workItem from="1526001843877" duration="25846000" />
       <workItem from="1526171369934" duration="4466000" />
       <workItem from="1526201227424" duration="6024000" />
-      <workItem from="1526259476276" duration="1688000" />
+      <workItem from="1526259476276" duration="2061000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="308218000" />
+    <option name="totallyTimeSpent" value="308591000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -731,13 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/modify.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/View/Model/lst.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -749,7 +748,7 @@
     <entry file="file://$PROJECT_DIR$/Application/Admin/View/Goods/add.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1593">
-          <caret line="59" column="131" lean-forward="true" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="131" />
+          <caret line="59" column="131" lean-forward="false" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="131" />
           <folding />
         </state>
       </provider>
@@ -757,7 +756,7 @@
     <entry file="file://$PROJECT_DIR$/Application/Admin/View/Model/add.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1728">
-          <caret line="64" column="17" lean-forward="true" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
+          <caret line="64" column="17" lean-forward="false" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
           <folding>
             <element signature="n#style#0;n#input#0;n#li#0;n#td#1;n#tr#4;n#table#0;n#form#0;n#div#0;n#!!top" expanded="true" />
             <marker date="1526201962605" expanded="true" signature="5131:5161" ph="..." />
@@ -770,7 +769,7 @@
     <entry file="file://$PROJECT_DIR$/Application/Admin/View/Model/edit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
-          <caret line="130" column="16" lean-forward="true" selection-start-line="130" selection-start-column="16" selection-end-line="130" selection-end-column="16" />
+          <caret line="130" column="16" lean-forward="false" selection-start-line="130" selection-start-column="16" selection-end-line="130" selection-end-column="16" />
           <folding>
             <element signature="n#style#0;n#input#0;n#div#1;n#td#1;n#tr#3;n#table#0;n#form#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#1;n#div#1;n#td#1;n#tr#3;n#table#0;n#form#0;n#div#0;n#!!top" expanded="true" />
@@ -783,7 +782,7 @@
     <entry file="file://$PROJECT_DIR$/Application/Admin/Model/CategoryModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="93" column="8" lean-forward="true" selection-start-line="93" selection-start-column="8" selection-end-line="100" selection-end-column="9" />
+          <caret line="93" column="8" lean-forward="false" selection-start-line="93" selection-start-column="8" selection-end-line="100" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -791,15 +790,23 @@
     <entry file="file://$PROJECT_DIR$/Application/Admin/Model/ModelModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="541">
-          <caret line="78" column="43" lean-forward="true" selection-start-line="78" selection-start-column="43" selection-end-line="78" selection-end-column="43" />
+          <caret line="78" column="43" lean-forward="false" selection-start-line="78" selection-start-column="43" selection-end-line="78" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/ModelController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="63" column="13" lean-forward="true" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
+        <state relative-caret-position="486">
+          <caret line="32" column="54" lean-forward="false" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/modify.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="35" column="50" lean-forward="false" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
           <folding />
         </state>
       </provider>

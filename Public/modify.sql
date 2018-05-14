@@ -33,7 +33,7 @@ CREATE TABLE `made_module` (
   `type` varchar(50) NOT NULL DEFAULT '' COMMENT '产品类型',
   `material` varchar(300) NOT NULL COMMENT '材料价格',
   `parameter` varchar(300) NOT NULL COMMENT '参数值',
-  KEY `quote_id` (`quote_id`,`model_cate`)
+  KEY `quote_id` (`quote_id`,`model_cate`,`sort_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='报价单中模块商品';
 
 ALTER TABLE `made_goods` ADD `is_quote` tinyint(4) NOT NULL DEFAULT '0' COMMENT '是否报价系统中商品';
