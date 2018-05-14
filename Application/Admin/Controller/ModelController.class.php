@@ -50,26 +50,28 @@ class ModelController extends BaseController {
     public function edit(){
         //获取需要修改类型的ID
         $id = I('get.id');
-        $model = D('type');
+        $model = D('model');
+        $catModel = D('category');
+        $data = $model->find($id);
         //判断是否接收表单
         if(IS_POST){
             //判断是否验证成功
             if($model->create(I('post.'),2)){
                 //判断是否修改成功
                 if(FALSE !== $model->save()){
-                    $this->success('类型修改成功！',U('lst'));
+                    $this->success('模型修改成功！',U('lst'));
                 }
             }
             //添加失败
             $this->error($model->getError());
         }
-        //获取修改类型数据
-        $data = $model->find($id);
+        $catData = $catModel->getTree();
         //数据assign到页面中
         $this->assign(array(
             'data' => $data,
-            'title' => '修改类型',
-            'btn_name' => '类型列表',
+            'catData' => $catData,
+            'title' => '修改模型',
+            'btn_name' => '模型列表',
             'btn_url' => U('lst')
         ));
         $this->display();
