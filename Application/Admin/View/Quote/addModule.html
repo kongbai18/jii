@@ -17,60 +17,140 @@
         float: left;
         margin: 40px 100px;
     }
+    .button-div{
+        margin-top: 30px;
+    }
 </style>
 <div id="main-box">
-    <img src="<?php echo $img; ?>" alt="">
+    <img id="fur-img" src="<?php echo $furData['img_src']; ?>" alt="">
+    <?php $attr = json_decode($furData['attribute'],true);
+            if(empty($attr)){
+               $gatherattr = '0';
+            }
+            foreach ($attr as $k => $v){
+               foreach($v as $k1 => $v1){
+                   $attr[$k] = $v1;
+               }
+             }
+     ?>
     <div id="mou-tal">
         <form method="post" action="__SELF__"enctype="multipart/form-data" >
             <table cellspacing="1" cellpadding="3" width="100%">
+                <?php $index = 1; foreach($attr as $k => $v): ?>
                 <tr>
-                    <td class="label">产品位置：</td>
+                    <td class="label"><?php echo $k; ?>：</td>
                     <td>
-                        <input type="text" name="space" placeholder="例如：卧室1" maxlength="60" />
-                        <span class="require-field">*</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="label">产品类型：</td>
-                    <td >
-                        <input type="text" name="type" placeholder="例如：衣柜" maxlength="60" />
-                        <span class="require-field">*</span>
-                    </td>
-                </tr>
-                <?php foreach($material as $k => $v): ?>
-                <tr>
-                    <?php foreach($v as $k1 => $v1): ?>
-                        <td class="label"><?php echo $k1; ?>：</td>
-                        <td >
-                            <?php foreach($v1 as $k2 => $v2): ?>
-                            <input type="radio" class="radio" value="<?php echo $v2['id']; ?>" name="<?php echo $k; ?>" /><label class="radio-val"><?php echo $v2['goods_name']; ?></label>
-                            <?php endforeach; ?>
-                        </td>
-                    <?php endforeach; ?>
-                </tr>
-                <?php endforeach; ?>
-                <tr>
-                    <td class="label">根据图示输入参数：</td>
-                    <td >
-                        <?php foreach($parameter as $k => $v): ?>
-                        <input type="text" name="<?php echo $v; ?>" placeholder="<?php echo $v; ?>" style="width: 80px;margin-right: 10px;" />
+                        <?php foreach($v as $k1 => $v1): ?>
+                        <input type="radio" class="radio" name="attr<?php echo $index; ?>" value="<?php echo $k1; ?>"><?php echo $v1; ?>
                         <?php endforeach; ?>
                     </td>
                 </tr>
-                <tr>
-                    <td class="label">折扣：</td>
-                    <td >
-                        <input type="text" name="agio" value="1" maxlength="60" style="width: 80px;" />
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center"><br />
-                        <input type="submit" class="button" value=" 确定 " />
-                        <input type="reset" class="button" value=" 重置 " />
-                    </td>
-                </tr>
+                <?php $index++; endforeach; ?>
             </table>
+
+            <table id="mater-par" cellspacing="1" cellpadding="3" width="100%">
+            </table>
+            <div class="button-div">
+                <input type="submit" value=" 确定 " class="button"/>
+                <input type="reset" value=" 重置 " class="button" />
+            </div>
         </form>
     </div>
 
 </div>
+<script>
+    var num = <?php echo count($attr); ?>;
+
+    $("input:radio").change(function(){
+        var att = true;
+        var gatattr = '';
+        for(var i=1;i<=num;i++){
+           var attr = $('input[name="attr'+i+'"]:checked').val();
+            console.log(attr);
+           if(attr == undefined){
+              att = false;
+           }else{
+               gatattr = gatattr+attr+',';
+           }
+        }
+        if(att){
+            var furId = <?php echo $furId; ?>;
+            $.ajax({
+                type : "GET",
+                url : "<?php echo U('ajaxGetModel','',FALSE); ?>",
+                data : {attr:gatattr,furId:furId},
+                dataType : "json",
+                success : function(data){
+                    if(data.length != 0){
+                        var div = '<input type="hidden" name="fur-quo" value="'+data[0].id+'">';
+                        for(var i in data[0].material){
+                            for(var p in data[0].material[i]){
+                                div += '<tr><td class="label">'+p+'：</td><td>';
+                                $(data[0].material[i][p]).each(function (k,v) {
+                                    div += '<input type="radio" name="'+i+'" value="'+v.id+'">'+v.goods_name;
+                                });
+                                div += '</td></tr>';
+                            }
+                        }
+                        var arr1 = $.parseJSON( data[0].parameter );
+                        div += '<tr><td class="label">根据图示输入参数：</td><td>';
+                        $.each(arr1, function(i,val){
+                            div += '<input type="text" name="'+val+'" placeholder="'+val+'" style="width: 60px;margin-right: 5px;">';
+                        });
+                        div += '</td></tr>';
+                        div += '<tr><td class="label">柜体开放面积：</td><td ><input type="text" name="open" placeholder="㎡" maxlength="60" style="width: 80px;" /></td></tr>';
+                        div += '<tr><td class="label">家具所在位置：</td><td ><input type="text" name="space" placeholder="例如:主卧,次卧,客厅等" /></td></tr>';
+                        div += '<tr><td class="label">折扣：</td><td ><input type="text" name="agio" value="1" maxlength="60" style="width: 80px;" /></td></tr>';
+
+                        console.log(div);
+                        $("#mater-par").html(div);
+                    }else{
+                        $("#mater-par").html('');
+                        alert('暂不支持该配置！');
+                    }
+                }
+            });
+        }else{
+            $("#mater-par").html();
+        }
+    });
+</script>
+<script>
+    var gatherattr = <?php echo $gatherattr; ?>;
+    if(gatherattr === 0){
+        var furId = <?php echo $furId; ?>;
+        $.ajax({
+            type : "GET",
+            url : "<?php echo U('ajaxGetModel','',FALSE); ?>",
+            data : {attr:'0',furId:furId},
+            dataType : "json",
+            success : function(data){
+                if(data.length != 0){
+                    var div = '<input type="hidden" name="fur-quo" value="'+data[0].id+'">';
+                    for(var i in data[0].material){
+                        for(var p in data[0].material[i]){
+                            div += '<tr><td class="label">'+p+'：</td><td>';
+                            $(data[0].material[i][p]).each(function (k,v) {
+                                div += '<input type="radio" name="'+i+'" value="'+v.id+'">'+v.goods_name;
+                            });
+                            div += '</td></tr>';
+                        }
+                    }
+                    var arr1 = $.parseJSON( data[0].parameter );
+                    div += '<tr><td class="label">根据图示输入参数：</td><td>';
+                    $.each(arr1, function(i,val){
+                        div += '<input type="text" name="'+val+'" placeholder="'+val+'" style="width: 60px;margin-right: 5px;">';
+                    });
+                    div += '</td></tr>';
+                    div += '<tr><td class="label">柜体开放面积：</td><td ><input type="text" name="open" placeholder="㎡" maxlength="60" style="width: 80px;" /></td></tr>';
+                    div += '<tr><td class="label">家具所在位置：</td><td ><input type="text" name="space" placeholder="例如:主卧,次卧,客厅等" /></td></tr>';
+                    div += '<tr><td class="label">折扣：</td><td ><input type="text" name="agio" value="1" maxlength="60" style="width: 80px;" /></td></tr>';
+                    $("#mater-par").html(div);
+                }else{
+                    $("#mater-par").html('');
+                    alert('暂不支持该配置！');
+                }
+            }
+        });
+    }
+</script>

@@ -1,0 +1,1145 @@
+[ 2018-05-14T17:11:57+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getArticle?num=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000909s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000797s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000956s ]
+SQL: SHOW COLUMNS FROM `made_article` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `made_article` WHERE `is_index` = '1' ORDER BY sort_id asc LIMIT 5   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002468s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002826s ]
+
+[ 2018-05-14T17:11:57+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=3&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000846s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001603s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '3' ORDER BY order_id asc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0018s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '1' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0026s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001475s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001737s ]
+
+[ 2018-05-14T17:11:57+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=1&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000642s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001152s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001385s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '1' ORDER BY order_id asc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0010s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '3' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0017s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000924s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001127s ]
+
+[ 2018-05-14T17:11:57+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=4&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000747s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001258s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001517s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '4' ORDER BY order_id asc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0095s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '7' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0082s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '8' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001235s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001467s ]
+
+[ 2018-05-14T17:11:57+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=2&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001504s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003981s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '2' ORDER BY order_id asc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0038s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '5' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0027s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '6' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001091s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001301s ]
+
+[ 2018-05-14T17:11:57+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getArticle?num=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001088s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001170s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001448s ]
+SQL: SHOW COLUMNS FROM `made_article` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `made_article` WHERE `is_index` = '1' ORDER BY sort_id asc LIMIT 5   [ RunTime:0.0014s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002634s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003897s ]
+
+[ 2018-05-14T17:11:58+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=3&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000789s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001216s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001513s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '3' ORDER BY order_id asc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0077s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '1' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0091s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002952s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003207s ]
+
+[ 2018-05-14T17:11:58+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=1&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000836s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003825s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.023813s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '1' ORDER BY order_id asc  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0010s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '3' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0036s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001196s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001428s ]
+
+[ 2018-05-14T17:11:58+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=2&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000776s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001219s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001513s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '2' ORDER BY order_id asc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0009s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '5' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0008s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '6' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001300s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001509s ]
+
+[ 2018-05-14T17:11:58+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=4&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000771s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001263s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '4' ORDER BY order_id asc  [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0046s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '7' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0029s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '8' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001054s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001269s ]
+
+[ 2018-05-14T17:12:00+08:00 ] 127.0.0.1 /jiimadeeee/index.php/home/index/login?code=081CjgBd17EsJr0rLRCd1l2XAd1CjgBS
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000881s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005038s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0017s ]
+SQL: SELECT `id` FROM `made_user` WHERE `openid` = 'ojUv941YOJMStCvC71fzUK4iqE8g' LIMIT 1   [ RunTime:0.0017s ]
+SQL: UPDATE `made_user` SET `thr_session`='1e5a4a357886e4ad9e803e41f13823cd',`session_key`='BctpAyaHS9YzMamoQH0LjQ==' WHERE `id` = 4 [ RunTime:0.0066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005760s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006167s ]
+
+[ 2018-05-14T17:22:19+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getArticle?num=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001844s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001219s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001524s ]
+SQL: SHOW COLUMNS FROM `made_article` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `made_article` WHERE `is_index` = '1' ORDER BY sort_id asc LIMIT 5   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001109s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001337s ]
+
+[ 2018-05-14T17:22:19+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=1&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000778s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001645s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '1' ORDER BY order_id asc  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0017s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '3' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0015s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003145s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003901s ]
+
+[ 2018-05-14T17:22:19+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=3&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000249s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001432s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001301s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '3' ORDER BY order_id asc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0011s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '1' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001225s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001447s ]
+
+[ 2018-05-14T17:22:20+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=2&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000825s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000984s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001434s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '2' ORDER BY order_id asc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0009s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '5' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0008s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '6' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001268s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001541s ]
+
+[ 2018-05-14T17:22:20+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=3&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000818s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001164s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001428s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '3' ORDER BY order_id asc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0013s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '1' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001179s ]
+
+[ 2018-05-14T17:22:20+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=1&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000633s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005764s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '1' ORDER BY order_id asc  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0010s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '3' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001477s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001685s ]
+
+[ 2018-05-14T17:22:20+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getArticle?num=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000705s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001117s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001378s ]
+SQL: SHOW COLUMNS FROM `made_article` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `made_article` WHERE `is_index` = '1' ORDER BY sort_id asc LIMIT 5   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000896s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001079s ]
+
+[ 2018-05-14T17:22:20+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=2&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000973s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001710s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '2' ORDER BY order_id asc  [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0010s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '5' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0009s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '6' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0016s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001102s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001343s ]
+
+[ 2018-05-14T17:22:20+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=4&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000823s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001593s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '4' ORDER BY order_id asc  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0026s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '7' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0019s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '8' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001468s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001680s ]
+
+[ 2018-05-14T17:22:20+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=4&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000883s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001221s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001648s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '4' ORDER BY order_id asc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0010s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '7' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0008s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '8' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000965s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001234s ]
+
+[ 2018-05-14T17:22:20+08:00 ] 127.0.0.1 /jiimadeeee/index.php/home/index/login?code=0610KZPK1FIzP50F7VMK1tGLPK10KZPi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000828s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000983s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001210s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0025s ]
+SQL: SELECT `id` FROM `made_user` WHERE `openid` = 'ojUv941YOJMStCvC71fzUK4iqE8g' LIMIT 1   [ RunTime:0.0007s ]
+SQL: UPDATE `made_user` SET `thr_session`='5f56fa5d3684e7ceb2d99d02120a4cf6',`session_key`='xTqK4MHB7Fv/n/cz0meKeg==' WHERE `id` = 4 [ RunTime:0.0038s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001612s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001853s ]
+
+[ 2018-05-14T17:26:17+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getArticle?num=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000907s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001082s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001333s ]
+SQL: SHOW COLUMNS FROM `made_article` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `made_article` WHERE `is_index` = '1' ORDER BY sort_id asc LIMIT 5   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000779s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000971s ]
+
+[ 2018-05-14T17:26:17+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=3&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000758s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001024s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001281s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '3' ORDER BY order_id asc  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0012s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '1' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001045s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001296s ]
+
+[ 2018-05-14T17:26:17+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getArticle?num=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000988s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001112s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001379s ]
+SQL: SHOW COLUMNS FROM `made_article` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `made_article` WHERE `is_index` = '1' ORDER BY sort_id asc LIMIT 5   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001157s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001392s ]
+
+[ 2018-05-14T17:26:17+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=1&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000084s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001831s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000992s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001603s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '1' ORDER BY order_id asc  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0009s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '3' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000978s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001220s ]
+
+[ 2018-05-14T17:26:18+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=2&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001509s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001580s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '2' ORDER BY order_id asc  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0013s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '5' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '6' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001412s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001628s ]
+
+[ 2018-05-14T17:26:18+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=4&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000859s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001548s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '4' ORDER BY order_id asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0011s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '7' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '8' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0014s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001624s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001849s ]
+
+[ 2018-05-14T17:26:18+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=3&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000670s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001090s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001383s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '3' ORDER BY order_id asc  [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0011s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '1' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001095s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001330s ]
+
+[ 2018-05-14T17:26:18+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=1&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000808s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001072s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '1' ORDER BY order_id asc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0011s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '3' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001027s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001290s ]
+
+[ 2018-05-14T17:26:18+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=2&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000740s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000933s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001162s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '2' ORDER BY order_id asc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0011s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '5' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '6' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001217s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001464s ]
+
+[ 2018-05-14T17:26:18+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=4&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000729s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005210s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005575s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '4' ORDER BY order_id asc  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0012s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '7' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0009s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '8' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001263s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001514s ]
+
+[ 2018-05-14T17:26:18+08:00 ] 127.0.0.1 /jiimadeeee/index.php/home/index/login?code=081G8GGf15aQIy0zbiDf1ekHGf1G8GGS
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001272s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001525s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001753s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0026s ]
+SQL: SELECT `id` FROM `made_user` WHERE `openid` = 'ojUv941YOJMStCvC71fzUK4iqE8g' LIMIT 1   [ RunTime:0.0012s ]
+SQL: UPDATE `made_user` SET `thr_session`='d55d613428ecd599404c571d04276053',`session_key`='wlyu2CEMGtGBKroA3tx5bA==' WHERE `id` = 4 [ RunTime:0.0048s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001484s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001714s ]
+
+[ 2018-05-14T17:26:22+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/orderState?userId=4&thr_session=d55d613428ecd599404c571d04276053
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000693s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000949s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001151s ]
+SQL: SHOW COLUMNS FROM `made_order` [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0027s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `made_order` WHERE `user_id` = '4'  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001229s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001440s ]
+
+[ 2018-05-14T17:26:22+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/orderState?userId=4&thr_session=d55d613428ecd599404c571d04276053
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000765s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000846s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001092s ]
+SQL: SHOW COLUMNS FROM `made_order` [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0011s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `made_order` WHERE `user_id` = '4'  [ RunTime:0.0016s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004135s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005277s ]
+
+[ 2018-05-14T17:26:46+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getArticle?num=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000845s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000873s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001110s ]
+SQL: SHOW COLUMNS FROM `made_article` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `made_article` WHERE `is_index` = '1' ORDER BY sort_id asc LIMIT 5   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001173s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001439s ]
+
+[ 2018-05-14T17:26:46+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=1&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000805s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000951s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001151s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '1' ORDER BY order_id asc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0035s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '3' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001268s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001485s ]
+
+[ 2018-05-14T17:26:46+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=2&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000708s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000837s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001052s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '2' ORDER BY order_id asc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0024s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '5' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0024s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '6' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000988s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001188s ]
+
+[ 2018-05-14T17:26:46+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=4&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000661s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000836s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001080s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '4' ORDER BY order_id asc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0025s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '7' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0023s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '8' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001289s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001644s ]
+
+[ 2018-05-14T17:26:46+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=3&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000676s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003902s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '3' ORDER BY order_id asc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0011s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '1' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000960s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001182s ]
+
+[ 2018-05-14T17:26:46+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getArticle?num=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000643s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000876s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001088s ]
+SQL: SHOW COLUMNS FROM `made_article` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `made_article` WHERE `is_index` = '1' ORDER BY sort_id asc LIMIT 5   [ RunTime:0.0015s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005116s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006534s ]
+
+[ 2018-05-14T17:26:47+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=2&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000637s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001020s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001298s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '2' ORDER BY order_id asc  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0009s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '5' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0008s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '6' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001366s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001577s ]
+
+[ 2018-05-14T17:26:47+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=4&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000879s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001094s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001360s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '4' ORDER BY order_id asc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0009s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '7' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0007s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '8' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001371s ]
+
+[ 2018-05-14T17:26:47+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=3&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000630s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000874s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001163s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '3' ORDER BY order_id asc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0016s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '1' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0014s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003747s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004911s ]
+
+[ 2018-05-14T17:26:47+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=1&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003377s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001871s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002801s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '1' ORDER BY order_id asc  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0035s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '3' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001730s ]
+
+[ 2018-05-14T17:26:48+08:00 ] 127.0.0.1 /jiimadeeee/index.php/home/index/login?code=011gf5w11ayqNZ1Ec8z11pn2w11gf5wq
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000662s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001167s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001418s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0025s ]
+SQL: SELECT `id` FROM `made_user` WHERE `openid` = 'ojUv941YOJMStCvC71fzUK4iqE8g' LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `made_user` SET `thr_session`='d55d613428ecd599404c571d04276053',`session_key`='wlyu2CEMGtGBKroA3tx5bA==' WHERE `id` = 4 [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001155s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001361s ]
+
+[ 2018-05-14T17:26:51+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/orderState?userId=4&thr_session=d55d613428ecd599404c571d04276053
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000095s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001494s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000952s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001193s ]
+SQL: SHOW COLUMNS FROM `made_order` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0023s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `made_order` WHERE `user_id` = '4'  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000895s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001074s ]
+
+[ 2018-05-14T17:26:51+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/orderState?userId=4&thr_session=d55d613428ecd599404c571d04276053
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000636s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001632s ]
+SQL: SHOW COLUMNS FROM `made_order` [ RunTime:0.0052s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0013s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `made_order` WHERE `user_id` = '4'  [ RunTime:0.0018s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005153s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007095s ]
+
+[ 2018-05-14T17:30:50+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getArticle?num=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000780s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003859s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004646s ]
+SQL: SHOW COLUMNS FROM `made_article` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `made_article` WHERE `is_index` = '1' ORDER BY sort_id asc LIMIT 5   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001233s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001463s ]
+
+[ 2018-05-14T17:30:50+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=3&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000924s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001217s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001523s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '3' ORDER BY order_id asc  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0009s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '1' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001322s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002520s ]
+
+[ 2018-05-14T17:30:50+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=1&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001745s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001609s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '1' ORDER BY order_id asc  [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0011s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '3' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001327s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001561s ]
+
+[ 2018-05-14T17:30:50+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getArticle?num=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000690s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002209s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002717s ]
+SQL: SHOW COLUMNS FROM `made_article` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `made_article` WHERE `is_index` = '1' ORDER BY sort_id asc LIMIT 5   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001032s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001260s ]
+
+[ 2018-05-14T17:30:50+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=4&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000788s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000801s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001010s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '4' ORDER BY order_id asc  [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0015s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '7' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0007s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '8' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001242s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001508s ]
+
+[ 2018-05-14T17:30:50+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=2&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000835s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000989s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001259s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '2' ORDER BY order_id asc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0028s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '5' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0012s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '6' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001216s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001435s ]
+
+[ 2018-05-14T17:30:50+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=2&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000733s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001155s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '2' ORDER BY order_id asc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0009s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '5' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0007s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '6' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001111s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001321s ]
+
+[ 2018-05-14T17:30:50+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=1&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000748s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001274s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001514s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '1' ORDER BY order_id asc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0009s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '3' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001108s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001307s ]
+
+[ 2018-05-14T17:30:50+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=3&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000825s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000921s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001180s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '3' ORDER BY order_id asc  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0014s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '1' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0032s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004889s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006182s ]
+
+[ 2018-05-14T17:30:50+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=4&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005217s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001318s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '4' ORDER BY order_id asc  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0013s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '7' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0008s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '8' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0015s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001252s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001526s ]
+
+[ 2018-05-14T17:30:50+08:00 ] 127.0.0.1 /jiimadeeee/index.php/home/index/login?code=081xexGm0fPvTk1cDNGm0mUEGm0xexGh
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000996s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001140s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001421s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0022s ]
+SQL: SELECT `id` FROM `made_user` WHERE `openid` = 'ojUv941YOJMStCvC71fzUK4iqE8g' LIMIT 1   [ RunTime:0.0008s ]
+SQL: UPDATE `made_user` SET `thr_session`='cbdb63309e417b8147b6ea46d8dc7283',`session_key`='bqhkjXHgZzDKV7/y6fsRuQ==' WHERE `id` = 4 [ RunTime:0.0050s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001390s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001660s ]
+
+[ 2018-05-14T17:30:54+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/orderState?userId=4&thr_session=cbdb63309e417b8147b6ea46d8dc7283
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000780s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000863s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001096s ]
+SQL: SHOW COLUMNS FROM `made_order` [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0023s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `made_order` WHERE `user_id` = '4'  [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001619s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001835s ]
+
+[ 2018-05-14T17:30:54+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/orderState?userId=4&thr_session=cbdb63309e417b8147b6ea46d8dc7283
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000823s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000869s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001095s ]
+SQL: SHOW COLUMNS FROM `made_order` [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0028s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `made_order` WHERE `user_id` = '4'  [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001386s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001735s ]
+
+[ 2018-05-14T17:31:02+08:00 ] 127.0.0.1 /jiimadeeee/index.php/home/index/getPhone?iv=ZEeSdnCBppZm3BxotFe7%2Fw%3D%3D&userId=4&thr_session=cbdb63309e417b8147b6ea46d8dc7283&iencryptedDatav=Wc19lsZkG6viTH%2FwyPur31CqquP58muuqHQLXTja%2Blc385cG4XuFuBROg%2BXSdzFNo2m58ykiY2EZTCfXAAKVwumMhqkJCCC9HfvP93w9hDIHr%2BXDceHbO7Nxcahhx4aKJ0ESjMFz%2B6B7RXnJbSWG0twi8f3rNPjNVceAJqAuvPyStkf5rJeo%2FiRUfXU2FHlpb7waKWBcHffXc3Qpxm15NQ%3D%3D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001384s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002887s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0023s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003516s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004606s ]
+
+[ 2018-05-14T17:43:17+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getArticle?num=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000786s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001753s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002033s ]
+SQL: SHOW COLUMNS FROM `made_article` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `made_article` WHERE `is_index` = '1' ORDER BY sort_id asc LIMIT 5   [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001354s ]
+
+[ 2018-05-14T17:43:17+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=3&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000657s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000824s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001074s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '3' ORDER BY order_id asc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0029s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '1' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004432s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005223s ]
+
+[ 2018-05-14T17:43:17+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=2&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000748s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001144s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001357s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '2' ORDER BY order_id asc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0013s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '5' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0009s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '6' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001054s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001283s ]
+
+[ 2018-05-14T17:43:17+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=4&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000112s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001590s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '4' ORDER BY order_id asc  [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0012s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '7' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '8' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001343s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001574s ]
+
+[ 2018-05-14T17:43:17+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=1&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000195s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001157s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000794s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001002s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '1' ORDER BY order_id asc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0010s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '3' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001336s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001538s ]
+
+[ 2018-05-14T17:43:17+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=1&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000781s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001322s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '1' ORDER BY order_id asc  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0010s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '3' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002368s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003632s ]
+
+[ 2018-05-14T17:43:17+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=3&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000639s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000998s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001243s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '3' ORDER BY order_id asc  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0014s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '1' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001376s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001624s ]
+
+[ 2018-05-14T17:43:17+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getArticle?num=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000711s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000780s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000972s ]
+SQL: SHOW COLUMNS FROM `made_article` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `made_article` WHERE `is_index` = '1' ORDER BY sort_id asc LIMIT 5   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001162s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001456s ]
+
+[ 2018-05-14T17:43:17+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=2&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000900s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001270s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001527s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '2' ORDER BY order_id asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0021s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '5' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0011s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '6' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001219s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001468s ]
+
+[ 2018-05-14T17:43:18+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=4&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000680s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000843s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001021s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '4' ORDER BY order_id asc  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0013s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '7' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0012s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '8' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001366s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001607s ]
+
+[ 2018-05-14T17:43:18+08:00 ] 127.0.0.1 /jiimadeeee/index.php/home/index/login?code=081yu3VA0BYC4f2QcvXA0eP5VA0yu3Vp
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000751s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000880s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001102s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0007s ]
+SQL: SELECT `id` FROM `made_user` WHERE `openid` = 'ojUv941YOJMStCvC71fzUK4iqE8g' LIMIT 1   [ RunTime:0.0011s ]
+SQL: UPDATE `made_user` SET `thr_session`='dbd80ab840f7142e91f16d32c74bdc3c',`session_key`='bmSo4L7K1M5Mqj+2wCSiGQ==' WHERE `id` = 4 [ RunTime:0.0049s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002973s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003650s ]
+
+[ 2018-05-14T17:43:23+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/orderState?userId=4&thr_session=dbd80ab840f7142e91f16d32c74bdc3c
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000925s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000836s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001045s ]
+SQL: SHOW COLUMNS FROM `made_order` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0010s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `made_order` WHERE `user_id` = '4'  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000991s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001240s ]
+
+[ 2018-05-14T17:43:23+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/orderState?userId=4&thr_session=dbd80ab840f7142e91f16d32c74bdc3c
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001370s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004463s ]
+SQL: SHOW COLUMNS FROM `made_order` [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0054s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT * FROM `made_order` WHERE `user_id` = '4'  [ RunTime:0.0014s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006484s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007117s ]
+
+[ 2018-05-14T17:43:30+08:00 ] 127.0.0.1 /jiimadeeee/index.php/home/index/getPhone?iv=0fOjpRPIsvqh9BZw%2FhDTWg%3D%3D&userId=4&thr_session=dbd80ab840f7142e91f16d32c74bdc3c&iencryptedDatav=cO1tCqlqDo12O4DchDocCe4t4Q5cxJuGy2fSkypWzJ96bT7uKu4Z%2BeoWnief9itKMHDFu%2FdH%2BbyrPyha9aPWW3dHx%2FYQce0QQVRYW%2FRQL%2FrpoD31RNYguvsRL7oypUQp%2B7SUjuv2nLM0pKmhauKt0nQXHaS3fiINsbEyNySvT4SyqCw0jd27P3sn5btzt5CkzDJ6saM3nEHt59H5Yfeq4A%3D%3D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000207s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002927s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002387s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002971s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0019s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT `session_key` FROM `made_user` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003830s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004631s ]
+
+[ 2018-05-14T17:47:23+08:00 ] 127.0.0.1 /jiimadeeee/index.php/home/index/getPhone?iv=f2OFUiHtZhKcW%2BFtPvdFVw%3D%3D&userId=4&thr_session=dbd80ab840f7142e91f16d32c74bdc3c&iencryptedDatav=vWqfNnyvjbtsoTYXwCKIkKTJ8capxQ%2BHhAlhAFrScU7bHZY0gOgTcUTAfIWc73bLZ99R5q%2BXRMz%2Byg3UB3TJnb%2FLcvnRWBgwgqS%2F2wgPojZkgbQG8VNf0ALbW2ogQJ%2BIS9koEnFQqGBWkaIWLf%2F1FmOqUKBmfhzFlIN7osSi2a9L4DvlgH2r2WKr2NkKcpCyHB6lE0w5Z%2BjTgqYDehhLPw%3D%3D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000489s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000673s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000843s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0037s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT `session_key` FROM `made_user` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0014s ]
+SQL: UPDATE `made_user` SET `telephone`='18720920196' WHERE `id` = 4 [ RunTime:0.0061s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004683s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005853s ]
+

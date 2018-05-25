@@ -158,6 +158,29 @@ class IndexController extends Controller {
         $model = D('Admin/Goods');
         echo $model->showImg();
     }
+    //获取手机号
+    public function getPhone(){
+        $model = D('Admin/user');
+        echo json_encode($model->getPhone());
+    }
+    //选择家具
+    public function chooseFurniture(){
+        $model = D('furniture');
+        $furData = $model->field('id,fur_name,img_src')->order('sort_id desc')->select();
+        echo json_encode($furData);
+    }
+    //获取家具扩展属性
+    public function getFurAttr(){
+        $model = D('furniture');
+        $furId = I('get.furId');
+        $furData = $model->find($furId);
+        $attribute = json_decode($furData['attribute'],true);
+        $data = array(
+          'attribute' => $attribute,
+          'furData' => $furData,
+        );
+        echo json_encode($data);
+    }
     public function test(){
         $model = D('Admin/Model');
         var_dump($model->getModel());

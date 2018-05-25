@@ -22,10 +22,12 @@ class UserModel extends Model {
              if($id['id']){
                  $data = array(
                      'id' => $id['id'],
-                     'thr_session' => md5($wxData['session_key'])
+                     'thr_session' => md5($wxData['session_key']),
+                     'session_key' => $wxData['session_key'],
                  );
                  $result = $this->save($data);
                  if($result !== false){
+                   unset($data['session_key']);
                    return $data;
                  }else{
                      return 'false';
@@ -33,10 +35,12 @@ class UserModel extends Model {
              }else{
                  $data['openid'] = $openid;
                  $data['thr_session'] = md5($wxData['session_key']);
+                 $data['session_key'] = $wxData['session_key'];
                  $result = $this->add($data);
                  if ($result){
                      $data['id'] = $result;
                      unset($data['openid']);
+                     unset($data['session_key']);
                      return $data;
                  }else{
                      return 'false';
@@ -45,5 +49,28 @@ class UserModel extends Model {
          }else{
              return 'false';
          }
+    }
+    public function getPhone(){
+        $iencryptedDatav = I('get.iencryptedDatav');
+        $iv = I('get.iv');
+        $userId = I('get.userId');
+        $thr_session = I('get.thr_session');
+        $user = checkUser($userId,$thr_session);
+        if($user){
+            $key = $this->field('session_key')->find($userId);
+            $data = array();
+            $result = decryptData($iencryptedDatav,$iv,$key['session_key'],$data);
+            $data = json_decode($data,true);
+            if($result){
+                $reData = array(
+                  'id' => $userId,
+                  'telephone' => $data['phoneNumber']
+                );
+                $this->save($reData);
+            }
+            return $data;
+        }else{
+
+        }
     }
 }

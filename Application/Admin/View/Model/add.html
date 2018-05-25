@@ -24,27 +24,10 @@
     <form method="post" action="__SELF__"enctype="multipart/form-data" >
         <table cellspacing="1" cellpadding="3" width="100%">
             <tr>
-                <td class="label">模型名称</td>
+                <td class="label">模型名称：</td>
                 <td>
                     <input type="text" name="model_name" maxlength="60" />
                     <span class="require-field">*</span>
-                </td>
-            </tr>
-            <tr>
-                <td class="label">模型分类：</td>
-                <td >
-                    <select name="model_cate">
-                        <option value="1">柜体</option>
-                        <option value="2">饰面</option>
-                        <option value="3">门</option>
-                    </select>
-                    <span class="require-field">*</span>
-                </td>
-            </tr>
-            <tr>
-                <td class="label">模型图：</td>
-                <td >
-                    <input type="file" name="img_src" accept="image/*" >
                 </td>
             </tr>
             <tr>
@@ -75,19 +58,7 @@
                     </li>
                 </td>
             </tr>
-            <tr>
-                <td class="label">推荐排序：</td>
-                <td>
-                    <input type="text" name="sort_id" size="5" value="100"/>
-                </td>
-            </tr>
-            <tr>
-                <td class="label">是否显示：</td>
-                <td>
-                    <input type="radio" name="is_index" value="1" checked="checked"/> 是
-                    <input type="radio" name="is_index" value="0"/> 否
-                </td>
-            </tr>
+
             <tr>
                 <td colspan="2" align="center"><br />
                     <input type="submit" class="button" value=" 确定 " />
@@ -104,7 +75,6 @@
         var qqq = '#material-list'+sort;
         if($(a).text() == '[+]'){
             var newLi = li.clone();
-            console.log(newLi);
             newLi.find('a').text('[-]');
             newLi.find('select').val('');
             $(qqq).append(newLi);
@@ -150,7 +120,6 @@
             div += '<select name="material-val['+index+'][]">';
             div += '<option value="">请选择...</option>';
         $(catData).each(function(k,v){
-            console.log(v.name);
             div += '<option value="'+v.id+'">'+repeat("-",2*v.level)+v.name+'</option>';
         });
             div += '</select> </li>';

@@ -10,7 +10,7 @@ class ModelController extends BaseController {
     //模型列表
     public function lst(){
         $model = D('model');
-        $data = $model->field('id,model_name,model_cate,img_src')->select();
+        $data = $model->field('id,model_name')->select();
         //数据assign到页面中
         $this->assign(array(
             'data'  => $data,

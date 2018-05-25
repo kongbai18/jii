@@ -94,18 +94,18 @@ class QuoteController extends BaseController {
             'moduleData' => $moduleData,
             'data' => $data,
             'title' => '报价单详情',
-            'btn_name' => '添加模块',
-            'btn_url' => U('chooseModel?id='.$id)
+            'btn_name' => '添加家具',
+            'btn_url' => U('chooseFurniture?id='.$id)
         ));
         $this->display();
     }
-    public function chooseModel(){
+    public function chooseFurniture(){
         $id = I('get.id');
-        $model = D('model');
-        $mData = $model->field('id,model_name,img_src')->order('sort_id asc')->select();
+        $model = D('furniture');
+        $furData = $model->field('id,fur_name,img_src')->order('sort_id desc')->select();
         $this->assign(array(
             'quote' => $id,
-            'data' => $mData,
+            'furData' => $furData,
             'title' => '选择模型',
             'btn_name' => '返回报价单详情',
             'btn_url' => U('detail?id='.$id)
@@ -114,42 +114,55 @@ class QuoteController extends BaseController {
     }
     public function addModule(){
         $quoteId = I('get.quoteId');
-        $modelId = I('get.id');
-        $mModel = D('model');
-        $mData = $mModel->find($modelId);
-        $goodsModel = D('goods');
-        $img = $mData['img_src'];
-        $material = json_decode($mData['material'],true);
-        $parameter = json_decode($mData['parameter'],true);
+        $furId = I('get.id');
+        $furModel = D('furniture');
+        $furData = $furModel->find($furId);
+
         //判断是否接收表单
         if(IS_POST){
+            $furQuoId = I('post.fur-quo');
+            if(!$furQuoId){
+                $this->error('请选择存在的配置！');
+            }
+            //从家具计算属性表获取对应计算模型ID
+            $furQuoModel = D('furniture_quote');
+            $furQuoData = $furQuoModel->field('model_id')->find($furQuoId);
+
+            $_POST['model_id'] = $furQuoData['model_id'];
+            $_POST['fur_name'] = $furData['fur_name'];
+            $_POST['cate_id'] = $furData['cate_id'];
+            $_POST['quote_id'] = $quoteId;
+
+            //根据计算模型ID获取计算模型
+            $moModel = D('model');
+            $moData = $moModel->find($furQuoData['model_id']);
+
+            //获取选择得材料
+            $material = json_decode($moData['material'],true);
+            $_POST['material'] = array();
+            foreach($material as $k => $v){
+                $$k = I('post.'.$k);
+                if(empty($$k)){
+                    $this->error('请选择完整的材料！');
+                }
+                    $_POST['material'][$k] = $$k;
+            }
+
+            //获取所填参数
+            $parameter = json_decode($moData['parameter'],true);
+            $_POST['parameter'] = array();
+            foreach ($parameter as $k => $v){
+                $$v = I('post.'.$v);
+                if(empty($$v)){
+                    $this->error('请填写完整参数！');
+                }
+                $_POST['parameter'][$v] = $$v;
+                unset($_POST[$v]);
+            }
              $moduleModel = D('module');
             //判断是否验证成功
             if($moduleModel->create(I('post.'),1)){
-                $_POST['model_id'] = $mData['id'];
-                $_POST['model_cate'] = $mData['model_cate'];
-                $_POST['quote_id'] = $quoteId;
-                $_POST['material'] = array();
-                foreach ($material as $k => $v){
-                    $$k = I('post.'.$k);
-                    if(empty($$k)){
-                        $this->error('请选择完整的材料！');
-                    }
-                    foreach ($v as $k1 => $v1){
-                        $_POST['material'][$k] = $$k;
-                    }
-                    unset($_POST[$k]);
-                }
 
-                $_POST['parameter'] = array();
-                foreach ($parameter as $k => $v){
-                    $$v = I('post.'.$v);
-                    if(empty($$v)){
-                        $this->error('请填写完整参数！');
-                    }
-                    $_POST['parameter'][$v] = $$v;
-                    unset($_POST[$v]);
-                }
                 //判断是否修改成功
                 if($moduleModel->add()){
                     $quoteModel = D('quote');
@@ -165,21 +178,39 @@ class QuoteController extends BaseController {
             $this->error($moduleModel->getError());
         }
 
-       foreach ($material as $k => &$v){
-           foreach ($v as $k1 => &$v1){
-               $cateId = explode(',',$v1);
-               $goodsData = $goodsModel->field('id,goods_name')->where(array('cat_id'=>array('in',$cateId),'is_quote'=>array('eq','1')))->select();
-               $v1 = $goodsData;
-           }
-       }
+
         $this->assign(array(
-            'img' => $img,
-            'material' => $material,
-            'parameter' => $parameter,
-            'title' => '添加模块',
-            'btn_name' => '重新选择模块',
-            'btn_url' => U('chooseModel?id='.$quoteId)
+            'furData' => $furData,
+            'furId' => $furId,
+            'title' => '添加家具',
+            'btn_name' => '重新选择家具',
+            'btn_url' => U('chooseFurniture?id='.$quoteId)
         ));
         $this->display();
+    }
+    //AJAX获取计价模型
+    public function ajaxGetModel(){
+        $furId = I('get.furId');
+        $attr = I('get.attr');
+        $attr = rtrim($attr,',');
+        $model = D('furniture_quote');
+        $goodsModel = D('goods');
+        $data = $model->field('a.id,a.img_src,b.material,b.parameter')
+            ->alias('a')
+            ->where(array('fur_id'=>array('eq',$furId),'fur_attr_id'=>array('eq',$attr)))
+            ->join('LEFT JOIN __MODEL__ b ON a.model_id = b.id')
+            ->select();
+        if(!empty($data)){
+            $material = json_decode($data[0]['material'],true);
+            foreach ($material as $k => &$v){
+                foreach ($v as $k1 => &$v1){
+                    $cateId = explode(',',$v1);
+                    $goodsData = $goodsModel->field('id,goods_name')->where(array('cat_id'=>array('in',$cateId),'is_quote'=>array('eq','1')))->select();
+                    $v1 = $goodsData;
+                }
+            }
+            $data[0]['material'] = $material;
+        }
+        echo json_encode($data);
     }
 }

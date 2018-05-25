@@ -3,25 +3,26 @@ namespace Admin\Model;
 use Think\Model;
 class ModuleModel extends Model {
     //添加类别时允许接收的表单
-    protected $insertFields = array('agio','space','type');
+    protected $insertFields = array('quote_id','model_id','cate_id','agio','open','space','fur_name');
     //修改类别时允许接收的字段
     protected $updateFields = array('id','type_name');
     //验证码规则
     protected $_validate = array(
-           array('space','require','产品位置不能为空！',1),
-           array('type','require','产品类型不能为空！',1),
+           array('space','require','家具所在位置位置不能为空！',1),
+           array('open','check_number','开放面积必须为数字类型！',1,'callback'),
            array('agio','0.8,1','折扣只能在0.8-1之间！',1,'between'),
     );
+    public function check_number($open){
+        $v = is_numeric ($open) ? true : false;
+        return $v;
+    }
     //添加之前
     public function _before_insert(&$data,$option){
         $quoteId = I('post.quote_id');
-        $modelCate = I('post.model_cate');
-        $data['quote_id'] = $quoteId;
-        $data['model_cate'] = $modelCate;
-        $data['model_id'] = I('post.model_id');
+        $cateId = I('post.cate_id');
         $data['material'] = json_encode(I('post.material'));
         $data['parameter'] = json_encode(I('post.parameter'));
-        $num = $this->field('max(sort_id) as num')->where(array('quote_id'=>array('eq',$quoteId),'model_cate'=>array('eq',$modelCate)))->group('quote_id')->select();
+        $num = $this->field('max(sort_id) as num')->where(array('quote_id'=>array('eq',$quoteId),'cate_id'=>array('eq',$cateId)))->group('quote_id')->select();
         if(empty($num)){
             $data['sort_id'] = 1;
         }else{
@@ -55,7 +56,7 @@ class ModuleModel extends Model {
             ->alias('a')
             ->join('LEFT JOIN __MODEL__ b ON a.model_id = b.id')
             ->where(array(
-                'quote_id' => array('eq',$quoteId)
+                'a.quote_id' => array('eq',$quoteId)
             ))
             ->select();
         foreach ($data as $k => $v){
@@ -63,8 +64,10 @@ class ModuleModel extends Model {
            foreach ($parameter as $k1 => $v1){
                $$k1 = $v1;
            }
-            foreach (json_decode($v['material'],true) as $k2 => $v2){
-               $goodsModel = D('Admin/goods');
+           $material = json_decode($v['material'],true);
+
+            foreach ($material as $k2 => $v2){
+               $goodsModel = D('goods');
                $goodsData = $goodsModel->field('a.goods_name,max(b.goods_price) as price')
                    ->alias('a')
                    ->group('b.goods_id')
@@ -72,18 +75,20 @@ class ModuleModel extends Model {
                    ->join('LEFT JOIN __GOODS_NUMBER__ b ON a.id=b.goods_id')
                    ->find();
                $$k2 = $goodsData['price'];
-               $goodsName[ltrim($k2,'$')] = $goodsData['goods_name'];
+               $goodsName[$k2] = $goodsData['goods_name'];
             }
             $module = array();
-            foreach (json_decode($v['formula'],true) as $k3 => $v3){
-               $num = eval("return $v3[0];");
+            $formula = json_decode($v['formula'],true);
+
+            foreach ($formula as $k3 => $v3){
+               $num = eval($v3[0]);
                $price = eval("return $v3[1];");
                $fee = $num * $price;
                $agioFee = $fee * $v['agio'];
                if($v['agio'] === '1.00'){
                    $v['agio'] = 1;
                }
-               if($v['model_cate'] == '1'){
+               if($v['cate_id'] == '1'){
                    $cabinetFee = $cabinetFee + $fee;
                    $cabinetAgioFee = $cabinetAgioFee + $agioFee;
                    $hold = false;
@@ -98,7 +103,7 @@ class ModuleModel extends Model {
                        $cabinetDetailFee[$k3]['fee'] = $fee;
                        $cabinetDetailFee[$k3]['agioFee'] = $agioFee;
                    }
-               }elseif ($v['model_cate'] == '2'){
+               }elseif ($v['cate_id'] == '3'){
                    $frontFee = $frontFee + $fee;
                    $frontAgioFee = $frontAgioFee + $agioFee;
                    $hold = false;
@@ -113,7 +118,7 @@ class ModuleModel extends Model {
                        $frontDetailFee[$k3]['fee'] = $fee;
                        $frontDetailFee[$k3]['agioFee'] = $agioFee;
                    }
-               }elseif ($v['model_cate'] == '3'){
+               }elseif ($v['cate_id'] == '2'){
                    $doorFee = $doorFee + $fee;
                    $doorAgioFee = $doorAgioFee + $agioFee;
                    $hold = false;
@@ -140,22 +145,22 @@ class ModuleModel extends Model {
 
                );
             }
-            if($v['model_cate'] == '1'){
+            if($v['cate_id'] == '1'){
                 $cabinetData['module'][$k]['formula'] = $module;
                 $cabinetData['module'][$k]['space'] = $v['space'];
-                $cabinetData['module'][$k]['type'] = $v['type'];
+                $cabinetData['module'][$k]['fur_name'] = $v['fur_name'];
                 $cabinetData['module'][$k]['sort_id'] = $v['sort_id'];
                 $cabinetData['module'][$k]['parameter'] = $parameter;
-            }elseif ($v['model_cate'] == '2'){
+            }elseif ($v['cate_id'] == '3'){
                 $frontData['module'][$k]['formula'] = $module;
                 $frontData['module'][$k]['space'] = $v['space'];
-                $frontData['module'][$k]['type'] = $v['type'];
+                $frontData['module'][$k]['fur_name'] = $v['fur_name'];
                 $frontData['module'][$k]['sort_id'] = $v['sort_id'];
                 $frontData['module'][$k]['parameter'] = $parameter;
-            }elseif ($v['model_cate'] == '3'){
+            }elseif ($v['cate_id'] == '2'){
                 $doorData['module'][$k]['formula'] = $module;
                 $doorData['module'][$k]['space'] = $v['space'];
-                $doorData['module'][$k]['type'] = $v['type'];
+                $doorData['module'][$k]['fur_name'] = $v['fur_name'];
                 $doorData['module'][$k]['sort_id'] = $v['sort_id'];
                 $doorData['module'][$k]['parameter'] = $parameter;
             }

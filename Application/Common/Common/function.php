@@ -378,3 +378,36 @@ function showImg($img){
     header('content-type: image/gif');
     return file_get_contents($img);
 }
+/*
+ * 微信获取手机号解密
+ */
+function decryptData( $encryptedData, $iv,$sessionKey, &$data )
+{
+    if (strlen($sessionKey) != 24) {
+        return false;
+    }
+    $appid = 'wx6a73b5816054ba24';
+    $aesKey=base64_decode($sessionKey);
+
+
+    if (strlen($iv) != 24) {
+        return false;
+    }
+    $aesIV=base64_decode($iv);
+
+    $aesCipher=base64_decode($encryptedData);
+
+    $result=openssl_decrypt( $aesCipher, "AES-128-CBC", $aesKey, 1, $aesIV);
+
+    $dataObj=json_decode( $result );
+    if( $dataObj  == NULL )
+    {
+        return false;
+    }
+    if( $dataObj->watermark->appid != $appid )
+    {
+        return false;
+    }
+    $data = $result;
+    return true;
+}

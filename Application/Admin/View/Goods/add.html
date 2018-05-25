@@ -177,6 +177,7 @@
                 success : function(data){
                     /*******把服务器返还的属性循环拼成LI字符串********/
                     let li = '';
+                    console.log(data);
                     $(data).each(function(k,v){
                         if(v.attr_type == '2'){
                             li += '<div class="attr"><li>';

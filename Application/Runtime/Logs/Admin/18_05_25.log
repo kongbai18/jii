@@ -1,0 +1,338 @@
+[ 2018-05-25T14:50:24+08:00 ] ::1 /jiimadeeee/index.php/admin/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000443s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000619s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000765s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002671s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.003398s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044825s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045460s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002927s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003331s ]
+
+[ 2018-05-25T14:50:26+08:00 ] ::1 /jiimadeeee/index.php/Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000928s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000492s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000633s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000388s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001030s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041391s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042216s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003036s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004912s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006074s ]
+
+[ 2018-05-25T14:50:27+08:00 ] ::1 /jiimadeeee/index.php/Admin/Login/chkcode.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002110s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002277s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002994s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\LoginController.class.php 第 29 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003729s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004716s ]
+
+[ 2018-05-25T14:50:38+08:00 ] ::1 /jiimadeeee/index.php/Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000276s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003421s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001506s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002361s ]
+SQL: SHOW COLUMNS FROM `made_admin` [ RunTime:0.0142s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Model\AdminModel.class.php 第 36 行.
+NOTIC: [8] Undefined index: auto D:\wamp\wamp64\www\jiimadeeee\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SELECT * FROM `made_admin` WHERE `username` = 'root' LIMIT 1   [ RunTime:0.0012s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Model\AdminModel.class.php 第 54 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000385s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001104s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034156s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035161s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002499s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003649s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000670s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.022614s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019645s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.006479s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000182s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.023451s ]
+
+[ 2018-05-25T14:50:40+08:00 ] ::1 /jiimadeeee/index.php/Admin/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000449s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000649s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000995s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000220s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016772s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018229s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001885s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002752s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001777s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002226s ]
+
+[ 2018-05-25T14:50:40+08:00 ] ::1 /jiimadeeee/index.php/Admin/index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000617s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000808s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000385s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001417s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039487s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040159s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002549s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003804s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003662s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004773s ]
+
+[ 2018-05-25T14:50:40+08:00 ] ::1 /jiimadeeee/index.php/Admin/index/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000665s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000582s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000773s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000146s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000318s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035298s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036202s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001581s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002318s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003085s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004174s ]
+
+[ 2018-05-25T14:50:40+08:00 ] ::1 /jiimadeeee/index.php/Admin/index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000337s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004024s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000812s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001031s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000270s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015085s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016143s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000723s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000892s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000823s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001007s ]
+
+[ 2018-05-25T14:50:49+08:00 ] ::1 /jiimadeeee/index.php/Admin/Furniture/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000130s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001808s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003434s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_furniture` [ RunTime:0.0055s ]
+SQL: SELECT `id`,`fur_name` FROM `made_furniture` WHERE `cate_id` = '1' ORDER BY sort_id asc  [ RunTime:0.0012s ]
+SQL: SELECT `id`,`fur_name` FROM `made_furniture` WHERE `cate_id` = '2' ORDER BY sort_id asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`fur_name` FROM `made_furniture` WHERE `cate_id` = '3' ORDER BY sort_id asc  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000506s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001199s ]
+NOTIC: [8] Undefined variable: data D:\wamp\wamp64\www\jiimadeeee\Application\Runtime\Cache\Admin\bc3aa5ba5d153fdbef92213ec841b114.php 第 48 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\wamp64\www\jiimadeeee\Application\Runtime\Cache\Admin\bc3aa5ba5d153fdbef92213ec841b114.php 第 48 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044753s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045432s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002033s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002912s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003053s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004023s ]
+
+[ 2018-05-25T14:50:51+08:00 ] ::1 /jiimadeeee/index.php/Admin/Furniture/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000171s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002391s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002278s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003174s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_furniture` [ RunTime:0.0079s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000697s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001422s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037730s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001914s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002829s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003222s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004136s ]
+
+[ 2018-05-25T14:52:01+08:00 ] ::1 /jiimadeeee/index.php/Admin/Furniture/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000204s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002888s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001726s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002234s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_furniture` [ RunTime:0.0033s ]
+NOTIC: [8] Undefined index: validate D:\wamp\wamp64\www\jiimadeeee\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\wamp\wamp64\www\jiimadeeee\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `made_furniture` (`fur_name`,`cate_id`,`sort_id`,`is_index`,`attribute`,`img_src`) VALUES ('橱柜','1','100','1','{\"test\":{\"1\":[\"test1\",\"test2\"]},\"test1\":{\"1\":[\"test1\",\"test2\"]},\"test2\":{\"2\":[\"test1\",\"test2\"]}}','http://p5koaz6je.bkt.clouddn.com/jiimade/view/images/furniture/2018/05/25/25067?') [ RunTime:0.0036s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000442s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001170s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037554s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039088s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002707s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004034s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.025134s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015705s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.007050s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000239s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.019515s ]
+
+[ 2018-05-25T14:52:02+08:00 ] ::1 /jiimadeeee/index.php/Admin/Furniture/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000122s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001291s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001985s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002706s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_furniture` [ RunTime:0.0028s ]
+SQL: SELECT `id`,`fur_name` FROM `made_furniture` WHERE `cate_id` = '1' ORDER BY sort_id asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`fur_name` FROM `made_furniture` WHERE `cate_id` = '2' ORDER BY sort_id asc  [ RunTime:0.0015s ]
+SQL: SELECT `id`,`fur_name` FROM `made_furniture` WHERE `cate_id` = '3' ORDER BY sort_id asc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000140s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000352s ]
+NOTIC: [8] Undefined variable: data D:\wamp\wamp64\www\jiimadeeee\Application\Runtime\Cache\Admin\bc3aa5ba5d153fdbef92213ec841b114.php 第 48 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\wamp64\www\jiimadeeee\Application\Runtime\Cache\Admin\bc3aa5ba5d153fdbef92213ec841b114.php 第 48 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039099s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039799s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002405s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003386s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002974s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003751s ]
+
+[ 2018-05-25T15:54:09+08:00 ] ::1 /jiimadeeee/index.php/Admin/Order/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000209s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002443s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004717s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_order` [ RunTime:0.0032s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `made_order` LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `made_order` ORDER BY add_time desc LIMIT 0,20   [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000519s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001229s ]
+NOTIC: [8] Undefined variable: btn_url D:\wamp\wamp64\www\jiimadeeee\Application\Runtime\Cache\Admin\6929b1ce86d5fcc660e84cb37a1b0795.php 第 12 行.
+NOTIC: [8] Undefined variable: btn_name D:\wamp\wamp64\www\jiimadeeee\Application\Runtime\Cache\Admin\6929b1ce86d5fcc660e84cb37a1b0795.php 第 12 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\wamp\wamp64\www\jiimadeeee\Application\Runtime\Cache\Admin\6929b1ce86d5fcc660e84cb37a1b0795.php 第 52 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\wamp\wamp64\www\jiimadeeee\Application\Runtime\Cache\Admin\6929b1ce86d5fcc660e84cb37a1b0795.php 第 52 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\wamp\wamp64\www\jiimadeeee\Application\Runtime\Cache\Admin\6929b1ce86d5fcc660e84cb37a1b0795.php 第 52 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046655s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047580s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002795s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001346s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002359s ]
+
+[ 2018-05-25T15:54:11+08:00 ] ::1 /jiimadeeee/index.php/Admin/index/back_list.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000192s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002375s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003768s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004421s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+ERR: 非法操作:back_list
+
+[ 2018-05-25T15:54:14+08:00 ] ::1 /jiimadeeee/index.php/Admin/Furniture/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000227s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003089s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002273s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002971s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_furniture` [ RunTime:0.0031s ]
+SQL: SELECT `id`,`fur_name` FROM `made_furniture` WHERE `cate_id` = '1' ORDER BY sort_id asc  [ RunTime:0.0013s ]
+SQL: SELECT `id`,`fur_name` FROM `made_furniture` WHERE `cate_id` = '2' ORDER BY sort_id asc  [ RunTime:0.0007s ]
+SQL: SELECT `id`,`fur_name` FROM `made_furniture` WHERE `cate_id` = '3' ORDER BY sort_id asc  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000832s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001917s ]
+NOTIC: [8] Undefined variable: data D:\wamp\wamp64\www\jiimadeeee\Application\Runtime\Cache\Admin\bc3aa5ba5d153fdbef92213ec841b114.php 第 48 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\wamp64\www\jiimadeeee\Application\Runtime\Cache\Admin\bc3aa5ba5d153fdbef92213ec841b114.php 第 48 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049924s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050590s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001615s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002301s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003811s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004573s ]
+

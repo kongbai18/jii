@@ -25,27 +25,10 @@
         <table cellspacing="1" cellpadding="3" width="100%">
             <input type="hidden" name="id" value="<?php echo $data['id']; ?>">
             <tr>
-                <td class="label">模型名称</td>
+                <td class="label">模型名称：</td>
                 <td>
                     <input type="text" name="model_name" maxlength="60" value="<?php echo $data['model_name']; ?>"/>
                     <span class="require-field">*</span>
-                </td>
-            </tr>
-            <tr>
-                <td class="label">模型分类：</td>
-                <td >
-                    <select name="model_cate">
-                        <option value="1" <?php echo ($data['model_cate'] == 1)?'selected':'' ?>>柜体</option>
-                        <option value="2" <?php echo ($data['model_cate'] == 2)?'selected':'' ?>>饰面</option>
-                        <option value="3" <?php echo ($data['model_cate'] == 3)?'selected':'' ?>>门</option>
-                    </select>
-                    <span class="require-field">*</span>
-                </td>
-            </tr>
-            <tr>
-                <td class="label">模型图：</td>
-                <td >
-                    <input type="file" name="img_src" accept="image/*" >
                 </td>
             </tr>
             <tr>
@@ -58,16 +41,16 @@
                     <?php foreach($material as $k => $v): ?>
                     <div id="material-list<?php echo $index;?>" class="material-list">
                         <a href="javascript:void(0)" onclick="delMaterial(this)">[删除此材料]</a>
-                        <input type="text" name="material-price<?php echo $index;?>" value="<?php echo $k;?>" style="width: 80px;margin-right: 5px;">
+                        <input type="text" name="material-price[<?php echo $index;?>]" value="<?php echo $k;?>" style="width: 80px;margin-right: 5px;">
                         <?php foreach($v as $k1 => $v1): $cateId = explode(',',$v1)?>
-                        <input type="text" name="material-name<?php echo $index;?>" value="<?php echo $k1;?>" style="width: 80px;margin-right: 5px;">
+                        <input type="text" name="material-name[<?php echo $index;?>]" value="<?php echo $k1;?>" style="width: 80px;margin-right: 5px;">
                            <?php foreach($cateId as $k2 => $v2):?>
                               <?php if($k2 == 0): ?>
                                   <li> <a href="javascript:void(0)" sort="<?php echo $index;?>" onclick="addMaterial(this)">[+]</a>
                               <?php else: ?>
                                   <li> <a href="javascript:void(0)" sort="<?php echo $index;?>" onclick="addMaterial(this)">[-]</a>
                               <?php endif; ?>
-                                    <select name="material-val['<?php echo $index;?>'][]">
+                                    <select name="material-val[<?php echo $index;?>][]">
                                         <option value="">请选择...</option>
                                         <?php foreach($catData as $k3 => $v3): ?>
                                         <option value="<?php echo $v3['id'] ?>" <?php echo ($v3['id']== $v2)?'selected':''?>><?php echo str_repeat('-',2*$v3['level']).$v3['name']; ?></option>
@@ -113,19 +96,6 @@
                         <input type="text" name="formula-unit[]" placeholder="计价单位" value="<?php echo $v[2]; ?>" style="width: 80px;">
                     </li>
                     <?php $foNum = $foNum +1;  endforeach;?>
-                </td>
-            </tr>
-            <tr>
-                <td class="label">推荐排序：</td>
-                <td>
-                    <input type="text" name="sort_id" size="5" value="<?php echo $data['sort_id']; ?>"/>
-                </td>
-            </tr>
-            <tr>
-                <td class="label">是否显示：</td>
-                <td>
-                    <input type="radio" name="is_index" value="1"  <?php echo ($data['is_index'] == '1')?'checked="checked"':''; ?>/> 是
-                    <input type="radio" name="is_index" value="0" <?php echo ($data['is_index'] == '0')?'checked="checked"':''; ?>/> 否
                 </td>
             </tr>
             <tr>
