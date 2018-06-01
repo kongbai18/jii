@@ -158,6 +158,11 @@ class IndexController extends Controller {
         $model = D('Admin/Goods');
         echo $model->showImg();
     }
+    //检测用户是否存在报价单
+    public function checkQuote(){
+        $model = D('Admin/quote');
+        echo json_encode($model->checkQuote());
+    }
     //获取手机号
     public function getPhone(){
         $model = D('Admin/user');
@@ -181,9 +186,30 @@ class IndexController extends Controller {
         );
         echo json_encode($data);
     }
+    //获取对应属性的对应计价模型
+    public function getFurModel(){
+        $model = D('Admin/Model');
+        //var_dump($model->getFurModel());
+        echo json_encode($model->getFurModel());
+    }
+    //小程序添加家具模块
+    public function addWxModule(){
+        $model = D('Admin/Module');
+        echo json_encode($model->addWxModule());
+    }
+    //小程序获取个人家具模块
+    public function getModule(){
+        $model = D('Admin/Module');
+        echo json_encode($model->getModule());
+    }
+    //小程序删除个人家具模块
+    public function delModule(){
+        $model = D('Admin/Module');
+        echo json_encode($model->delModule());
+    }
     public function test(){
         $model = D('Admin/Model');
-        var_dump($model->getModel());
+        var_dump($model->test());
     }
 
 }

@@ -29,6 +29,7 @@ CREATE TABLE `made_model` (
   `material` text NOT NULL COMMENT '涉及材料',
   `parameter` varchar(300) NOT NULL COMMENT '所需参数',
   `formula` text NOT NULL COMMENT '计价公式',
+  `extend` text NOT NULL COMMENT '扩展数据',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='报价模型';
 
@@ -40,9 +41,12 @@ CREATE TABLE `made_module` (
   `cate_id` tinyint UNSIGNED NOT NULL COMMENT '家具大类Id，1柜体，2门，3饰面',
   `agio` decimal(3,2) UNSIGNED NOT NULL DEFAULT '1'COMMENT '折扣',
   `space` varchar(100) NOT NULL DEFAULT '' COMMENT '产品位置',
-  `open` varchar(100) NOT NULL DEFAULT '0' COMMENT '产品位置',
   `fur_name` varchar(50) NOT NULL DEFAULT '' COMMENT '家具名称',
   `material` text NOT NULL COMMENT '材料价格',
   `parameter` text NOT NULL COMMENT '参数值',
+  `ext` text NOT NULL COMMENT '扩展',
    KEY `quote_id` (`quote_id`,`cate_id`,`sort_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='报价单中模块家具';
+
+ALTER TABLE `made_module` drop column `open`;
+

@@ -51,15 +51,18 @@ class UserModel extends Model {
          }
     }
     public function getPhone(){
-        $iencryptedDatav = I('get.iencryptedDatav');
+        $encryptedData = I('get.encryptedData');
         $iv = I('get.iv');
         $userId = I('get.userId');
         $thr_session = I('get.thr_session');
+        $latitude = I('get.latitude');
+        $longitude = I('get.longitude');
+        $address = getAddress($longitude,$latitude);
         $user = checkUser($userId,$thr_session);
         if($user){
             $key = $this->field('session_key')->find($userId);
             $data = array();
-            $result = decryptData($iencryptedDatav,$iv,$key['session_key'],$data);
+            $result = decryptData($encryptedData,$iv,$key['session_key'],$data);
             $data = json_decode($data,true);
             if($result){
                 $reData = array(
@@ -67,10 +70,22 @@ class UserModel extends Model {
                   'telephone' => $data['phoneNumber']
                 );
                 $this->save($reData);
+                $quoteModel = D('quote');
+                $quoteId = $quoteModel->where(array('user_id'=>array('eq',$userId)))->select();
+                if(empty($quoteId)){
+                    $quoteData = array(
+                        'id' => create_unique(),
+                        'user_id' => $userId,
+                        'telephone' => $data['phoneNumber'],
+                        'address' => $address,
+                        'add_time' => time(),
+                    );
+                    $quoteModel->add($quoteData);
+                }
             }
-            return $data;
+            return true;
         }else{
-
+            return false;
         }
     }
 }

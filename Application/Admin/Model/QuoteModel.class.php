@@ -3,7 +3,7 @@ namespace Admin\Model;
 use Think\Model;
 class QuoteModel extends Model {
     //添加类别时允许接收的表单
-    protected $insertFields = array('id','address','telephone');
+    protected $insertFields = array('id','user_id','address','telephone');
     //修改类别时允许接收的字段
     protected $updateFields = array('id','type_name');
     //验证码规则
@@ -60,7 +60,7 @@ class QuoteModel extends Model {
     //添加之前
     public function _before_insert(&$data,$option){
         $data['add_time'] = time();
-        $data['user_id'] = 0;
+        $data['id'] = $this->create_unique();
     }
     //修改之前
     public function _before_update(&$data,$option){
@@ -69,5 +69,19 @@ class QuoteModel extends Model {
     //删除之前
     public function _before_delete($option){
 
+    }
+
+    public function checkQuote(){
+        $userId = I('get.userId');
+        $thr_session = I('get.thr_session');
+        $user = checkUser($userId,$thr_session);
+        if($user){
+            $data = $this->where(array('user_id'=>array('eq',$userId)))->select();
+            if(empty($data)){
+                return true;
+            }else{
+                return false;
+            }
+        }
     }
 }

@@ -411,3 +411,16 @@ function decryptData( $encryptedData, $iv,$sessionKey, &$data )
     $data = $result;
     return true;
 }
+/*
+ * 百度API根据经纬度获取地址
+ */
+function getAddress($longitude,$latitude){
+    $longitude=$longitude;//用户当前定位的经度
+
+    $latitude=$latitude;//用户当前定位的纬度
+    $place_url='http://api.map.baidu.com/geocoder/v2/?location='.$latitude.','.$longitude.'&output=json&ak=G2Mt3eb7ZM7ajoRIQwXdYY27w9DVYhvl';
+    $json_place=file_get_contents($place_url);
+    $place_arr=json_decode($json_place,true);
+    $address=$place_arr['result']['formatted_address'];
+    return $address;
+}

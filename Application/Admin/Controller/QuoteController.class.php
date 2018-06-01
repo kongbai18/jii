@@ -25,7 +25,7 @@ class QuoteController extends BaseController {
         $model = D('quote');
         //判断是否接收表单
         if(IS_POST){
-            $_POST['id'] = $model->create_unique();
+            $_POST['user_id'] = 0;
             //判断是否验证成功
             if($model->create(I('post.'),1)){
                 //判断是否添加成功
@@ -120,6 +120,7 @@ class QuoteController extends BaseController {
 
         //判断是否接收表单
         if(IS_POST){
+            //var_dump($_POST);die;
             $furQuoId = I('post.fur-quo');
             if(!$furQuoId){
                 $this->error('请选择存在的配置！');
@@ -159,6 +160,37 @@ class QuoteController extends BaseController {
                 $_POST['parameter'][$v] = $$v;
                 unset($_POST[$v]);
             }
+
+            //获取扩展参数
+            $extend = json_decode($moData['ext'],true);
+            $_POST['ext'] = array();
+            foreach ($extend as $k => $v){
+                foreach ($v as $k1 => $v1){
+                    $$v1[1] = I('post.'.$v1[1]);
+                    if($k1 == '3'){
+                        if(!is_numeric ($$v1[1][0])){
+                            $this->error($v1[0].'参数必须为数字类型！');
+                        }
+                    }else{
+                        if(!$$v1[1]){
+                            $this->error($v1[0].'必须选择！');
+                        }
+                    }
+
+                    $total = 0;
+
+                    if($k1 == '1'){
+                        $total = $total + $$v1[1];
+                    }else{
+                        foreach ($$v1[1] as $k2 => $v2){
+                            $total = $total + $v2;
+                        }
+                    }
+
+                    $_POST['ext'][$v1[1]] = $total;
+                }
+            }
+
              $moduleModel = D('module');
             //判断是否验证成功
             if($moduleModel->create(I('post.'),1)){
@@ -195,7 +227,7 @@ class QuoteController extends BaseController {
         $attr = rtrim($attr,',');
         $model = D('furniture_quote');
         $goodsModel = D('goods');
-        $data = $model->field('a.id,a.img_src,b.material,b.parameter')
+        $data = $model->field('a.id,a.img_src,b.material,b.parameter,b.ext')
             ->alias('a')
             ->where(array('fur_id'=>array('eq',$furId),'fur_attr_id'=>array('eq',$attr)))
             ->join('LEFT JOIN __MODEL__ b ON a.model_id = b.id')

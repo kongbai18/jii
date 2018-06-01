@@ -37,6 +37,14 @@
         list-style:none;
         margin-right: 20px;
     }
+    .ext-list{
+        margin-top:5px;
+    }
+    .ext-list li{
+        list-style:none;
+        display: inline-block;
+        margin-right: 20px;
+    }
 </style>
 <div class="main-div">
     <form method="post" action="/jiimadeeee/index.php/Admin/Model/add.html"enctype="multipart/form-data" >
@@ -74,6 +82,17 @@
                         <input type="text" name="formula-price[]" placeholder="计价单价" style="width: 80px;">
                         <input type="text" name="formula-unit[]" placeholder="计价单位" style="width: 80px;">
                     </li>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">扩展参数：</td>
+                <td id="ext">
+                    <div>
+                        <input type="radio" name="ext" value="1" checked>单选
+                        <input type="radio" name="ext" value="2">多选
+                        <input type="radio" name="ext" value="3">输入框
+                        <input type="button" value="添加一个扩展" onclick="addExt()">
+                    </div>
                 </td>
             </tr>
 
@@ -146,6 +165,49 @@
     }
     function repeat(str, num){
         return new Array( num + 1 ).join( str );
+    }
+</script>
+<script>
+    index = 0;
+    function addExt() {
+        let ext = $("input[name='ext']:checked").val();
+        index = index + 1;
+        var div = '<div id="ext-list'+index+'" class="ext-list">';
+        div += '<a href="javascript:void(0)" onclick="delExt(this)">[删除此扩展]</a>';
+        if(ext == '1'){
+            div += ' 单选 ';
+        }else if(ext == '2'){
+            div += ' 多选 ';
+        }else if(ext == '3'){
+            div += ' 输入框 ';
+        }
+        div += '<input type="hidden" name="ext_cat['+index+']" value="'+ext+'">';
+        div += '<input type="text"  placeholder="扩展名称" name="ext_name['+index+']" style="width: 80px;margin-right: 5px;">';
+        div += '<input type="text"  placeholder="扩展参数符号" name="ext_para['+index+']" style="width: 80px;margin-right: 5px;">';
+        if(ext == '1' || ext == '2'){
+            div += '<li> <a href="javascript:void(0)" sort="'+index+'"  onclick="addExtVal(this)">[+]</a>';
+            div += '<input type="text" placeholder="扩展值名称" name="ext_val_name['+index+'][]" style="width: 80px;margin-right: 5px;">';
+            div += '<input type="text" placeholder="扩展值" name="ext_val['+index+'][]" style="width: 80px;"></li>';
+            div += '</div>';
+        }
+        $('#ext').append(div);
+    }
+    function delExt(a) {
+        let div = $(a).parent();
+        div.remove();
+    }
+    function addExtVal(a) {
+        let li = $(a).parent();
+        var sort = $(a).attr('sort');
+        var qqq = '#ext-list'+sort;
+        if($(a).text() == '[+]'){
+            var newLi = li.clone();
+            newLi.find('a').text('[-]');
+            newLi.find('input').val('');
+            $(qqq).append(newLi);
+        }else{
+            li.remove();
+        }
     }
 </script>
 

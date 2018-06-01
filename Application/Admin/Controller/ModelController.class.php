@@ -26,6 +26,7 @@ class ModelController extends BaseController {
         $catModel = D('category');
         //判断是否接收表单
         if(IS_POST){
+            //var_dump($_POST);die;
             //判断是否验证成功
             if($model->create(I('post.'),1)){
                 //判断是否添加成功
@@ -55,6 +56,7 @@ class ModelController extends BaseController {
         $data = $model->find($id);
         //判断是否接收表单
         if(IS_POST){
+            //var_dump($_POST);die;
             //判断是否验证成功
             if($model->create(I('post.'),2)){
                 //判断是否修改成功
@@ -87,4 +89,5 @@ class ModelController extends BaseController {
         }
         $this->error($model->getError());
     }
+
 }
