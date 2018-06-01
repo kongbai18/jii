@@ -153,7 +153,7 @@ class ModuleModel extends Model {
                  'remarkes' => $goodsName[ltrim($v3[1],'$')],
 
                );
-               $totalModulePrice = $totalModulePrice + $price;
+               $totalModulePrice = $totalModulePrice + $agioFee;
             }
             if($v['cate_id'] == '1'){
                 $cabinetData['module'][$k]['formula'] = $module;
