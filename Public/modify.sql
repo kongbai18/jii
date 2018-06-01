@@ -1,5 +1,6 @@
-ALTER TABLE `made_user` ADD  `session_key` varchar(150) NOT NULL DEFAULT '' COMMENT '密钥',
+ALTER TABLE `made_user` ADD  `session_key` varchar(150) NOT NULL DEFAULT '' COMMENT '密钥';
 
+drop table if exists `made_furniture`;
 CREATE TABLE `made_furniture` (
   `id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Id',
   `fur_name` varchar(30) NOT NULL  COMMENT '家具名称',
@@ -12,6 +13,7 @@ CREATE TABLE `made_furniture` (
    KEY `cate_id` `cate_id`
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='家具类表';
 
+drop table if exists `made_furniture_quote`;
 CREATE TABLE `made_furniture_quote` (
   `id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Id',
   `fur_id` mediumint(8) UNSIGNED NOT NULL COMMENT 'Id',
@@ -22,7 +24,7 @@ CREATE TABLE `made_furniture_quote` (
    KEY `furId` (`fur_id`,`fur_attr_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='家具类表';
 
-DROP TABLE `made_model`;
+drop table if exists `made_model`;
 CREATE TABLE `made_model` (
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Id',
   `model_name` varchar(30) NOT NULL COMMENT '模型名称',
@@ -33,7 +35,7 @@ CREATE TABLE `made_model` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='报价模型';
 
-DROP TABLE `made_module`;
+drop table if exists `made_module`;
 CREATE TABLE `made_module` (
   `quote_id` varchar(30) NOT NULL  COMMENT '报价单Id',
   `sort_id` tinyint UNSIGNED NOT NULL COMMENT '家具编号',
@@ -47,6 +49,4 @@ CREATE TABLE `made_module` (
   `ext` text NOT NULL COMMENT '扩展',
    KEY `quote_id` (`quote_id`,`cate_id`,`sort_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='报价单中模块家具';
-
-ALTER TABLE `made_module` drop column `open`;
 

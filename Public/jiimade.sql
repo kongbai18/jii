@@ -176,17 +176,6 @@ CREATE TABLE `made_admin` (
 INSERT INTO `made_admin` (`id`, `username`, `password`) VALUES
 (1, 'root', '48601017c9c217061bc9c231f246ca7f');
 
-CREATE TABLE `made_model` (
-  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Id',
-  `model_name` varchar(30) NOT NULL COMMENT '模型名称',
-  `material` text NOT NULL COMMENT '涉及材料',
-  `parameter` varchar(300) NOT NULL COMMENT '所需参数',
-  `formula` text NOT NULL COMMENT '计价公式',
-  `is_index` tinyint(4) UNSIGNED NOT NULL DEFAULT '1' COMMENT '是否显示',
-  `sort_id` mediumint(8) UNSIGNED NOT NULL DEFAULT '100' COMMENT '排序',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='报价模型';
-
 CREATE TABLE `made_quote` (
   `id` varchar(30) NOT NULL  COMMENT 'Id',
   `user_id` mediumint(8) UNSIGNED NOT NULL COMMENT '用户Id',
@@ -198,20 +187,6 @@ CREATE TABLE `made_quote` (
   KEY `user_id` (`user_id`),
   KEY `telephone` (`telephone`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='报价单';
-
-CREATE TABLE `made_module` (
-  `quote_id` varchar(30) NOT NULL  COMMENT '报价单Id',
-  `sort_id` tinyint UNSIGNED NOT NULL COMMENT '家具编号',
-  `model_id` tinyint UNSIGNED NOT NULL COMMENT '模型Id',
-  `cate_id` tinyint UNSIGNED NOT NULL COMMENT '家具大类Id，1柜体，2门，3饰面',
-  `agio` decimal(3,2) UNSIGNED NOT NULL DEFAULT '1'COMMENT '折扣',
-  `space` varchar(100) NOT NULL DEFAULT '' COMMENT '产品位置',
-  `open` varchar(100) NOT NULL DEFAULT '0' COMMENT '产品位置',
-  `fur_name` varchar(50) NOT NULL DEFAULT '' COMMENT '家具名称',
-  `material` text NOT NULL COMMENT '材料价格',
-  `parameter` text NOT NULL COMMENT '参数值',
-   KEY `quote_id` (`quote_id`,`cate_id`,`sort_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='报价单中模块家具';
 
 CREATE TABLE `made_furniture` (
   `id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Id',
@@ -234,3 +209,27 @@ CREATE TABLE `made_furniture_quote` (
    PRIMARY KEY (`id`),
    KEY `furId` (`fur_id`,`fur_attr_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='家具类表';
+
+CREATE TABLE `made_model` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Id',
+  `model_name` varchar(30) NOT NULL COMMENT '模型名称',
+  `material` text NOT NULL COMMENT '涉及材料',
+  `parameter` varchar(300) NOT NULL COMMENT '所需参数',
+  `formula` text NOT NULL COMMENT '计价公式',
+  `extend` text NOT NULL COMMENT '扩展数据',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='报价模型';
+
+CREATE TABLE `made_module` (
+  `quote_id` varchar(30) NOT NULL  COMMENT '报价单Id',
+  `sort_id` tinyint UNSIGNED NOT NULL COMMENT '家具编号',
+  `model_id` tinyint UNSIGNED NOT NULL COMMENT '模型Id',
+  `cate_id` tinyint UNSIGNED NOT NULL COMMENT '家具大类Id，1柜体，2门，3饰面',
+  `agio` decimal(3,2) UNSIGNED NOT NULL DEFAULT '1'COMMENT '折扣',
+  `space` varchar(100) NOT NULL DEFAULT '' COMMENT '产品位置',
+  `fur_name` varchar(50) NOT NULL DEFAULT '' COMMENT '家具名称',
+  `material` text NOT NULL COMMENT '材料价格',
+  `parameter` text NOT NULL COMMENT '参数值',
+  `ext` text NOT NULL COMMENT '扩展',
+   KEY `quote_id` (`quote_id`,`cate_id`,`sort_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='报价单中模块家具';
