@@ -197,7 +197,7 @@ CREATE TABLE `made_furniture` (
   `sort_id` smallint(5) UNSIGNED NOT NULL DEFAULT '100' COMMENT '排序',
   `is_index` tinyint(3) UNSIGNED NOT NULL DEFAULT '0' COMMENT '是否显示',
    PRIMARY KEY (`id`),
-   KEY `cate_id` `cate_id`
+   KEY `cate_id` (`cate_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='家具类表';
 
 CREATE TABLE `made_furniture_quote` (
