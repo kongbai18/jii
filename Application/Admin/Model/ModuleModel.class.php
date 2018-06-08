@@ -96,8 +96,8 @@ class ModuleModel extends Model {
             $totalModulePrice = 0;
             foreach ($formula as $k3 => $v3){
                $num = eval($v3[0]);
-               $price = eval($v3[1]);
-               $fee = $num * $price;
+               $price = eval("return".$v3[1].";");
+               $fee = eval($v3[3]);
                $agioFee = $fee * $v['agio'];
                if($v['agio'] === '1.00'){
                    $v['agio'] = 1;

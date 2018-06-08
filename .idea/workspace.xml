@@ -3,23 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="0b8f0d28-43ca-4f73-9bdb-a816208d00ec" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Application/Admin/Controller/QuoteController.class.php" afterPath="$PROJECT_DIR$/Application/Admin/Controller/QuoteController.class.php" />
       <change beforePath="$PROJECT_DIR$/Application/Admin/Model/ModelModel.class.php" afterPath="$PROJECT_DIR$/Application/Admin/Model/ModelModel.class.php" />
       <change beforePath="$PROJECT_DIR$/Application/Admin/Model/ModuleModel.class.php" afterPath="$PROJECT_DIR$/Application/Admin/Model/ModuleModel.class.php" />
-      <change beforePath="$PROJECT_DIR$/Application/Admin/Model/QuoteModel.class.php" afterPath="$PROJECT_DIR$/Application/Admin/Model/QuoteModel.class.php" />
-      <change beforePath="$PROJECT_DIR$/Application/Admin/View/Index/menu.html" afterPath="$PROJECT_DIR$/Application/Admin/View/Index/menu.html" />
       <change beforePath="$PROJECT_DIR$/Application/Admin/View/Model/add.html" afterPath="$PROJECT_DIR$/Application/Admin/View/Model/add.html" />
       <change beforePath="$PROJECT_DIR$/Application/Admin/View/Model/edit.html" afterPath="$PROJECT_DIR$/Application/Admin/View/Model/edit.html" />
-      <change beforePath="$PROJECT_DIR$/Application/Admin/View/Quote/lst.html" afterPath="$PROJECT_DIR$/Application/Admin/View/Quote/lst.html" />
-      <change beforePath="$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php" />
-      <change beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/3ac3b7524beedf12cb27698bd1472710.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/3ac3b7524beedf12cb27698bd1472710.php" />
       <change beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/4bc4913b407324fb4d494724d5710d65.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/4bc4913b407324fb4d494724d5710d65.php" />
-      <change beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/5f62cf3ecb66a47dcb1a9b7512abfb3d.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/5f62cf3ecb66a47dcb1a9b7512abfb3d.php" />
       <change beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/76f1346423b45590bfe3f0573a180526.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/76f1346423b45590bfe3f0573a180526.php" />
-      <change beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/e9d874e8c3f402267c11d3dda67ffb5c.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/e9d874e8c3f402267c11d3dda67ffb5c.php" />
-      <change beforePath="$PROJECT_DIR$/Public/jiimade.sql" afterPath="$PROJECT_DIR$/Public/jiimade.sql" />
-      <change beforePath="$PROJECT_DIR$/Public/modify.sql" afterPath="$PROJECT_DIR$/Public/modify.sql" />
-      <change beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change beforePath="$PROJECT_DIR$/Application/Runtime/Logs/Admin/18_06_08.log" afterPath="$PROJECT_DIR$/Application/Runtime/Logs/Admin/18_06_08.log" />
+      <change beforePath="$PROJECT_DIR$/Application/Runtime/Logs/Common/18_06_08.log" afterPath="$PROJECT_DIR$/Application/Runtime/Logs/Common/18_06_08.log" />
+      <change beforePath="$PROJECT_DIR$/Application/Runtime/Logs/Home/18_06_08.log" afterPath="$PROJECT_DIR$/Application/Runtime/Logs/Home/18_06_08.log" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,8 +28,8 @@
       <file leaf-file-name="IndexController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-26">
-              <caret line="213" column="34" lean-forward="true" selection-start-line="213" selection-start-column="34" selection-end-line="213" selection-end-column="34" />
+            <state relative-caret-position="5751">
+              <caret line="213" column="34" lean-forward="false" selection-start-line="213" selection-start-column="34" selection-end-line="213" selection-end-column="34" />
               <folding>
                 <marker date="1528420225799" expanded="true" signature="446:465" ph="..." />
               </folding>
@@ -48,8 +40,8 @@
       <file leaf-file-name="ModelModel.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Admin/Model/ModelModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8397">
-              <caret line="311" column="12" lean-forward="false" selection-start-line="311" selection-start-column="12" selection-end-line="313" selection-end-column="40" />
+            <state relative-caret-position="565">
+              <caret line="93" column="0" lean-forward="true" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -58,28 +50,74 @@
       <file leaf-file-name="QuoteController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/QuoteController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
+            <state relative-caret-position="2322">
               <caret line="91" column="40" lean-forward="false" selection-start-line="91" selection-start-column="36" selection-end-line="91" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ModuleModel.class.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ModuleModel.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/Admin/Model/ModuleModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="97" column="35" lean-forward="false" selection-start-line="97" selection-start-column="35" selection-end-line="97" selection-end-column="35" />
+            <state relative-caret-position="638">
+              <caret line="98" column="50" lean-forward="false" selection-start-line="98" selection-start-column="50" selection-end-line="98" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modify.sql" pinned="false" current-in-tab="true">
+      <file leaf-file-name="modify.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/modify.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="783">
-              <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+            <state relative-caret-position="134">
+              <caret line="12" column="35" lean-forward="false" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Admin/View/Model/add.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="70" column="111" lean-forward="true" selection-start-line="70" selection-start-column="111" selection-end-line="70" selection-end-column="111" />
+              <folding>
+                <element signature="n#style#0;n#input#3;n#li#0;n#td#1;n#tr#4;n#table#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <marker date="1528443805784" expanded="true" signature="4954:4984" ph="..." />
+                <marker date="1528443805784" expanded="true" signature="5087:5117" ph="..." />
+                <marker date="1528443805784" expanded="true" signature="6322:6352" ph="..." />
+                <marker date="1528443805784" expanded="true" signature="6448:6478" ph="..." />
+                <marker date="1528443805784" expanded="true" signature="6728:6758" ph="..." />
+                <marker date="1528443805784" expanded="true" signature="6855:6867" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Admin/View/Model/edit.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="365">
+              <caret line="110" column="134" lean-forward="true" selection-start-line="110" selection-start-column="134" selection-end-line="110" selection-end-column="134" />
+              <folding>
+                <element signature="n#style#0;n#input#3;n#li#0;n#td#1;n#tr#4;n#table#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                <marker date="1528443805737" expanded="true" signature="10312:10342" ph="..." />
+                <marker date="1528443805737" expanded="true" signature="10441:10471" ph="..." />
+                <marker date="1528443805737" expanded="true" signature="11709:11739" ph="..." />
+                <marker date="1528443805737" expanded="true" signature="11835:11865" ph="..." />
+                <marker date="1528443805737" expanded="true" signature="12115:12145" ph="..." />
+                <marker date="1528443805737" expanded="true" signature="12242:12254" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModelController.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/ModelController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-486">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -88,18 +126,8 @@
       <file leaf-file-name="jiimade.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/jiimade.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="806">
+            <state relative-caret-position="6588">
               <caret line="244" column="52" lean-forward="false" selection-start-line="244" selection-start-column="52" selection-end-line="244" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="20" column="36" lean-forward="false" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -111,28 +139,6 @@
             <state relative-caret-position="2538">
               <caret line="94" column="25" lean-forward="false" selection-start-line="94" selection-start-column="25" selection-end-line="94" selection-end-column="25" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CarouselController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/CarouselController.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="7" column="31" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lst.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Admin/View/Carousel/lst.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="30" column="20" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
-              <folding>
-                <element signature="e#1036#1042#1" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -224,8 +230,6 @@
         <option value="$PROJECT_DIR$/ThinkPHP/Library/Org/PHPExcel/PHPExcel.class.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/ThinkPHP/Library/Vendor/PHPExcel/PHPExcel/IOFactory.php" />
-        <option value="$PROJECT_DIR$/Application/Admin/View/Model/add.html" />
-        <option value="$PROJECT_DIR$/Application/Admin/View/Model/edit.html" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Quote/lst.html" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Index/menu.html" />
         <option value="$PROJECT_DIR$/Public/modify.sql" />
@@ -234,12 +238,14 @@
         <option value="$PROJECT_DIR$/Application/Admin/View/Carousel/edit.html" />
         <option value="$PROJECT_DIR$/Application/Admin/Controller/CarouselController.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Carousel/lst.html" />
-        <option value="$PROJECT_DIR$/Application/Admin/Model/ModelModel.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/Controller/QuoteController.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/Model/QuoteModel.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php" />
-        <option value="$PROJECT_DIR$/Application/Admin/Model/ModuleModel.class.php" />
         <option value="$PROJECT_DIR$/Public/jiimade.sql" />
+        <option value="$PROJECT_DIR$/Application/Admin/View/Model/add.html" />
+        <option value="$PROJECT_DIR$/Application/Admin/Model/ModelModel.class.php" />
+        <option value="$PROJECT_DIR$/Application/Admin/View/Model/edit.html" />
+        <option value="$PROJECT_DIR$/Application/Admin/Model/ModuleModel.class.php" />
       </list>
     </option>
   </component>
@@ -317,27 +323,14 @@
               <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Carousel" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="jiimadeeee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jiimadeeee" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Color" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="jiimadeeee" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jiimadeeee" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -439,12 +432,13 @@
       <workItem from="1528159913081" duration="10941000" />
       <workItem from="1528249494766" duration="14517000" />
       <workItem from="1528332846959" duration="12272000" />
-      <workItem from="1528419106917" duration="2570000" />
+      <workItem from="1528419106917" duration="3949000" />
+      <workItem from="1528443143334" duration="2247000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="504540000" />
+    <option name="totallyTimeSpent" value="508166000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -489,13 +483,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/FurnitureController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/jiimade.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5589">
@@ -710,7 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="702">
           <caret line="146" column="18" lean-forward="false" selection-start-line="146" selection-start-column="18" selection-end-line="146" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -718,20 +704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="16" column="69" lean-forward="false" selection-start-line="16" selection-start-column="69" selection-end-line="16" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Model/add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1620">
-          <caret line="60" column="21" lean-forward="false" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Model/edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5616">
-          <caret line="208" column="19" lean-forward="false" selection-start-line="208" selection-start-column="19" selection-end-line="208" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -781,10 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="4" column="12" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="22" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#1;n#table#0;n#form#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#2;n#table#0;n#form#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -792,10 +760,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
           <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#1;n#table#0;n#form#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#2;n#table#0;n#form#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -804,16 +768,8 @@
         <state relative-caret-position="810">
           <caret line="30" column="20" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
           <folding>
-            <element signature="e#1036#1042#1" expanded="true" />
+            <element signature="e#1036#1042#1" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/Model/ModelModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8397">
-          <caret line="311" column="12" lean-forward="false" selection-start-line="311" selection-start-column="12" selection-end-line="313" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -843,8 +799,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-26">
-          <caret line="213" column="34" lean-forward="true" selection-start-line="213" selection-start-column="34" selection-end-line="213" selection-end-column="34" />
+        <state relative-caret-position="5751">
+          <caret line="213" column="34" lean-forward="false" selection-start-line="213" selection-start-column="34" selection-end-line="213" selection-end-column="34" />
           <folding>
             <marker date="1528420225799" expanded="true" signature="446:465" ph="..." />
           </folding>
@@ -853,23 +809,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/QuoteController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
+        <state relative-caret-position="2322">
           <caret line="91" column="40" lean-forward="false" selection-start-line="91" selection-start-column="36" selection-end-line="91" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/Model/ModuleModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="97" column="35" lean-forward="false" selection-start-line="97" selection-start-column="35" selection-end-line="97" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/jiimade.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="806">
+        <state relative-caret-position="6588">
           <caret line="244" column="52" lean-forward="false" selection-start-line="244" selection-start-column="52" selection-end-line="244" selection-end-column="52" />
           <folding />
         </state>
@@ -877,8 +825,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/modify.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+        <state relative-caret-position="134">
+          <caret line="12" column="35" lean-forward="false" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/ModelController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-486">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Model/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="70" column="111" lean-forward="true" selection-start-line="70" selection-start-column="111" selection-end-line="70" selection-end-column="111" />
+          <folding>
+            <element signature="n#style#0;n#input#3;n#li#0;n#td#1;n#tr#4;n#table#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1528443805784" expanded="true" signature="4954:4984" ph="..." />
+            <marker date="1528443805784" expanded="true" signature="5087:5117" ph="..." />
+            <marker date="1528443805784" expanded="true" signature="6322:6352" ph="..." />
+            <marker date="1528443805784" expanded="true" signature="6448:6478" ph="..." />
+            <marker date="1528443805784" expanded="true" signature="6728:6758" ph="..." />
+            <marker date="1528443805784" expanded="true" signature="6855:6867" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Model/ModelModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="565">
+          <caret line="93" column="0" lean-forward="true" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Model/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="110" column="134" lean-forward="true" selection-start-line="110" selection-start-column="134" selection-end-line="110" selection-end-column="134" />
+          <folding>
+            <element signature="n#style#0;n#input#3;n#li#0;n#td#1;n#tr#4;n#table#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1528443805737" expanded="true" signature="10312:10342" ph="..." />
+            <marker date="1528443805737" expanded="true" signature="10441:10471" ph="..." />
+            <marker date="1528443805737" expanded="true" signature="11709:11739" ph="..." />
+            <marker date="1528443805737" expanded="true" signature="11835:11865" ph="..." />
+            <marker date="1528443805737" expanded="true" signature="12115:12145" ph="..." />
+            <marker date="1528443805737" expanded="true" signature="12242:12254" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Model/ModuleModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="98" column="50" lean-forward="false" selection-start-line="98" selection-start-column="50" selection-end-line="98" selection-end-column="50" />
           <folding />
         </state>
       </provider>

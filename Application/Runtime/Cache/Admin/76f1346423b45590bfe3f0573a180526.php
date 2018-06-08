@@ -86,6 +86,7 @@
                         <input type="text" name="formula-name[]" placeholder="计价名称" style="width: 80px;">
                         <input type="text" name="formula-num[]" placeholder="计价数量" style="width: 200px;">
                         <input type="text" name="formula-price[]" placeholder="计价单价" style="width: 80px;">
+                        <input type="text" name="formula-total-price[]" placeholder="总计价" style="width: 80px;">
                         <input type="text" name="formula-unit[]" placeholder="计价单位" style="width: 80px;">
                     </li>
                 </td>
