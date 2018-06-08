@@ -47,7 +47,7 @@
     }
 </style>
 <div class="main-div">
-    <form method="post" action="/jiimadeeee/index.php/Admin/Model/edit/id/4.html"enctype="multipart/form-data" >
+    <form method="post" action="/jiimadeeee/index.php/Admin/Model/edit/id/1.html"enctype="multipart/form-data" >
         <table cellspacing="1" cellpadding="3" width="100%">
             <input type="hidden" name="id" value="<?php echo $data['id']; ?>">
             <tr>
@@ -103,6 +103,12 @@
                         <input type="text" name="parameter[]" value="<?php echo $v; ?>" style="width: 80px;">
                     </li>
                     <?php  endforeach;?>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">投影面积公式：</td>
+                <td>
+                    <input type="text" name="project_area" placeholder="投影面积公式" value="<?php echo $data['project_area']; ?>">
                 </td>
             </tr>
             <tr>
@@ -211,7 +217,7 @@
         let div = $(a).parent();
         div.remove();
     }
-    index = <?php echo $index; ?>;
+    var index = 10;
     function addMaterCat() {
         index = index + 1;
         var catData = <?php echo json_encode($catData);?>;

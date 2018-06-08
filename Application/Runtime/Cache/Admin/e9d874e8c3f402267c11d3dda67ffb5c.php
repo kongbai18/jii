@@ -36,6 +36,7 @@
                 <td align="center"><?php if($v['update_time']){echo date("Y-m-d H:i:s", $v['update_time']);}else{echo date("Y-m-d H:i:s", $v['add_time']);} ?></td>
                 <td align="center">
                 <a href="<?php echo U('detail?id='.$v['id']) ?>" >报价单详情</a> |
+                <a href="<?php echo U('getExcel?id='.$v['id']) ?>" >下载报价表</a> |
                 <a href="<?php echo U('delete?id='.$v['id']) ?>" onclick="return delMol()">移除</a>
                 </td>
             </tr>

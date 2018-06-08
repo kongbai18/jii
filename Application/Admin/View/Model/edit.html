@@ -88,6 +88,12 @@
                 </td>
             </tr>
             <tr>
+                <td class="label">投影面积公式：</td>
+                <td>
+                    <input type="text" name="project_area" placeholder="投影面积公式" value="<?php echo $data['project_area']; ?>">
+                </td>
+            </tr>
+            <tr>
                 <td class="label">计价公式：</td>
                 <td id="formula-list">
                     <?php $formula = json_decode($data['formula'],true);?>
@@ -200,7 +206,7 @@
         let div = $(a).parent();
         div.remove();
     }
-    index = <?php echo $index; ?>;
+    var index = 10;
     function addMaterCat() {
         index = index + 1;
         var catData = <?php echo json_encode($catData);?>;

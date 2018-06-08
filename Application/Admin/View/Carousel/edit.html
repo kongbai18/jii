@@ -1,0 +1,32 @@
+<layout name="layout" />
+<div class="main-div">
+    <form method="post" action="__ACTION__"enctype="multipart/form-data" >
+        <table cellspacing="1" cellpadding="3" width="100%">
+        <input type="hidden" name="id" value="<?php echo $data['id'] ?>">
+            <tr>
+                <td class="label">颜色图片</td>
+                <td>
+                    <input type="file" name="img_src" accept="image/*" id="img" size="45">
+                    <span class="require-field">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">跳转路径</td>
+                <td>
+                    <input type="text" name="url" maxlength="120" style="width: 300px;" value="<?php echo $data['url'] ?>" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">排序</td>
+                <td>
+                    <input type="text" name="sort_id" maxlength="60" style="width: 50px;" value="<?php echo $data['sort_id'] ?>" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><br />
+                    <input type="submit" class="button" value=" 确定 " />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>

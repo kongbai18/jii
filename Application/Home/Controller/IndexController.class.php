@@ -10,6 +10,12 @@ class IndexController extends Controller {
         $userModel = D('Admin/User');
         echo json_encode($userModel->login());
     }
+    //获取轮播图
+    public function getCarouselImg(){
+        $model = D('carousel');
+        $data = $model->order('sort_id asc')->select();
+        echo json_encode($data);
+    }
     //获取特定分类下特定数量商品
     public function getCatGoods(){
         $model = D('Admin/goods');
@@ -171,7 +177,25 @@ class IndexController extends Controller {
     //选择家具
     public function chooseFurniture(){
         $model = D('furniture');
-        $furData = $model->field('id,fur_name,img_src')->order('sort_id desc')->select();
+        $furData = $model->field('id,fur_name,img_src,attribute')->order('sort_id desc')->select();
+        foreach ($furData as $k => $v){
+            $attribute = json_decode($v['attribute'],true);
+            if(empty($attribute)){
+                $furData[$k]['attribute'] = '';
+                continue;
+            }
+            foreach ($attribute as $v1){
+                foreach ($v1 as $k2 => $v2){
+                    if($k2 == '1'){
+                        $attr = implode('/',$v2);
+                        $furData[$k]['attribute'] = $attr;
+                        break 2;
+                    }else{
+                        $furData[$k]['attribute'] = '';
+                    }
+                }
+            }
+        }
         echo json_encode($furData);
     }
     //获取家具扩展属性
@@ -189,7 +213,6 @@ class IndexController extends Controller {
     //获取对应属性的对应计价模型
     public function getFurModel(){
         $model = D('Admin/Model');
-        //var_dump($model->getFurModel());
         echo json_encode($model->getFurModel());
     }
     //小程序添加家具模块
@@ -207,9 +230,18 @@ class IndexController extends Controller {
         $model = D('Admin/Module');
         echo json_encode($model->delModule());
     }
+    //小程序获取excel
+    public function getExcel(){
+        $model = D('Admin/Quote');
+        echo json_encode($model->getExcel());
+    }
+    //删除Excel
+    public function delExcel(){
+        $fileName = I('get.fileName');
+        unlink(APP_PATH.'../Public/Excel/'.$fileName);
+    }
     public function test(){
-        $model = D('Admin/Model');
-        var_dump($model->test());
+       unlink(APP_PATH.'../Public/Excel/201806071728084265.xlsx');
     }
 
 }

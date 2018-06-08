@@ -131,7 +131,12 @@ body {
                     <li class="menu-item"><a href="<?php echo U('Type/lst') ?>" target="main-frame">商品类型</a></li>
                 </ul>
             </li>
-
+            <li class="explode" key="02_cat_and_goods" name="menu">
+                轮播图管理
+                <ul>
+                    <li class="menu-item"><a href="<?php echo U('Carousel/lst') ?>" target="main-frame">轮播图列表</a></li>
+                </ul>
+            </li>
             <li class="explode" key="02_cat_and_goods" name="menu">
                 颜色库管理
                 <ul>

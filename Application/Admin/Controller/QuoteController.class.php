@@ -125,11 +125,8 @@ class QuoteController extends BaseController {
             if(!$furQuoId){
                 $this->error('请选择存在的配置！');
             }
-            //从家具计算属性表获取对应计算模型ID
-            $furQuoModel = D('furniture_quote');
-            $furQuoData = $furQuoModel->field('model_id')->find($furQuoId);
 
-            $_POST['model_id'] = $furQuoData['model_id'];
+            $_POST['fur_quo_id'] = $furQuoId;
             $_POST['fur_name'] = $furData['fur_name'];
             $_POST['cate_id'] = $furData['cate_id'];
             $_POST['quote_id'] = $quoteId;
@@ -220,6 +217,12 @@ class QuoteController extends BaseController {
         ));
         $this->display();
     }
+    //下载报价表
+    public function getExcel(){
+        $quoId = I('get.id');
+        $model = D('module');
+        $model->getExcel($quoId,true);
+    }
     //AJAX获取计价模型
     public function ajaxGetModel(){
         $furId = I('get.furId');
@@ -245,4 +248,5 @@ class QuoteController extends BaseController {
         }
         echo json_encode($data);
     }
+
 }

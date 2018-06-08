@@ -84,4 +84,15 @@ class QuoteModel extends Model {
             }
         }
     }
+    public function getExcel(){
+        $userId = I('get.userId');
+        $thr_session = I('get.thr_session');
+        $user = checkUser($userId,$thr_session);
+        if($user){
+            $quoteId = $this->field('id')->where(array('user_id'=>array('eq',$userId)))->select();
+            $model = D('Admin/Module');
+            $data = $model->getExcel($quoteId[0]['id']);
+            return $data;
+        }
+    }
 }
