@@ -52,7 +52,7 @@ class ModuleModel extends Model {
         $doorData = array();
         $frontData = array();
         //获取所有模块商品
-        $data = $this->field('a.*,b.img_src,c.formula,c.project_area')
+        $data = $this->field('a.*,b.img_src,b.fur_attr_id,c.formula,c.project_area')
             ->alias('a')
             ->order('a.sort_id asc')
             ->join('LEFT JOIN __FURNITURE_QUOTE__ b ON a.fur_quo_id = b.id
@@ -93,6 +93,10 @@ class ModuleModel extends Model {
 
             $projectArea = eval($v['project_area']);//投影面积
 
+            if($v['cate_id'] == '2'){
+                $furAttrId = explode(',',$v['fur_attr_id']);
+                $mult = $furAttrId[1];
+            }
             $totalModulePrice = 0;
             foreach ($formula as $k3 => $v3){
                $num = eval($v3[0]);
@@ -398,7 +402,7 @@ class ModuleModel extends Model {
                 $j++;
                 $obj->setActiveSheetIndex($index)->setCellValue($cellName[$j].$_row, $v0['fee']);
                 $j++;
-                $obj->setActiveSheetIndex($index)->setCellValue($cellName[$j].$_row, '折扣');
+                $obj->setActiveSheetIndex($index)->setCellValue($cellName[$j].$_row, '折后');
                 $j++;
                 $obj->setActiveSheetIndex($index)->setCellValue($cellName[$j].$_row, $v0['agioFee']);
                 $j++;
@@ -511,7 +515,7 @@ class ModuleModel extends Model {
                 $j++;
                 $obj->setActiveSheetIndex($index)->setCellValue($cellName[$j].$_row, $v0['fee']);
                 $j++;
-                $obj->setActiveSheetIndex($index)->setCellValue($cellName[$j].$_row, '折扣');
+                $obj->setActiveSheetIndex($index)->setCellValue($cellName[$j].$_row, '折后');
                 $j++;
                 $obj->setActiveSheetIndex($index)->setCellValue($cellName[$j].$_row, $v0['agioFee']);
                 $j++;
@@ -624,7 +628,7 @@ class ModuleModel extends Model {
                 $j++;
                 $obj->setActiveSheetIndex($index)->setCellValue($cellName[$j].$_row, $v0['fee']);
                 $j++;
-                $obj->setActiveSheetIndex($index)->setCellValue($cellName[$j].$_row, '折扣');
+                $obj->setActiveSheetIndex($index)->setCellValue($cellName[$j].$_row, '折后');
                 $j++;
                 $obj->setActiveSheetIndex($index)->setCellValue($cellName[$j].$_row, $v0['agioFee']);
                 $j++;

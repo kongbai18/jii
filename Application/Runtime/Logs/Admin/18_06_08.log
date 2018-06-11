@@ -1929,3 +1929,697 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003885s ]
 INFO: [ app_end ] --END-- [ RunTime:0.005095s ]
 
+[ 2018-06-08T16:28:25+08:00 ] ::1 /jiimadeeee/index.php/Admin/Furniture/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000179s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003742s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004996s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006361s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_furniture` [ RunTime:0.0063s ]
+SQL: SELECT `id`,`fur_name` FROM `made_furniture` WHERE `cate_id` = '1' ORDER BY sort_id asc  [ RunTime:0.0011s ]
+SQL: SELECT `id`,`fur_name` FROM `made_furniture` WHERE `cate_id` = '2' ORDER BY sort_id asc  [ RunTime:0.0011s ]
+SQL: SELECT `id`,`fur_name` FROM `made_furniture` WHERE `cate_id` = '3' ORDER BY sort_id asc  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000938s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002100s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067761s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.068810s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003888s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005133s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004403s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005325s ]
+
+[ 2018-06-08T16:28:31+08:00 ] ::1 /jiimadeeee/index.php/Admin/Furniture/edit/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000178s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005213s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_furniture` [ RunTime:0.0098s ]
+SQL: SELECT * FROM `made_furniture` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000184s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000348s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032306s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033014s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002466s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002962s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003093s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003825s ]
+
+[ 2018-06-08T16:30:16+08:00 ] ::1 /jiimadeeee/index.php/Admin/Furniture/edit/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000214s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003515s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004715s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_furniture` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `made_furniture` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: validate D:\wamp\wamp64\www\jiimadeeee\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\wamp\wamp64\www\jiimadeeee\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: SELECT `attribute` FROM `made_furniture` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `made_furniture_quote` [ RunTime:0.0061s ]
+SQL: SELECT `img_src` FROM `made_furniture_quote` WHERE `fur_id` = '3'  [ RunTime:0.0008s ]
+SQL: DELETE FROM `made_furniture_quote` WHERE `fur_id` = '3' [ RunTime:0.0063s ]
+SQL: UPDATE `made_furniture` SET `fur_name`='门板',`cate_id`='1',`sort_id`='100',`is_index`='1',`id`='3',`attribute`='{\"\\u95e8\\u63a7\\u5206\\u7c7b\":{\"1\":[\"\\u5f00\\u95e8\",\"\\u6728\\u79fb\\u95e8\",\"\\u73bb\\u7483\\u79fb\\u95e8\",\"\\u6298\\u53e0\\u95e8\"]},\"\\u95e8\\u6247\\u6570\":{\"2\":[\"1\",\"2\",\"3\",\"4\"]}}' WHERE `id` = 3 [ RunTime:0.0075s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000397s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001130s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043749s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044500s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002173s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002970s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000337s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.027689s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023239s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.005552s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000190s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.026842s ]
+
+[ 2018-06-08T16:30:17+08:00 ] ::1 /jiimadeeee/index.php/Admin/Furniture/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000130s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002445s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005808s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_furniture` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`fur_name` FROM `made_furniture` WHERE `cate_id` = '1' ORDER BY sort_id asc  [ RunTime:0.0013s ]
+SQL: SELECT `id`,`fur_name` FROM `made_furniture` WHERE `cate_id` = '2' ORDER BY sort_id asc  [ RunTime:0.0008s ]
+SQL: SELECT `id`,`fur_name` FROM `made_furniture` WHERE `cate_id` = '3' ORDER BY sort_id asc  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000432s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001794s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.065292s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.066155s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004271s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005283s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003617s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004292s ]
+
+[ 2018-06-08T16:30:21+08:00 ] ::1 /jiimadeeee/index.php/Admin/Furniture/furniture_quote/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000155s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002769s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001851s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002599s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_furniture` [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `made_model` [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `made_furniture_quote` [ RunTime:0.0013s ]
+SQL: SELECT `id`,`model_name` FROM `made_model`  [ RunTime:0.0009s ]
+SQL: SELECT `attribute` FROM `made_furniture` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `made_furniture_quote` WHERE `fur_id` = '3'  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001007s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001942s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057387s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058276s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001103s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001679s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002963s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003642s ]
+
+[ 2018-06-08T16:31:08+08:00 ] ::1 /jiimadeeee/index.php/Admin/Furniture/furniture_quote/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000193s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003363s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003417s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_furniture` [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `made_model` [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `made_furniture_quote` [ RunTime:0.0019s ]
+SQL: SELECT `id`,`model_name` FROM `made_model`  [ RunTime:0.0007s ]
+SQL: SELECT `attribute` FROM `made_furniture` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `made_furniture_quote` WHERE `fur_id` = '3'  [ RunTime:0.0009s ]
+SQL: INSERT INTO `made_furniture_quote` (`fur_id`,`model_id`,`fur_attr_id`,`img_src`) VALUES ('3','1','0,0','http://p5koaz6je.bkt.clouddn.com/jiimade/view/images/furnitureModel/2018/06/08/1418?') [ RunTime:0.0043s ]
+SQL: INSERT INTO `made_furniture_quote` (`fur_id`,`model_id`,`fur_attr_id`,`img_src`) VALUES ('3','1','0,1','http://p5koaz6je.bkt.clouddn.com/jiimade/view/images/furnitureModel/2018/06/08/6139?') [ RunTime:0.0059s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000475s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001303s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040308s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041280s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003475s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004141s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000659s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.036112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037882s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.007883s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000153s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.042569s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003214s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004088s ]
+
+[ 2018-06-08T16:31:09+08:00 ] ::1 /jiimadeeee/index.php/Admin/Furniture/furniture_quote/id/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000152s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002710s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003863s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005186s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_furniture` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `made_model` [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `made_furniture_quote` [ RunTime:0.0032s ]
+SQL: SELECT `id`,`model_name` FROM `made_model`  [ RunTime:0.0009s ]
+SQL: SELECT `attribute` FROM `made_furniture` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `made_furniture_quote` WHERE `fur_id` = '3'  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000700s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001341s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056173s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057566s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001947s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002463s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004272s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005660s ]
+
+[ 2018-06-08T16:54:33+08:00 ] ::1 /jiimadeeee/index.php/Admin/Quote/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000172s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003061s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004712s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_quote` [ RunTime:0.0058s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\QuoteModel::search(), called in D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\QuoteController.class.php on line 13 and defined D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Model\QuoteModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `made_quote` LIMIT 1   [ RunTime:0.0007s ]
+NOTIC: [8] Undefined variable: perpage D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Model\QuoteModel.class.php 第 39 行.
+NOTIC: [2] Division by zero D:\wamp\wamp64\www\jiimadeeee\ThinkPHP\Library\Think\Page.class.php 第 84 行.
+SQL: SELECT a.* FROM made_quote a  [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000376s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000886s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058009s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001073s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001668s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003449s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004228s ]
+
+[ 2018-06-08T16:54:34+08:00 ] ::1 /jiimadeeee/index.php/Admin/Quote/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000196s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003770s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003923s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004957s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_quote` [ RunTime:0.0066s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000229s ]
+NOTIC: [8] Undefined variable: catData D:\wamp\wamp64\www\jiimadeeee\Application\Runtime\Cache\Admin\f84922e4e721ddc2c4484d38d7994ee1.php 第 91 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026535s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027642s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002622s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003555s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003567s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004452s ]
+
+[ 2018-06-08T16:54:37+08:00 ] ::1 /jiimadeeee/index.php/Admin/Quote/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000174s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002880s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002651s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003349s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_quote` [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 1 for Admin\Model\QuoteModel::search(), called in D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\QuoteController.class.php on line 13 and defined D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Model\QuoteModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `made_quote` LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined variable: perpage D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Model\QuoteModel.class.php 第 39 行.
+NOTIC: [2] Division by zero D:\wamp\wamp64\www\jiimadeeee\ThinkPHP\Library\Think\Page.class.php 第 84 行.
+SQL: SELECT a.* FROM made_quote a  [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000611s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058814s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059562s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002946s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004434s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001816s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002543s ]
+
+[ 2018-06-08T16:54:39+08:00 ] ::1 /jiimadeeee/index.php/Admin/Quote/detail/id/20180530170511205737.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000192s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004410s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005495s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_quote` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `made_quote` WHERE `id` = '20180530170511205737' LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `made_module` [ RunTime:0.0057s ]
+SQL: SELECT a.*,b.img_src,c.formula,c.project_area FROM made_module a LEFT JOIN made_furniture_quote b ON a.fur_quo_id = b.id
+                    LEFT JOIN made_model c ON b.model_id = c.id  WHERE a.quote_id = '20180530170511205737' ORDER BY a.sort_id asc  [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0026s ]
+SQL: SELECT a.goods_name,max(b.goods_price) as price FROM made_goods a LEFT JOIN made_goods_number b ON a.id=b.goods_id  WHERE a.id = '5' GROUP BY b.goods_id LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT a.goods_name,max(b.goods_price) as price FROM made_goods a LEFT JOIN made_goods_number b ON a.id=b.goods_id  WHERE a.id = '7' GROUP BY b.goods_id LIMIT 1   [ RunTime:0.0018s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Model\ModuleModel.class.php 第 97 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001670s ]
+NOTIC: [8] Undefined index: module D:\wamp\wamp64\www\jiimadeeee\Application\Runtime\Cache\Admin\3eb234c616c7cbdf8762b22fa6994749.php 第 134 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\wamp64\www\jiimadeeee\Application\Runtime\Cache\Admin\3eb234c616c7cbdf8762b22fa6994749.php 第 134 行.
+NOTIC: [8] Undefined variable: caParNum D:\wamp\wamp64\www\jiimadeeee\Application\Runtime\Cache\Admin\3eb234c616c7cbdf8762b22fa6994749.php 第 210 行.
+NOTIC: [8] Undefined index: module D:\wamp\wamp64\www\jiimadeeee\Application\Runtime\Cache\Admin\3eb234c616c7cbdf8762b22fa6994749.php 第 282 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\wamp64\www\jiimadeeee\Application\Runtime\Cache\Admin\3eb234c616c7cbdf8762b22fa6994749.php 第 282 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.097203s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.097957s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002285s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003018s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003043s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003850s ]
+
+[ 2018-06-08T16:54:40+08:00 ] ::1 /jiimadeeee/index.php/Admin/Quote/chooseFurniture/id/20180530170511205737.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000173s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003089s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004127s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004877s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_furniture` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`fur_name`,`img_src` FROM `made_furniture` ORDER BY sort_id desc  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000122s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000372s ]
+NOTIC: [8] Undefined index: model_name D:\wamp\wamp64\www\jiimadeeee\Application\Runtime\Cache\Admin\a040ff70c7464c3e879b4a5643263946.php 第 54 行.
+NOTIC: [8] Undefined index: model_name D:\wamp\wamp64\www\jiimadeeee\Application\Runtime\Cache\Admin\a040ff70c7464c3e879b4a5643263946.php 第 54 行.
+NOTIC: [8] Undefined index: model_name D:\wamp\wamp64\www\jiimadeeee\Application\Runtime\Cache\Admin\a040ff70c7464c3e879b4a5643263946.php 第 54 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042332s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043151s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002317s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003262s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003295s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004059s ]
+
+[ 2018-06-08T16:54:42+08:00 ] ::1 /jiimadeeee/index.php/Admin/Quote/addModule/id/3/quoteId/20180530170511205737.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000212s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003199s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002749s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003407s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_furniture` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `made_furniture` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000215s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000441s ]
+NOTIC: [8] Undefined variable: gatherattr D:\wamp\wamp64\www\jiimadeeee\Application\Runtime\Cache\Admin\3ac3b7524beedf12cb27698bd1472710.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050952s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051709s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002612s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003557s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004902s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005847s ]
+
+[ 2018-06-08T16:54:45+08:00 ] ::1 /jiimadeeee/index.php/Admin/Quote/ajaxGetModel?attr=0%2C0%2C&furId=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000165s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003034s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002276s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002836s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_furniture_quote` [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0020s ]
+SQL: SELECT a.id,a.img_src,b.material,b.parameter,b.ext FROM made_furniture_quote a LEFT JOIN made_model b ON a.model_id = b.id  WHERE `fur_id` = '3' AND `fur_attr_id` = '0,0'  [ RunTime:0.0011s ]
+SQL: SELECT `id`,`goods_name` FROM `made_goods` WHERE `cat_id` IN ('3') AND `is_quote` = '1'  [ RunTime:0.0009s ]
+SQL: SELECT `id`,`goods_name` FROM `made_goods` WHERE `cat_id` IN ('8','1') AND `is_quote` = '1'  [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003696s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004314s ]
+
+[ 2018-06-08T16:55:41+08:00 ] ::1 /jiimadeeee/index.php/Admin/Quote/addModule/id/3/quoteId/20180530170511205737.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000169s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002274s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002913s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_furniture` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `made_furniture` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `made_model` [ RunTime:0.0022s ]
+NOTIC: [8] Undefined variable: furQuoData D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\QuoteController.class.php 第 136 行.
+SQL: SELECT * FROM `made_model` LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000374s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000995s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037808s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038961s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002959s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003968s ]
+
+[ 2018-06-08T16:55:45+08:00 ] ::1 /jiimadeeee/index.php/Admin/Quote/addModule/id/3/quoteId/20180530170511205737.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000258s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003886s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003780s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005011s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_furniture` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `made_furniture` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000859s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001524s ]
+NOTIC: [8] Undefined variable: gatherattr D:\wamp\wamp64\www\jiimadeeee\Application\Runtime\Cache\Admin\3ac3b7524beedf12cb27698bd1472710.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057986s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058497s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002718s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003608s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005148s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006008s ]
+
+[ 2018-06-08T16:55:47+08:00 ] ::1 /jiimadeeee/index.php/Admin/Quote/ajaxGetModel?attr=0%2C1%2C&furId=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000172s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003285s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004027s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005012s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_furniture_quote` [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0026s ]
+SQL: SELECT a.id,a.img_src,b.material,b.parameter,b.ext FROM made_furniture_quote a LEFT JOIN made_model b ON a.model_id = b.id  WHERE `fur_id` = '3' AND `fur_attr_id` = '0,1'  [ RunTime:0.0012s ]
+SQL: SELECT `id`,`goods_name` FROM `made_goods` WHERE `cat_id` IN ('3') AND `is_quote` = '1'  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`goods_name` FROM `made_goods` WHERE `cat_id` IN ('8','1') AND `is_quote` = '1'  [ RunTime:0.0012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003400s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004039s ]
+
+[ 2018-06-08T16:55:49+08:00 ] ::1 /jiimadeeee/index.php/Admin/Quote/ajaxGetModel?attr=0%2C0%2C&furId=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000149s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002484s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003924s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004775s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_furniture_quote` [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0021s ]
+SQL: SELECT a.id,a.img_src,b.material,b.parameter,b.ext FROM made_furniture_quote a LEFT JOIN made_model b ON a.model_id = b.id  WHERE `fur_id` = '3' AND `fur_attr_id` = '0,0'  [ RunTime:0.0012s ]
+SQL: SELECT `id`,`goods_name` FROM `made_goods` WHERE `cat_id` IN ('3') AND `is_quote` = '1'  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`goods_name` FROM `made_goods` WHERE `cat_id` IN ('8','1') AND `is_quote` = '1'  [ RunTime:0.0011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002840s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003586s ]
+
+[ 2018-06-08T16:55:53+08:00 ] ::1 /jiimadeeee/index.php/Admin/Quote/addModule/id/3/quoteId/20180530170511205737.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000129s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002030s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004210s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_furniture` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `made_furniture` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `made_model` [ RunTime:0.0019s ]
+NOTIC: [8] Undefined variable: furQuoData D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\QuoteController.class.php 第 136 行.
+SQL: SELECT * FROM `made_model` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000377s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001033s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037815s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038368s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002044s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002792s ]
+
+[ 2018-06-08T16:55:56+08:00 ] ::1 /jiimadeeee/index.php/Admin/Quote/addModule/id/3/quoteId/20180530170511205737.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000184s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003134s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003097s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004012s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_furniture` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `made_furniture` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000813s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001454s ]
+NOTIC: [8] Undefined variable: gatherattr D:\wamp\wamp64\www\jiimadeeee\Application\Runtime\Cache\Admin\3ac3b7524beedf12cb27698bd1472710.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048352s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048766s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001884s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002549s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003938s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005018s ]
+
+[ 2018-06-08T16:55:57+08:00 ] ::1 /jiimadeeee/index.php/Admin/Quote/ajaxGetModel?attr=0%2C1%2C&furId=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000170s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002528s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005144s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_furniture_quote` [ RunTime:0.0079s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0031s ]
+SQL: SELECT a.id,a.img_src,b.material,b.parameter,b.ext FROM made_furniture_quote a LEFT JOIN made_model b ON a.model_id = b.id  WHERE `fur_id` = '3' AND `fur_attr_id` = '0,1'  [ RunTime:0.0011s ]
+SQL: SELECT `id`,`goods_name` FROM `made_goods` WHERE `cat_id` IN ('3') AND `is_quote` = '1'  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`goods_name` FROM `made_goods` WHERE `cat_id` IN ('8','1') AND `is_quote` = '1'  [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002282s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002573s ]
+
+[ 2018-06-08T16:56:02+08:00 ] ::1 /jiimadeeee/index.php/Admin/Quote/addModule/id/3/quoteId/20180530170511205737.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000121s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001815s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003139s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004017s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_furniture` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `made_furniture` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `made_model` [ RunTime:0.0021s ]
+NOTIC: [8] Undefined variable: furQuoData D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\QuoteController.class.php 第 136 行.
+SQL: SELECT * FROM `made_model` LIMIT 1   [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000368s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001014s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035281s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035978s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001772s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002437s ]
+
+[ 2018-06-08T16:56:05+08:00 ] ::1 /jiimadeeee/index.php/Admin/Quote/addModule/id/3/quoteId/20180530170511205737.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000191s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003190s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001726s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002468s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_furniture` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `made_furniture` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001305s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002258s ]
+NOTIC: [8] Undefined variable: gatherattr D:\wamp\wamp64\www\jiimadeeee\Application\Runtime\Cache\Admin\3ac3b7524beedf12cb27698bd1472710.php 第 151 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052059s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052737s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002120s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002842s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004759s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005145s ]
+
+[ 2018-06-08T16:56:07+08:00 ] ::1 /jiimadeeee/index.php/Admin/Quote/ajaxGetModel?attr=0%2C0%2C&furId=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000167s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002721s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003981s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_furniture_quote` [ RunTime:0.0062s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0021s ]
+SQL: SELECT a.id,a.img_src,b.material,b.parameter,b.ext FROM made_furniture_quote a LEFT JOIN made_model b ON a.model_id = b.id  WHERE `fur_id` = '3' AND `fur_attr_id` = '0,0'  [ RunTime:0.0013s ]
+SQL: SELECT `id`,`goods_name` FROM `made_goods` WHERE `cat_id` IN ('3') AND `is_quote` = '1'  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`goods_name` FROM `made_goods` WHERE `cat_id` IN ('8','1') AND `is_quote` = '1'  [ RunTime:0.0013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003737s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004235s ]
+
+[ 2018-06-08T16:57:09+08:00 ] ::1 /jiimadeeee/index.php/Admin/Model/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000123s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002048s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003404s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004242s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_model` [ RunTime:0.0026s ]
+SQL: SELECT `id`,`model_name` FROM `made_model`  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000660s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001568s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041227s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041918s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002400s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003122s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003273s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004042s ]
+
+[ 2018-06-08T16:57:11+08:00 ] ::1 /jiimadeeee/index.php/Admin/Model/edit/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000281s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004511s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002641s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003319s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_model` [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `made_model` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `made_category` ORDER BY order_id asc  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001975s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.076629s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.077218s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003390s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004300s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001920s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002330s ]
+
+[ 2018-06-08T16:57:14+08:00 ] ::1 /jiimadeeee/index.php/Admin/Model/edit/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000166s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003104s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004535s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_model` [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `made_model` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: validate D:\wamp\wamp64\www\jiimadeeee\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\wamp\wamp64\www\jiimadeeee\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Model\ModelModel.class.php 第 97 行.
+SQL: UPDATE `made_model` SET `model_name`='开门',`project_area`='return $w*$h;',`material`='{\"p1\":{\"\\u9009\\u62e9\\u95e8\\u5957\":\"3\"},\"p2\":{\"\\u9009\\u62e9\\u95e8\\u677f\":\"8,1\"}}',`parameter`='[\"w\",\"d\",\"h\"]',`formula`='{\"\\u95e8\\u5957\":[\"return ($h*2+$w)*$d;\",\"$p1\",\"\\u33a1\",\"return $num*$price;\"],\"\\u95e8\\u677f\":[\"return $w*$h;\",\"$p2\",\"\\u33a1\",\"return $num*$price+$shan*940;\"]}',`ext`='[]' WHERE `id` = 1 [ RunTime:0.0041s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000405s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001106s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044026s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045057s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003262s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004073s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000481s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.036087s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023122s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.026965s ]
+
+[ 2018-06-08T16:57:15+08:00 ] ::1 /jiimadeeee/index.php/Admin/Model/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000150s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002872s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003559s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_model` [ RunTime:0.0028s ]
+SQL: SELECT `id`,`model_name` FROM `made_model`  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000459s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001149s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043345s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044020s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002411s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002919s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000810s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000928s ]
+

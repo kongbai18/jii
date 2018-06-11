@@ -7824,3 +7824,97 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002912s ]
 INFO: [ app_end ] --END-- [ RunTime:0.003134s ]
 
+[ 2018-06-08T16:31:17+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/chooseFurniture
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000312s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004290s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005588s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006496s ]
+SQL: SHOW COLUMNS FROM `made_furniture` [ RunTime:0.0024s ]
+SQL: SELECT `id`,`fur_name`,`img_src`,`attribute` FROM `made_furniture` ORDER BY sort_id desc  [ RunTime:0.0015s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004235s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004955s ]
+
+[ 2018-06-08T16:31:20+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getFurAttr?furId=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000191s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003852s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004606s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005458s ]
+SQL: SHOW COLUMNS FROM `made_furniture` [ RunTime:0.0075s ]
+SQL: SELECT * FROM `made_furniture` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001396s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001648s ]
+
+[ 2018-06-08T16:31:22+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getFurModel?furId=3&gatAttr=0%2C0%2C
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000162s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002725s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003706s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004634s ]
+SQL: SHOW COLUMNS FROM `made_model` [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `made_furniture_quote` [ RunTime:0.0067s ]
+SQL: SELECT `id`,`model_id` FROM `made_furniture_quote` WHERE `fur_attr_id` = '0,0' AND `fur_id` = '3'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `made_model` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0025s ]
+SQL: SELECT a.id,a.goods_name,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id=b.goods_id  WHERE a.cat_id IN ('3') AND a.is_quote = '1' GROUP BY a.id  [ RunTime:0.0015s ]
+SQL: SELECT a.id,a.goods_name,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id=b.goods_id  WHERE a.cat_id IN ('8','1') AND a.is_quote = '1' GROUP BY a.id  [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003967s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005111s ]
+
+[ 2018-06-08T16:31:26+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getFurModel?furId=3&gatAttr=0%2C1%2C
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000132s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002650s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005312s ]
+SQL: SHOW COLUMNS FROM `made_model` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `made_furniture_quote` [ RunTime:0.0018s ]
+SQL: SELECT `id`,`model_id` FROM `made_furniture_quote` WHERE `fur_attr_id` = '0,1' AND `fur_id` = '3'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `made_model` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0025s ]
+SQL: SELECT a.id,a.goods_name,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id=b.goods_id  WHERE a.cat_id IN ('3') AND a.is_quote = '1' GROUP BY a.id  [ RunTime:0.0016s ]
+SQL: SELECT a.id,a.goods_name,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id=b.goods_id  WHERE a.cat_id IN ('8','1') AND a.is_quote = '1' GROUP BY a.id  [ RunTime:0.0013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004196s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005138s ]
+
+[ 2018-06-08T16:31:29+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getFurModel?furId=3&gatAttr=0%2C2%2C
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000139s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002451s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003386s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004313s ]
+SQL: SHOW COLUMNS FROM `made_model` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `made_furniture_quote` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`model_id` FROM `made_furniture_quote` WHERE `fur_attr_id` = '0,2' AND `fur_id` = '3'  [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003929s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005289s ]
+
+[ 2018-06-08T16:31:32+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getFurModel?furId=3&gatAttr=0%2C1%2C
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001808s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004606s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005601s ]
+SQL: SHOW COLUMNS FROM `made_model` [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `made_furniture_quote` [ RunTime:0.0045s ]
+SQL: SELECT `id`,`model_id` FROM `made_furniture_quote` WHERE `fur_attr_id` = '0,1' AND `fur_id` = '3'  [ RunTime:0.0014s ]
+SQL: SELECT * FROM `made_model` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0036s ]
+SQL: SELECT a.id,a.goods_name,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id=b.goods_id  WHERE a.cat_id IN ('3') AND a.is_quote = '1' GROUP BY a.id  [ RunTime:0.0011s ]
+SQL: SELECT a.id,a.goods_name,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id=b.goods_id  WHERE a.cat_id IN ('8','1') AND a.is_quote = '1' GROUP BY a.id  [ RunTime:0.0014s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004597s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005765s ]
+

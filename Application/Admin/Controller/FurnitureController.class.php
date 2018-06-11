@@ -192,8 +192,8 @@ class FurnitureController extends BaseController {
             'moData' => $moData,
             'attr' => $attr,
             'furQuoData' => $furQuoData,
-            'title' => '修改模型',
-            'btn_name' => '模型列表',
+            'title' => '修改扩展属性',
+            'btn_name' => '家具类型列表',
             'btn_url' => U('lst')
         ));
         $this->display();

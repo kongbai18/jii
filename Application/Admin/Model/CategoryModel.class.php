@@ -103,7 +103,7 @@ class CategoryModel extends Model {
 
     //小程序获取两级分类
     public function getCate(){
-        $data = $this->order('order_id asc')->select();
+        $data = $this->order('order_id asc')->where(array('is_index'=>array('eq','1')))->select();
         $ret = array();
         foreach ($data as $k => &$v) {
             if($v['parent_id'] == 0){
