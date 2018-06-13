@@ -1974,3 +1974,74 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002378s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002961s ]
 
+[ 2018-06-11T16:48:33+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Admin/Type/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000163s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002901s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005302s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_type` [ RunTime:0.0057s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `made_type` LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `made_type` LIMIT 0,10   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000490s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001172s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057781s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058572s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002357s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003213s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003574s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004346s ]
+
+[ 2018-06-11T16:48:35+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Admin/Category/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000201s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003200s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004375s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005587s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `made_category` ORDER BY order_id asc  [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000469s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001087s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.103705s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.104538s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002629s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003462s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003835s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004679s ]
+
+[ 2018-06-11T16:56:19+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Admin/Carousel/lst.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000166s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002982s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003737s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004674s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_carousel` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `made_carousel`  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000619s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001410s ]
+NOTIC: [8] Undefined index: page D:\wamp\wamp64\www\jiimadeeee\Application\Runtime\Cache\Admin\bd3db642d342703a83cfdee4299f1d0e.php 第 46 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055244s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055795s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001887s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002572s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003151s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003868s ]
+

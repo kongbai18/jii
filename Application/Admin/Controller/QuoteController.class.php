@@ -126,6 +126,9 @@ class QuoteController extends BaseController {
                 $this->error('请选择存在的配置！');
             }
 
+            $furQuoModel = D('furniture_quote');
+            $furQuoData = $furQuoModel->find($furQuoId);
+
             $_POST['fur_quo_id'] = $furQuoId;
             $_POST['fur_name'] = $furData['fur_name'];
             $_POST['cate_id'] = $furData['cate_id'];
@@ -145,14 +148,95 @@ class QuoteController extends BaseController {
                 }
                     $_POST['material'][$k] = $$k;
             }
-
             //获取所填参数
             $parameter = json_decode($moData['parameter'],true);
             $_POST['parameter'] = array();
             foreach ($parameter as $k => $v){
                 $$v = I('post.'.$v);
-                if(empty($$v)){
+
+                if(!is_numeric($$v)){
                     $this->error('请填写完整参数！');
+                }
+
+                if($furData['cate_id'] == '2'){
+                    $gatattr = I('post.gatattr');
+                    if($v == 'H'){
+                        if($$v > 2.4){
+                            $this->error('参数H必须小于等于2.4');
+                        }
+                    }else if($v == 'W'){
+                        if($gatattr == '1,1,'){
+                            //开门1
+                            if($$v>1 || $$v<=0){
+                                $this->error('参数W取值为 0&lt;W≤1');
+                            }
+                        }else if($gatattr == '1,2,'){
+                            //开门2
+                            if($$v>2 || $$v<=0.6){
+                                $this->error('参数W取值为 0.6&lt;W≤2');
+                            }
+                        }else if($gatattr == '2,1,'){
+                            //木移门1
+                            if($$v>1 || $$v<0){
+                                $this->error('参数W取值为 0&lt;W≤1');
+                            }
+                        }else if($gatattr == '2,2,'){
+                            //木移门2
+                            if($$v<=1 || $$v>2){
+                                $this->error('参数W取值为 1&lt;W≤2');
+                            }
+                        }else if($gatattr == '2,3,'){
+                            //木移门3
+                            if($$v<1.8 || $$v>3){
+                                $this->error('参数W取值为 1.8≤W≤3');
+                            }
+                        }else if($gatattr == '2,4,'){
+                            //木移门4
+                            if($$v<2.6 || $$v>4){
+                                $this->error('参数W取值为 2.6≤W≤4');
+                            }
+                        }else if($gatattr == '3,1,'){
+                            //玻璃移门1
+                            if($$v<=0 || $$v>1){
+                                $this->error('参数W取值为 0&lt;W≤1');
+                            }
+                        }else if($gatattr == '3,2,'){
+                            //玻璃移门2
+                            if($$v<=1 || $$v>2){
+                                $this->error('参数W取值为 1&lt;W≤2');
+                            }
+                        }else if($gatattr == '3,3,'){
+                            //玻璃移门3
+                            if($$v<1.8 || $$v>3){
+                                $this->error('参数W取值为 1.8≤W≤3');
+                            }
+                        }else if($gatattr == '3,4,'){
+                            //玻璃移门4
+                            if($$v<2.6 || $$v>4){
+                                $this->error('参数W取值为 2.6≤W≤4');
+                            }
+                        }else if($gatattr == '4,2,'){
+                            //折叠门2
+                            if($$v<0.9 || $$v>1.8){
+                                $this->error('参数W取值为 0.9≤W≤1.8');
+                            }
+                        }else if($gatattr == '4,3,'){
+                            //折叠门3
+                            if($$v>1.4 || $$v<2.7){
+                                $this->error('参数W取值为 1.4≤W≤2.7');
+                            }
+                        }else if($gatattr == '4,4,'){
+                            //折叠门4
+                            if($$v<1.8 || $$v>4){
+                                $this->error('参数W取值为 1.8≤W≤4');
+                            }
+                        }else if(1 == '4,5,'){
+                            //折叠门5
+                            if($$v<2.3 || $$v>5){
+                                $this->error('参数W取值为 2.3≤W≤5');
+                            }
+                        }
+                    }
                 }
                 $_POST['parameter'][$v] = $$v;
                 unset($_POST[$v]);
