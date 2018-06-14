@@ -1,0 +1,58 @@
+<layout name="layout" />
+<div class="main-div">
+    <form action="__ACTION__" method="post" name="theForm" enctype="multipart/form-data">
+        <table width="100%" id="general-table">
+        <input type="hidden" name="id" value="<?php echo $data['id'] ?>">
+            <tr>
+                <td class="label">分类名称:</td>
+                <td>
+                    <input type='text' name='pri_name' maxlength="20" value="<?php echo $data['pri_name'] ?>" size='27' /> <font color="red">*</font>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">上级分类:</td>
+               <td>
+                 <select name="parent_id">
+                    <option value="0">顶级分类</option>
+                    <?php foreach($tree as $k => $v):
+                          if($v['id']==$data['parent_id']){
+                          	$select = 'selected="selected"';
+                          }else{
+                          	$select = '';
+                          }
+                     ?>
+                    <?php if(in_array($v['id'],$children)){
+                    	continue;
+                    }else{
+                    echo '<option '.$select.' value="'.$v['id'].'">'.str_repeat('-',4*$v['level']).$v['pri_name'].'</option>'; 
+                    }
+                    ?>
+                    <?php endforeach; ?>
+                 </select>
+            </tr>
+             <tr>
+                <td class="label">模型名称:</td>
+                <td>
+                    <input type='text' name='module_name' maxlength="20" value='<?php echo $data['module_name'] ?>' size='27' /> <font color="red">*</font>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">控制器名称:</td>
+                <td>
+                    <input type='text' name='controller_name' maxlength="20" value='<?php echo $data['controller_name'] ?>' size='27' /> <font color="red">*</font>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">方法名称:</td>
+                <td>
+                    <input type='text' name='action_name' maxlength="20" value='<?php echo $data['action_name'] ?>' size='27' /> <font color="red">*</font>
+                </td>
+            </tr>
+        </table>
+        <div class="button-div">
+            <input type="submit" value=" 确定 " />
+            <input type="reset" value=" 重置 " />
+        </div>
+    </form>
+</div>
+

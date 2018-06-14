@@ -3,12 +3,13 @@ namespace Admin\Model;
 use Think\Model;
 class QuoteModel extends Model {
     //添加类别时允许接收的表单
-    protected $insertFields = array('id','user_id','address','telephone');
+    protected $insertFields = array('id','address','user_name','telephone');
     //修改类别时允许接收的字段
     protected $updateFields = array('id','type_name');
     //验证码规则
     protected $_validate = array(
            array('address','require','地址不能为空！',1),
+           array('user_name','require','地址不能为空！',1),
            array('telephone','checkMobil','请输入正确的手机号！',1,'callback'),
     );
     public function checkMobil($mobile){
@@ -19,18 +20,40 @@ class QuoteModel extends Model {
         }
     }
     //搜索商品信息
-    public function search($perpage){
+    public function search($perpage,$admin=false){
         $where = array();
         $order = array();
-        //商品名称搜索
-        $keyword = I('get.keyword');
-        if($keyword){
-            $where['goods_name'] = array('like',"%$keyword%");
+
+
+        //用户名称搜索
+        $uname = I('get.u_name');
+        if($uname){
+            $where['user_name'] = array('eq',$uname);
         }
-        //品牌搜索
-        $brandId = I('get.brand_id');
-        if($brandId){
-            $where['brand_id'] = array('eq',$brandId);
+
+        //用户手机搜索
+        $uphone = I('get.u_phone');
+        if($uphone){
+            $where['telephone'] = array('eq',$uphone);
+        }
+
+        if($admin == '1'){
+            $adminId = session('id');
+            $where['admin_id'] = array('eq',$adminId);
+        }elseif ($admin == '2'){
+            //查询管理员订单
+            $where['admin_id'] = array('neq','0');
+
+            //管理员名称搜索
+            $aname = I('get.a_name');
+            if($aname){
+                $adminModel = D('admin');
+                $adminId = $adminModel->field('id')->where(array('username'=>array('eq',$aname)))->select();
+                $where['admin_id'] = array('eq',$adminId[0]['id']);
+            }
+        }elseif ($admin == '3'){
+            //查询用户订单
+            $where['user_id'] = array('neq','0');
         }
         /*****************翻页*************************/
         //获取总记录数
@@ -61,6 +84,7 @@ class QuoteModel extends Model {
     public function _before_insert(&$data,$option){
         $data['add_time'] = time();
         $data['id'] = $this->create_unique();
+        $data['admin_id'] = session('id');
     }
     //修改之前
     public function _before_update(&$data,$option){

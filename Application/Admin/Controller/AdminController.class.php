@@ -50,8 +50,7 @@ class AdminController extends BaseController {
     //用户修改
     public function edit(){
       //获取要修改用户的ID
-      session_start();
-      $id = $_SESSION['id'];
+      $id = I('get.id');
       //取出该用户信息
       $model = D('admin');
       $data = $model->find($id);
@@ -61,17 +60,67 @@ class AdminController extends BaseController {
       	 if($model->create(I('post.'),2)){
       	 	//判断是否修改成功
       	 	if(FALSE !== $model->save()){
-      	 		$this->success('用户修改成功！');
+      	 		$this->success('用户修改成功！',U('lst'));
       	 	}
       	 }
       	 $this->error($model->getError());
       }
+       //取出所有的角色
+      $rModel = D('role');
+      $rData = $rModel->select();
+      //取出用户所属角色
+      $arModel = D('admin_role');
+      $arData = $arModel->where(array(
+           'admin_id' =>array('eq',$id),
+      ))->select();
+      $_arData = array();
+      foreach($arData as $k => $v){
+      	$_arData[] = $v['role_id'];
+      }
       //数据assign到页面中
       $this->assign(array(
+           'arData' => $_arData,
+           'rData' => $rData,
            'data' => $data,
            'title' => '用户修改',
+           'btn_name' => '用户列表',
+           'btn_url' => U('lst')
       ));
       $this->display();
+    }
+    //用户修改密码
+    public function editpass(){
+        //获取要修改用户的ID
+        $id = session('id');
+        //取出该用户信息
+        $model = D('admin');
+        $data = $model->find($id);
+        //判断是否提交数据
+        if(IS_POST){
+
+            $pass = I('post.password');
+            $pass1 = I('post.password1');
+
+            if($pass != $pass1){
+                $this->error('两次密码输入不一致！');
+            }
+            $saveData = array(
+                'id' => I('post.id'),
+                'password' => $pass,
+            );
+            //判断是否修改成功
+            if(FALSE !== $model->save($saveData)) {
+                $this->success('密码修改成功！',U('Index/index'));
+            }
+            $this->error($model->getError());
+        }
+
+        //数据assign到页面中
+        $this->assign(array(
+            'data' => $data,
+            'title' => '密码修改',
+        ));
+        $this->display();
     }
     //用户删除
     public function delete(){

@@ -123,56 +123,18 @@ body {
 <div id="main-div">
     <div id="menu-list">
         <ul id="menu-ul">
+            <?php
+ $priModel = D('privilege'); $ret = $priModel->getBtns(); ?>
+            <?php foreach($ret as $k => $v): ?>
             <li class="explode" key="02_cat_and_goods" name="menu">
-            商品管理
+                <?php echo $v['pri_name']; ?>
                 <ul>
-                    <li class="menu-item"><a href="<?php echo U('Goods/lst') ?>" target="main-frame">商品列表</a></li>
-                    <li class="menu-item"><a href="<?php echo U('Category/lst') ?>" target="main-frame">商品分类</a></li>
-                    <li class="menu-item"><a href="<?php echo U('Type/lst') ?>" target="main-frame">商品类型</a></li>
+                    <?php foreach($v['children'] as $k1 => $v1): ?>
+                    <li class="menu-item"><a href="<?php echo U($v1['controller_name'].'/'.$v1['action_name']); ?>" target="main-frame"><?php echo $v1['pri_name']; ?></a></li>
+                    <?php endforeach; ?>
                 </ul>
             </li>
-            <li class="explode" key="02_cat_and_goods" name="menu">
-                轮播图管理
-                <ul>
-                    <li class="menu-item"><a href="<?php echo U('Carousel/lst') ?>" target="main-frame">轮播图列表</a></li>
-                </ul>
-            </li>
-            <li class="explode" key="02_cat_and_goods" name="menu">
-                颜色库管理
-                <ul>
-                    <li class="menu-item"><a href="<?php echo U('Color/lst') ?>" target="main-frame">颜色列表</a></li>
-                </ul>
-            </li>
-            <li class="explode" key="02_cat_and_goods" name="menu">
-                设计文章管理
-                <ul>
-                    <li class="menu-item"><a href="<?php echo U('Article/lst') ?>" target="main-frame">文章列表</a></li>
-                </ul>
-            </li>
-
-            <li class="explode" key="04_order" name="menu">
-            订单管理
-                <ul>
-                    <li class="menu-item"><a href="<?php echo U('Order/lst') ?>" target="main-frame">订单列表</a></li>
-                    <li class="menu-item"><a href="<?php echo U('Order/deli') ?>" target="main-frame">发货单列表</a></li>
-                    <li class="menu-item"><a href="back_list.html" target="main-frame">退货单列表</a></li>
-                </ul>
-            </li>
-            <li class="explode" key="04_order" name="menu">
-                报价管理
-                <ul>
-                    <li class="menu-item"><a href="<?php echo U('Model/lst') ?>" target="main-frame">模型列表</a></li>
-                    <li class="menu-item"><a href="<?php echo U('Furniture/lst') ?>" target="main-frame">家具类型列表</a></li>
-                    <li class="menu-item"><a href="<?php echo U('Quote/lst') ?>" target="main-frame">报价单列表</a></li>
-                </ul>
-            </li>
-            <li class="explode" key="04_order" name="menu">
-                管理员
-                <ul>
-                    <li class="menu-item"><a href="<?php echo U('Admin/edit') ?>" target="main-frame">修改密码</a></li>
-                </ul>
-            </li>
-
+            <?php endforeach; ?>
         </ul>
     </div>
     <div id="help-div" style="display:none">

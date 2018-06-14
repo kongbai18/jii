@@ -3,28 +3,7 @@
     <form method="post" action="__SELF__"enctype="multipart/form-data" >
         <table cellspacing="1" cellpadding="3" width="100%">
         <input type="hidden" name="id" value="<?php echo $data['id'] ?>">
-            <tr>
-                <td class="label">角色列表 :</td>
-                <td>
-                    <?php foreach($rData as $k => $v): 
-                          if(in_array($v['id'],$arData)){
-                          	 $check = 'checked="checked"';
-                          }else{
-                          	 $check = '';
-                          }
-                    ?>
-                    <input <?php echo $check; ?> type="checkbox" name="role_id[]" value="<?php echo $v['id'] ?>"><?php echo $v['role_name'] ?>
-                    <?php endforeach; ?>
-                    <span class="require-field">*</span>
-                </td>
-            </tr>
-            <tr>
-                <td class="label">用户名称 :</td>
-                <td>
-                    <input type="text" name="username" maxlength="60" value="<?php echo $data['username'] ?>" />
-                    <span class="require-field">*</span>
-                </td>
-            </tr>
+
             <tr>
                 <td class="label">密码 :</td>
                 <td>

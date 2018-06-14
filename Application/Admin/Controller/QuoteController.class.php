@@ -10,7 +10,7 @@ class QuoteController extends BaseController {
     //模型列表
     public function lst(){
         $model = D('quote');
-        $data = $model->search();
+        $data = $model->search(20,1);
         //数据assign到页面中
         $this->assign(array(
             'data'  => $data,
@@ -20,12 +20,33 @@ class QuoteController extends BaseController {
         ));
         $this->display();
     }
+    //管理员报价单
+    public function adminlst(){
+        $model = D('quote');
+        $data = $model->search(20,2);
+        //数据assign到页面中
+        $this->assign(array(
+            'data'  => $data,
+            'title' => '报价单列表',
+        ));
+        $this->display();
+    }
+    //用户报价单
+    public function userlst(){
+        $model = D('quote');
+        $data = $model->search(20,3);
+        //数据assign到页面中
+        $this->assign(array(
+            'data'  => $data,
+            'title' => '报价单列表',
+        ));
+        $this->display('lst');
+    }
     //类别增加
     public function add(){
         $model = D('quote');
         //判断是否接收表单
         if(IS_POST){
-            $_POST['user_id'] = 0;
             //判断是否验证成功
             if($model->create(I('post.'),1)){
                 //判断是否添加成功
@@ -77,11 +98,19 @@ class QuoteController extends BaseController {
         //接收要删除模型的ID
         $id = I('get.id');
         $model = D('quote');
-        //判断是否删除成功
-        if($model->delete($id)){
-            $this->success('报价单删除成功！',U('lst'));
+        $adminId = session('id');
+
+        $quoteData = $model->find($id);
+        if(($adminId == '1') || ($adminId = $quoteData['admin_id'])){
+            //判断是否删除成功
+            if($model->delete($id)){
+                $this->success('报价单删除成功！');
+            }
+            $this->error($model->getError());
+        }else{
+            $this->success('你没有删除权限！');
         }
-        $this->error($model->getError());
+
     }
     //报价单详情
     public function detail(){
@@ -102,6 +131,12 @@ class QuoteController extends BaseController {
     public function chooseFurniture(){
         $id = I('get.id');
         $model = D('furniture');
+        $adminId = session('id');
+        $quoteModel = D('quote');
+        $quoteData = $quoteModel->field('admin_id')->find($id);
+        if($adminId != $quoteData['admin_id']){
+            $this->error('无添加权限！');
+        }
         $furData = $model->field('id,fur_name,img_src')->order('sort_id desc')->select();
         $this->assign(array(
             'quote' => $id,

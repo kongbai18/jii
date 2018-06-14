@@ -20,43 +20,42 @@
 <div class="form-div">
     <form action="" name="searchForm">
         <img src="/jiimadeeee/Public/Admin/Images/icon_search.gif" width="26" height="22" border="0" alt="search" />
-
-
-        <!-- 用户姓名 -->
-        用户姓名 <input type="text" name="u_name" size="15" value="<?php echo I('get.u_name') ?>" />
-
-        <!-- 手机号 -->
-        手机号 <input type="text" name="u_phone" size="15" value="<?php echo I('get.u_phone') ?>" />
+        <!-- 状态 -->
+        <select name="status">
+            <option value='' <?php echo I('get.status') === ''?'selected':'' ?>>全部</option>
+            <option value="0" <?php echo (I('get.status') === '0')?'selected':'' ?>>待付款</option>
+            <option value="2" <?php echo I('get.status') === '2'?'selected':'' ?>>待发货</option>
+            <option value="3" <?php echo I('get.status') === '3'?'selected':'' ?>>待收货</option>
+            <option value="1" <?php echo I('get.status') === '1'?'selected':'' ?>>已完成</option>
+            <option value="7" <?php echo I('get.status') === '7'?'selected':'' ?>>已退款</option>
+        </select>
+        <!-- 关键字 -->
+        订单号 <input type="text" name="orderId" size="15" value="<?php echo I('get.orderId') ?>" />
         <input type="submit" value="搜索" class="button" />
     </form>
 </div>
- 
+
+<!-- 商品列表 -->
+<form method="post" action="" name="listForm" onsubmit="">
     <div class="list-div" id="listDiv">
         <table cellpadding="3" cellspacing="1">
             <tr>
-                <th>报价单号</th>
-                <th>业主姓名</th>
-                <th>业主地址</th>
-                <th>手机号</th>
-                <th>最后操作时间</th>
-                <th>操作</th>
+                <th>订单号</th>
+                <th>下单时间</th>
+                <th>最新更新时间</th>
+                <th>总价格</th>
             </tr>
             <?php foreach($data['data'] as $k => $v): ?>
             <tr class="tron">
-                <td align="center"><?php echo $v['id'] ?></td>
-                <td align="center"><?php echo $v['user_name'] ?></td>
-                <td align="center"><?php echo $v['address'] ?></td>
-                <td align="center"><?php echo $v['telephone'] ?></td>
-                <td align="center"><?php if($v['update_time']){echo date("Y-m-d H:i:s", $v['update_time']);}else{echo date("Y-m-d H:i:s", $v['add_time']);} ?></td>
-                <td align="center">
-                <a href="<?php echo U('detail?id='.$v['id']) ?>" >报价单详情</a> |
-                <a href="<?php echo U('getExcel?id='.$v['id']) ?>" >下载报价表</a> |
-                <a href="<?php echo U('delete?id='.$v['id']) ?>" onclick="return delMol()">移除</a>
-                </td>
+                <td align="center"><?php echo $v['order_id'] ?></td>
+                <td align="center"><?php echo date('Y-m-d',$v['add_time']) ?></td>
+                <td align="center"><?php echo date('Y-m-d',$v['update_time']) ?></td>
+                <td align="center"><?php echo $v['price'] ?></td>
             </tr>
             <?php endforeach; ?>
         </table>
-        <!-- 分页开始 -->
+
+    <!-- 分页开始 -->
         <table id="page-table" cellspacing="0">
             <tr>
                 <td width="80%">&nbsp;</td>
@@ -65,20 +64,12 @@
                 </td>
             </tr>
         </table>
-        <!-- 分页结束 -->
+    <!-- 分页结束 -->
     </div>
-
+</form>
  <!--引入高亮显示-->
-<script type="text/javascript" src="/jiimadeeee/Public/Admin/Js/tron.js"></script>
-<script>
-    function delMol() {
-        if(confirm("确认删除嘛？")){
-            return true;
-        }else {
-            return false;
-        }
-    }
-</script>
+<script type="text/javascript" src="/jiimadeeee/Public/Admin/Js/tron.js"></script>        
+
 
 
 <div id="footer">

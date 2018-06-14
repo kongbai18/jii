@@ -1,0 +1,46 @@
+<layout name="layout" />
+<div class="main-div">
+    <form action="__SELF__" method="post" name="theForm" enctype="multipart/form-data">
+        <table width="100%" id="general-table">
+            <tr>
+                <td class="label">权限名称:</td>
+                <td>
+                    <input type='text' name='pri_name' maxlength="20" value='' size='27' /> <font color="red">*</font>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">上级分类:</td>
+               <td>
+                 <select name="parent_id">
+                    <option value="0">顶级分类</option>
+                    <?php foreach($data as $k => $v): ?>
+                    <?php echo '<option value="'.$v['id'].'">'.str_repeat('-',4*$v['level']).$v['pri_name'].'</option>'; ?>
+                    <?php endforeach; ?>
+                 </select>
+            </tr>
+            <tr>
+                <td class="label">模型名称:</td>
+                <td>
+                    <input type='text' name='module_name' maxlength="20" value='' size='27' /> <font color="red">*</font>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">控制器名称:</td>
+                <td>
+                    <input type='text' name='controller_name' maxlength="20" value='' size='27' /> <font color="red">*</font>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">方法名称:</td>
+                <td>
+                    <input type='text' name='action_name' maxlength="20" value='' size='27' /> <font color="red">*</font>
+                </td>
+            </tr>
+        </table>
+        <div class="button-div">
+            <input type="submit" value=" 确定 " />
+            <input type="reset" value=" 重置 " />
+        </div>
+    </form>
+</div>
+

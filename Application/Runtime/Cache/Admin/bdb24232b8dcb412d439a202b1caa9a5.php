@@ -126,7 +126,7 @@
         </ul>
         <div id="send_info">
             您好，<?php echo session('username'); ?>
-            <a href="#" target="main-frame" class="fix-submenu">清除缓存</a>
+            <a href="<?php echo U('admin/editpass'); ?>" target="main-frame" class="fix-submenu">修改密码</a>
             <a href="<?php echo U('login/logout'); ?>" target="_top" class="fix-submenu">退出</a>
         </div>
     </div>

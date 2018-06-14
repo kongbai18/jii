@@ -1,8 +1,27 @@
-<layout name="layout" />
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>JiiHOME 管理中心 - 添加新商品 </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/jiimadeeee/Public/Admin/Styles/general.css" rel="stylesheet" type="text/css" />
+<link href="/jiimadeeee/Public/Admin/Styles/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/jiimadeeee/Public/Admin/Js/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+<h1>
+    <span class="action-span"><a href="<?php echo $btn_url; ?>"><?php echo $btn_name; ?></a>
+    </span>
+    <span class="action-span1"><a href="/jiimadeeee/index.php/Admin/index/index">JiiHOME 管理中心</a></span>
+    <span id="search_id" class="action-span1"> - <?php echo $title ?> </span>
+    <div style="clear:both"></div>
+</h1>
+
+
 <div class="form-div">
     <form action="" name="searchForm">
-        <img src="__PUBLIC__/Admin/Images/icon_search.gif" width="26" height="22" border="0" alt="search" />
-
+        <img src="/jiimadeeee/Public/Admin/Images/icon_search.gif" width="26" height="22" border="0" alt="search" />
+        <!-- 管理员 -->
+        管理员 <input type="text" name="a_name" size="15" value="<?php echo I('get.a_name') ?>" />
 
         <!-- 用户姓名 -->
         用户姓名 <input type="text" name="u_name" size="15" value="<?php echo I('get.u_name') ?>" />
@@ -51,7 +70,7 @@
     </div>
 
  <!--引入高亮显示-->
-<script type="text/javascript" src="__PUBLIC__/Admin/Js/tron.js"></script>
+<script type="text/javascript" src="/jiimadeeee/Public/Admin/Js/tron.js"></script>
 <script>
     function delMol() {
         if(confirm("确认删除嘛？")){
@@ -61,3 +80,9 @@
         }
     }
 </script>
+
+
+<div id="footer">
+版权所有 &copy; 2018 宁波几和网络科技有限公司，并保留所有权利。</div>
+</body>
+</html>

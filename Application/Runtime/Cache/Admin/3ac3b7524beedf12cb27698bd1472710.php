@@ -43,7 +43,7 @@
     <img id="fur-img" src="<?php echo $furData['img_src']; ?>" alt="">
     <?php $attr = json_decode($furData['attribute'],true); if(empty($attr)){ $gatherattr = '0'; } foreach ($attr as $k => $v){ foreach($v as $k1 => $v1){ $attr[$k] = $v1; } } ?>
     <div id="mou-tal">
-        <form method="post" action="/jiimadeeee/index.php/Admin/Quote/addModule/id/3/quoteId/20180530170511205737.html"enctype="multipart/form-data" >
+        <form method="post" action="/jiimadeeee/index.php/Admin/Quote/addModule/id/3/quoteId/20180613112743844764.html"enctype="multipart/form-data" >
             <table cellspacing="1" cellpadding="3" width="100%">
                 <?php $index = 1; foreach($attr as $k => $v): ?>
                 <tr>

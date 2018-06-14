@@ -374,7 +374,7 @@ class ModuleModel extends Model {
             $obj->setActiveSheetIndex($index)->setCellValue('B'.$_row, $quoData['address']);  //设置项目名称单元格
 
             $obj->setActiveSheetIndex($index)->setCellValue('E'.$_row, '客户姓名：');
-            $obj->setActiveSheetIndex($index)->setCellValue('F'.$_row, '');
+            $obj->setActiveSheetIndex($index)->setCellValue('F'.$_row, $quoData['user_name']);
             $obj->setActiveSheetIndex($index)->setCellValue('G'.$_row, '联系方式：');
             $obj->setActiveSheetIndex($index)->setCellValue('H'.$_row, $quoData['telephone']);
             $_row++;
@@ -487,7 +487,7 @@ class ModuleModel extends Model {
             $obj->setActiveSheetIndex($index)->setCellValue('B'.$_row, $quoData['address']);  //设置项目名称单元格
 
             $obj->setActiveSheetIndex($index)->setCellValue('E'.$_row, '客户姓名：');
-            $obj->setActiveSheetIndex($index)->setCellValue('F'.$_row, '');
+            $obj->setActiveSheetIndex($index)->setCellValue('F'.$_row, $quoData['user_name']);
             $obj->setActiveSheetIndex($index)->setCellValue('G'.$_row, '联系方式：');
             $obj->setActiveSheetIndex($index)->setCellValue('H'.$_row, $quoData['telephone']);
             $_row++;
@@ -600,7 +600,7 @@ class ModuleModel extends Model {
             $obj->setActiveSheetIndex($index)->setCellValue('B'.$_row, $quoData['address']);  //设置项目名称单元格
 
             $obj->setActiveSheetIndex($index)->setCellValue('E'.$_row, '客户姓名：');
-            $obj->setActiveSheetIndex($index)->setCellValue('F'.$_row, '');
+            $obj->setActiveSheetIndex($index)->setCellValue('F'.$_row, $quoData['user_name']);
             $obj->setActiveSheetIndex($index)->setCellValue('G'.$_row, '联系方式：');
             $obj->setActiveSheetIndex($index)->setCellValue('H'.$_row, $quoData['telephone']);
             $_row++;
