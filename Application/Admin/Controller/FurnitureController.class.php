@@ -136,7 +136,7 @@ class FurnitureController extends BaseController {
                     if ($ret['flag'] == 1) {
                         if ($id[$k] != '') {
                             //获取旧LOGO地址
-                            $oldImg = $gnModel->field('img_src')->find($id[$k]);
+                            $oldImg = $furQuoModel->field('img_src')->find($id[$k]);
 
                             foreach ($oldImg as $v1) {
                                 if ($v1 != '') {
