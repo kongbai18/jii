@@ -100,7 +100,7 @@ class ModuleModel extends Model {
             $totalModulePrice = 0;
             foreach ($formula as $k3 => $v3){
                $num = eval($v3[0]);
-               $price = eval("return".$v3[1].";");
+               $price = eval($v3[1]);
                $fee = eval($v3[3]);
                $agioFee = $fee * $v['agio'];
                if($v['agio'] === '1.00'){
@@ -152,6 +152,18 @@ class ModuleModel extends Model {
                        $doorDetailFee[$k3]['agioFee'] = $agioFee;
                    }
                }
+
+               if($v3[4]){
+                   if($goodsName[$v3[4]]){
+                       $remarkes = $goodsName[$v3[4]];
+                   }else{
+                       $remarkes = $v3[4];
+                   }
+               }else{
+                   $remarkes = '';
+               }
+
+
                 $module[] = array(
                  'name' => $k3,
                  'unit' => $v3[2],
@@ -159,7 +171,7 @@ class ModuleModel extends Model {
                  'price'=> $price,
                  'agio' => $v['agio'],
                  'agioFee' => $agioFee,
-                 'remarkes' => $goodsName[ltrim($v3[1],'$')],
+                 'remarkes' => $remarkes,
 
                );
                $totalModulePrice = $totalModulePrice + $agioFee;

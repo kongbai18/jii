@@ -22,6 +22,7 @@ class ModelModel extends Model {
         $formulaPrice = I('post.formula-price');
         $formulaTotalPrice = I('post.formula-total-price');
         $formulaUnit = I('post.formula-unit');
+        $formulaRemarke = I('post.formula-remarke');
         $extCat = I('post.ext_cat');
         $extName = I('post.ext_name');
         $extPara = I('post.ext_para');
@@ -36,7 +37,7 @@ class ModelModel extends Model {
         }
         $formula = array();
         foreach ($formulaName as $k => $v){
-            $formula[$v] = array($formulaNum[$k],$formulaPrice[$k],$formulaUnit[$k],$formulaTotalPrice[$k]);
+            $formula[$v] = array($formulaNum[$k],$formulaPrice[$k],$formulaUnit[$k],$formulaTotalPrice[$k],$formulaRemarke[$k]);
         }
 
         $extend = array();
@@ -75,6 +76,7 @@ class ModelModel extends Model {
         $formulaPrice = I('post.formula-price');
         $formulaTotalPrice = I('post.formula-total-price');
         $formulaUnit = I('post.formula-unit');
+        $formulaRemarke = I('post.formula-remarke');
         $extCat = I('post.ext_cat');
         $extName = I('post.ext_name');
         $extPara = I('post.ext_para');
@@ -89,7 +91,7 @@ class ModelModel extends Model {
         }
         $formula = array();
         foreach ($formulaName as $k => $v){
-            $formula[$v] = array($formulaNum[$k],$formulaPrice[$k],$formulaUnit[$k],$formulaTotalPrice[$k]);
+            $formula[$v] = array($formulaNum[$k],$formulaPrice[$k],$formulaUnit[$k],$formulaTotalPrice[$k],$formulaRemarke[$k]);
         }
 
         $extend = array();

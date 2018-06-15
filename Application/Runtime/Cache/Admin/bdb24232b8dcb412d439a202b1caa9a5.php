@@ -116,13 +116,13 @@
 <body>
 <div id="header-div">
     <div id="logo-div" style="bgcolor:#000000;">
-        <img src="" alt="" />
+        <img src="/jiimadeeee/Public/Admin/Images/icon.GIF" alt="" style="width: 50px;height: 50px;padding-left: 20px;" />
     </div>
     <div id="submenu-div">
         <ul>
-            <li><a href="#" target="_blank">查看网店</a></li>
-            <li><a href="#" target="main-frame">个人设置</a></li>
-            <li style="border-right:none"><a href="#">刷新</a></li>
+            <li><a href="#" target="_blank"></a></li>
+            <li><a href="#" target="main-frame"></a></li>
+            <li style="border-right:none"><a href="#"></a></li>
         </ul>
         <div id="send_info">
             您好，<?php echo session('username'); ?>
