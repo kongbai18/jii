@@ -18,7 +18,7 @@
 
 
 <div class="list-div" id="listDiv">
- <form method="post" action="/jiimadeeee/index.php/Admin/Furniture/furniture_quote/id/1.html" name="listForm" enctype="multipart/form-data">
+ <form method="post" action="/jiimadeeee/index.php/Admin/Furniture/furniture_quote/id/3.html" name="listForm" enctype="multipart/form-data">
        <table id="num-tal">
             <tr>
                 <?php foreach($attr as $k => $v): ?>

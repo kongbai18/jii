@@ -78,13 +78,30 @@ class ModuleModel extends Model {
            $material = json_decode($v['material'],true);
 
             foreach ($material as $k2 => $v2){
-               $goodsModel = D('goods');
-               $goodsData = $goodsModel->field('a.goods_name,max(b.goods_price) as price')
-                   ->alias('a')
-                   ->group('b.goods_id')
-                   ->where(array('a.id'=>array('eq',$v2)))
-                   ->join('LEFT JOIN __GOODS_NUMBER__ b ON a.id=b.goods_id')
-                   ->find();
+                $goodsModel = D('goods');
+                if(is_array($v2)){
+                    if($v2[1]){
+                        $goodsData = $goodsModel->field('a.goods_name,b.goods_price as price')
+                            ->alias('a')
+                            ->where(array('a.id'=>array('eq',$v2[0])))
+                            ->join('LEFT JOIN __GOODS_NUMBER__ b ON a.id=b.goods_id AND b.id='.$v2[1])
+                            ->find();
+                    }else{
+                        $goodsData = $goodsModel->field('a.goods_name,max(b.goods_price) as price')
+                            ->alias('a')
+                            ->group('b.goods_id')
+                            ->where(array('a.id'=>array('eq',$v2[0])))
+                            ->join('LEFT JOIN __GOODS_NUMBER__ b ON a.id=b.goods_id')
+                            ->find();
+                    }
+                }else{
+                    $goodsData = $goodsModel->field('a.goods_name,max(b.goods_price) as price')
+                        ->alias('a')
+                        ->group('b.goods_id')
+                        ->where(array('a.id'=>array('eq',$v2)))
+                        ->join('LEFT JOIN __GOODS_NUMBER__ b ON a.id=b.goods_id')
+                        ->find();
+                }
                $$k2 = $goodsData['price'];
                $goodsName[$k2] = $goodsData['goods_name'];
             }

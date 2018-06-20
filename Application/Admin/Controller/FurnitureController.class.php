@@ -10,14 +10,10 @@ class FurnitureController extends BaseController {
     //模型列表
     public function lst(){
         $model = D('furniture');
-        $cabinet = $model->field('id,fur_name')->where(array('cate_id' => array('eq','1')))->order('sort_id asc')->select();
-        $door = $model->field('id,fur_name')->where(array('cate_id' => array('eq','2')))->order('sort_id asc')->select();
-        $front = $model->field('id,fur_name')->where(array('cate_id' => array('eq','3')))->order('sort_id asc')->select();
+        $data = $model->field('id,fur_name,sort_id')->order('sort_id asc')->select();
         //数据assign到页面中
         $this->assign(array(
-            'cabinet' => $cabinet,
-            'door' => $door,
-            'front' => $front,
+            'data' => $data,
             'title' => '家具类型列表',
             'btn_name' => '添加家具类型',
             'btn_url' => U('add')

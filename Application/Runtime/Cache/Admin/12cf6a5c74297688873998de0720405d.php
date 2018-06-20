@@ -22,21 +22,17 @@
         <img src="/jiimadeeee/Public/Admin/Images/icon_search.gif" width="26" height="22" border="0" alt="search" />
         <!-- 分类 -->
         <select name="cat_id">
-            <option value="0">所有分类</option>
-            <?php if(is_array($cat_list)): foreach($cat_list as $key=>$val): ?><option value="<<?php echo ($val["cat_id"]); ?>>"><<?php echo (str_repeat('&nbsp;&nbsp;',$val["lev"])); ?>><<?php echo ($val["cat_name"]); ?>></option><?php endforeach; endif; ?>
+            <option value="">请选择...</option>
+            <?php foreach($catData as $k => $v): if($v['id'] == I('get.cat_id')){ $select = "selected"; }else{ $select = ""; } ?>
+            <?php echo '<option value="'.$v['id'].'" '.$select.' >'.str_repeat('-',4*$v['level']).$v['name'].'</option>'; ?>
+            <?php endforeach; ?>
         </select>
-        <!-- 推荐 -->
-        <select name="intro_type">
-            <option value="0">全部</option>
-            <option value="is_best">精品</option>
-            <option value="is_new">新品</option>
-            <option value="is_hot">热销</option>
-        </select>
+
         <!-- 上架 -->
         <select name="is_on_sale">
             <option value=''>全部</option>
-            <option value="1">上架</option>
-            <option value="0">下架</option>
+            <option value="1" <?php echo (I('get.is_on_sale')=='1')?'selected':''; ?>>上架</option>
+            <option value="0" <?php echo (I('get.is_on_sale')=='0')?'selected':''; ?>>下架</option>
         </select>
         <!-- 关键字 -->
         关键字 <input type="text" name="keyword" size="15" value="<?php echo I('get.keyword') ?>" />

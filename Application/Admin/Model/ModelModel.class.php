@@ -126,7 +126,7 @@ class ModelModel extends Model {
         $furId = I('get.furId');
         $gatAttr = rtrim($gatAttr,',');
         $furQuoModel = D('furniture_quote');
-        $furQuoData = $furQuoModel->field('id,model_id')->where(array(
+        $furQuoData = $furQuoModel->field('id,model_id,img_src')->where(array(
             'fur_attr_id' => array('eq',$gatAttr),
             'fur_id' => array('eq',$furId)
         ))->select();
@@ -142,6 +142,7 @@ class ModelModel extends Model {
                     $goodsData = $goodsModel->field('a.id,a.goods_name,max(b.img_src) as img_src')
                         ->alias('a')
                         ->join('LEFT JOIN __GOODS_NUMBER__ b ON a.id=b.goods_id')
+                        ->order('a.sort_id asc')
                         ->where(array('a.cat_id'=>array('in',$cateId),'a.is_quote'=>array('eq','1')))
                         ->group('a.id')
                         ->select();
@@ -156,6 +157,7 @@ class ModelModel extends Model {
             unset($modelData['parameter']);
             $data = array(
                 'furQuoId' =>  $furQuoData[0]['id'],
+                'furQuoImg' => $furQuoData[0]['img_src'],
                 'modelData' => $modelData,
                 'material' => $material,
                 'parameter' => $parameter,

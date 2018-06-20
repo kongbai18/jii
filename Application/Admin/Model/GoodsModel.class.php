@@ -304,11 +304,17 @@ class GoodsModel extends Model {
         if($keyword){
             $where['goods_name'] = array('like',"%$keyword%");
         }
-        //品牌搜索
-        $brandId = I('get.brand_id');
-        if($brandId){
-            $where['brand_id'] = array('eq',$brandId);
+        //分类搜索
+        $catId = I('get.cat_id');
+        if($catId){
+            $where['cat_id'] = array('eq',$catId);
         }
+        $isOnSale = I('get.is_on_sale');
+
+        if($isOnSale != ''){
+            $where['is_on_sale'] = array('eq',$isOnSale);
+        }
+
         /*****************翻页*************************/
         //获取总记录数
         $count = $this->where($where)->count();
@@ -494,7 +500,7 @@ class GoodsModel extends Model {
         sort($attr,SORT_NUMERIC);//以数字形式升序
         $attrStr = (string)implode(',',$attr);
         $gnModel = D('goods_number');
-        $gnData = $gnModel->field('goods_price,discount_price,goods_number,goods_attr_id,img_src')
+        $gnData = $gnModel->field('id,goods_price,discount_price,goods_number,goods_attr_id,img_src')
                     ->where(array(
                         'goods_id' => array('eq',$goodsId),
                         'goods_attr_id' =>array('eq',$attrStr)

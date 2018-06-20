@@ -12,9 +12,13 @@ class GoodsController extends BaseController {
     public function lst(){
         $model = D('goods');
         $data = $model->search(15);
+        //获取分类数据
+        $catModel = D('category');
+        $catData = $catModel->getTree();
         //数据assign到页面中
         $this->assign(array(
             'data' => $data,
+            'catData' => $catData,
             'title' => '商品列表',
             'btn_name' => '添加商品',
             'btn_url' => U('add')

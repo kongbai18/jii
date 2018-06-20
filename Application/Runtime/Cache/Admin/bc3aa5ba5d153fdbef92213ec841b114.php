@@ -24,14 +24,13 @@
         <table cellpadding="3" cellspacing="1">
             <tr>
                 <th>家具类型名称</th>
+                <th>排序</th>
                 <th>操作</th>
             </tr>
-            <tr>
-                <td colspan="2">柜体</td>
-            </tr>
-            <?php foreach($cabinet as $k => $v): ?>
+            <?php foreach($data as $k => $v): ?>
             <tr class="tron">
-                <td>--<?php echo $v['fur_name'] ?></td>
+                <td><?php echo $v['fur_name'] ?></td>
+                <td><?php echo $v['sort_id'] ?></td>
                 <td align="center">
                     <a href="<?php echo U('furniture_quote?id='.$v['id']) ?>" >属性模型</a> |
                     <a href="<?php echo U('edit?id='.$v['id']) ?>" >编辑</a> |
@@ -39,32 +38,7 @@
                 </td>
             </tr>
             <?php endforeach; ?>
-            <tr>
-                <td colspan="2">门板</td>
-            </tr>
-            <?php foreach($door as $k => $v): ?>
-            <tr class="tron">
-                <td>--<?php echo $v['fur_name'] ?></td>
-                <td align="center">
-                    <a href="<?php echo U('furniture_quote?id='.$v['id']) ?>" >属性模型</a> |
-                    <a href="<?php echo U('edit?id='.$v['id']) ?>" >编辑</a> |
-                    <a href="<?php echo U('delete?id='.$v['id']) ?>" onclick="return delMol()">移除</a>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-            <tr>
-                <td colspan="2">饰面</td>
-            </tr>
-            <?php foreach($front as $k => $v): ?>
-            <tr class="tron">
-                <td>--<?php echo $v['fur_name'] ?></td>
-                <td align="center">
-                    <a href="<?php echo U('furniture_quote?id='.$v['id']) ?>" >属性模型</a> |
-                    <a href="<?php echo U('edit?id='.$v['id']) ?>" >编辑</a> |
-                    <a href="<?php echo U('delete?id='.$v['id']) ?>" onclick="return delMol()">移除</a>
-                </td>
-            </tr>
-            <?php endforeach; ?>
+
         </table>
 
  <!--引入高亮显示-->
