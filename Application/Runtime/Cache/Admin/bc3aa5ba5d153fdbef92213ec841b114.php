@@ -40,6 +40,7 @@
             <?php endforeach; ?>
 
         </table>
+    </div>
 
  <!--引入高亮显示-->
 <script type="text/javascript" src="/jiimadeeee/Public/Admin/Js/tron.js"></script>

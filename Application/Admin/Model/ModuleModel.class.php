@@ -19,8 +19,23 @@ class ModuleModel extends Model {
     public function _before_insert(&$data,$option){
         $quoteId = I('post.quote_id');
         $cateId = I('post.cate_id');
+
+        $furQuoId = $data['fur_quo_id'];
+        $furQuoModel = D('furniture_quote');
+        $furQuoData = $furQuoModel->field('model_id')->find($furQuoId);
+
+        $modelModel = D('model');
+        $modelData = $modelModel->field('parameter')->find($furQuoData['model_id']);
+        $modelParameter = json_decode($modelData['parameter']);
+        $parameter = I('post.parameter');
+        $parameterBeta = array();
+        foreach ($modelParameter as $v){
+            $parameterBeta[$v] = $parameter[$v];
+        }
+
+
         $data['material'] = json_encode(I('post.material'));
-        $data['parameter'] = json_encode(I('post.parameter'));
+        $data['parameter'] = json_encode($parameterBeta);
         $data['ext'] = json_encode(I('post.ext'));
         $num = $this->field('max(sort_id) as num')->where(array('quote_id'=>array('eq',$quoteId),'cate_id'=>array('eq',$cateId)))->group('quote_id')->select();
         if(empty($num)){
@@ -75,6 +90,24 @@ class ModuleModel extends Model {
                $parAttr[] = $k1.':'.$v1;
            }
            $parStr = implode('/',$parAttr);
+
+           $parStrAttr = array();
+            $parTolNum = count($parAttr);
+           foreach ($parAttr as $k8 => $v8){
+               if($k8%3 == 0){
+                   $parOne = $v8.'/';
+               }
+               if($k8%3 == 1){
+                   $parOne = $parOne.$v8.'/';
+               }
+               if($k8%3 == 2){
+                   $parOne = $parOne.$v8;
+                   $parStrAttr[] = $parOne;
+
+               }
+           }
+
+            //var_dump($parStr);die;
            $material = json_decode($v['material'],true);
 
             foreach ($material as $k2 => $v2){
@@ -204,6 +237,7 @@ class ModuleModel extends Model {
                 $cabinetData['module'][$k]['sort_id'] = $v['sort_id'];
                 $cabinetData['module'][$k]['parameter'] = $parameter;
                 $cabinetData['module'][$k]['parStr'] = $parStr;
+                $cabinetData['module'][$k]['parStrAttr'] = $parStrAttr;
             }elseif ($v['cate_id'] == '3'){
                 $frontData['module'][$k]['img_src'] = $v['img_src'];
                 $frontData['module'][$k]['attr'] = explode(',',$v['attr']);
@@ -215,6 +249,7 @@ class ModuleModel extends Model {
                 $frontData['module'][$k]['sort_id'] = $v['sort_id'];
                 $frontData['module'][$k]['parameter'] = $parameter;
                 $frontData['module'][$k]['parStr'] = $parStr;
+                $frontData['module'][$k]['parStrAttr'] = $parStrAttr;
             }elseif ($v['cate_id'] == '2'){
                 $doorData['module'][$k]['img_src'] = $v['img_src'];
                 $doorData['module'][$k]['attr'] = explode(',',$v['attr']);
@@ -226,6 +261,7 @@ class ModuleModel extends Model {
                 $doorData['module'][$k]['sort_id'] = $v['sort_id'];
                 $doorData['module'][$k]['parameter'] = $parameter;
                 $doorData['module'][$k]['parStr'] = $parStr;
+                $doorData['module'][$k]['parStrAttr'] = $parStrAttr;
             }
         }
         $cabinetData['fee'] = $cabinetFee;

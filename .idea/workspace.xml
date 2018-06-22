@@ -3,15 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0b8f0d28-43ca-4f73-9bdb-a816208d00ec" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Application/Admin/Controller/FurnitureController.class.php" afterPath="$PROJECT_DIR$/Application/Admin/Controller/FurnitureController.class.php" />
-      <change beforePath="$PROJECT_DIR$/Application/Admin/Controller/GoodsController.class.php" afterPath="$PROJECT_DIR$/Application/Admin/Controller/GoodsController.class.php" />
-      <change beforePath="$PROJECT_DIR$/Application/Admin/Model/GoodsModel.class.php" afterPath="$PROJECT_DIR$/Application/Admin/Model/GoodsModel.class.php" />
-      <change beforePath="$PROJECT_DIR$/Application/Admin/Model/ModelModel.class.php" afterPath="$PROJECT_DIR$/Application/Admin/Model/ModelModel.class.php" />
       <change beforePath="$PROJECT_DIR$/Application/Admin/Model/ModuleModel.class.php" afterPath="$PROJECT_DIR$/Application/Admin/Model/ModuleModel.class.php" />
-      <change beforePath="$PROJECT_DIR$/Application/Admin/View/Furniture/lst.html" afterPath="$PROJECT_DIR$/Application/Admin/View/Furniture/lst.html" />
-      <change beforePath="$PROJECT_DIR$/Application/Admin/View/Goods/lst.html" afterPath="$PROJECT_DIR$/Application/Admin/View/Goods/lst.html" />
-      <change beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/0204c66e99b0fb0f909f732effe09da8.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/0204c66e99b0fb0f909f732effe09da8.php" />
-      <change beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/12cf6a5c74297688873998de0720405d.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/12cf6a5c74297688873998de0720405d.php" />
       <change beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/9ccaf2c99e4ab6efb9b1e2a785ed455c.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/9ccaf2c99e4ab6efb9b1e2a785ed455c.php" />
       <change beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/bc3aa5ba5d153fdbef92213ec841b114.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/bc3aa5ba5d153fdbef92213ec841b114.php" />
     </list>
@@ -37,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ModuleModel.class.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ModuleModel.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/Admin/Model/ModuleModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3105">
-              <caret line="115" column="13" lean-forward="false" selection-start-line="115" selection-start-column="13" selection-end-line="115" selection-end-column="13" />
+            <state relative-caret-position="-3976">
+              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -90,18 +82,18 @@
       <file leaf-file-name="GoodsModel.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Admin/Model/GoodsModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
+            <state relative-caret-position="8505">
               <caret line="320" column="17" lean-forward="false" selection-start-line="320" selection-start-column="17" selection-end-line="320" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lst.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="lst.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Admin/View/Furniture/lst.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="23" column="16" lean-forward="true" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+            <state relative-caret-position="621">
+              <caret line="23" column="16" lean-forward="false" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -110,7 +102,7 @@
       <file leaf-file-name="ModelModel.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Admin/Model/ModelModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4023">
+            <state relative-caret-position="838">
               <caret line="149" column="17" lean-forward="false" selection-start-line="149" selection-start-column="17" selection-end-line="149" selection-end-column="17" />
               <folding />
             </state>
@@ -168,7 +160,6 @@
       <find>va</find>
       <find>type</find>
       <find>made_user</find>
-      <find>add</find>
       <find>$material</find>
       <find>conso</find>
       <find>var</find>
@@ -181,6 +172,7 @@
       <find>changeA</find>
       <find>getFur</find>
       <find>changeAt</find>
+      <find>add</find>
     </findStrings>
     <replaceStrings>
       <replace>__PUBLIC__/Admin/Styles</replace>
@@ -237,12 +229,12 @@
         <option value="$PROJECT_DIR$/Application/Admin/View/Model/add.html" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Model/edit.html" />
         <option value="$PROJECT_DIR$/Application/Admin/Model/ModelModel.class.php" />
-        <option value="$PROJECT_DIR$/Application/Admin/Model/ModuleModel.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/Controller/GoodsController.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Goods/lst.html" />
         <option value="$PROJECT_DIR$/Application/Admin/Model/GoodsModel.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/Controller/FurnitureController.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Furniture/lst.html" />
+        <option value="$PROJECT_DIR$/Application/Admin/Model/ModuleModel.class.php" />
       </list>
     </option>
   </component>
@@ -253,7 +245,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -344,8 +336,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -457,15 +449,16 @@
       <workItem from="1529023844175" duration="6585000" />
       <workItem from="1529371675026" duration="6369000" />
       <workItem from="1529456926192" duration="1982000" />
+      <workItem from="1529550073031" duration="929000" />
+      <workItem from="1529551149485" duration="5702000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="555353000" />
+    <option name="totallyTimeSpent" value="561984000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13072917" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -784,20 +777,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1944">
           <caret line="72" column="25" lean-forward="false" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="106" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#li#0;n#td#1;n#tr#4;n#table#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#li#0;n#td#1;n#tr#4;n#table#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#li#0;n#td#1;n#tr#4;n#table#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#3;n#li#0;n#td#1;n#tr#4;n#table#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#4;n#li#0;n#td#1;n#tr#4;n#table#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#5;n#li#0;n#td#1;n#tr#4;n#table#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <marker date="1529045777909" expanded="true" signature="5063:5093" ph="..." />
-            <marker date="1529045777909" expanded="true" signature="5196:5226" ph="..." />
-            <marker date="1529045777909" expanded="true" signature="6431:6461" ph="..." />
-            <marker date="1529045777909" expanded="true" signature="6557:6587" ph="..." />
-            <marker date="1529045777909" expanded="true" signature="6837:6867" ph="..." />
-            <marker date="1529045777909" expanded="true" signature="6964:6976" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -830,30 +809,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/Model/ModelModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4023">
-          <caret line="149" column="17" lean-forward="false" selection-start-line="149" selection-start-column="17" selection-end-line="149" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/Model/ModuleModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3105">
-          <caret line="115" column="13" lean-forward="false" selection-start-line="115" selection-start-column="13" selection-end-line="115" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Goods/add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1134">
-          <caret line="42" column="24" lean-forward="false" selection-start-line="42" selection-start-column="24" selection-end-line="47" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/View/Goods/lst.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
@@ -872,7 +827,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/Model/GoodsModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
+        <state relative-caret-position="8505">
           <caret line="320" column="17" lean-forward="false" selection-start-line="320" selection-start-column="17" selection-end-line="320" selection-end-column="17" />
           <folding />
         </state>
@@ -886,10 +841,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Goods/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1134">
+          <caret line="42" column="24" lean-forward="false" selection-start-line="42" selection-start-column="24" selection-end-line="47" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/View/Furniture/lst.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="23" column="16" lean-forward="true" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+        <state relative-caret-position="621">
+          <caret line="23" column="16" lean-forward="false" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Model/ModelModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="838">
+          <caret line="149" column="17" lean-forward="false" selection-start-line="149" selection-start-column="17" selection-end-line="149" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Model/ModuleModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3976">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>
