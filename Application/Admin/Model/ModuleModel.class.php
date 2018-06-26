@@ -96,9 +96,20 @@ class ModuleModel extends Model {
            foreach ($parAttr as $k8 => $v8){
                if($k8%3 == 0){
                    $parOne = $v8.'/';
+                   if($parTolNum == $k8+1){
+                       $parOne = $v8;
+                       $parStrAttr[] = $parOne;
+                   }else{
+                       $parOne = $v8.'/';
+                   }
                }
                if($k8%3 == 1){
-                   $parOne = $parOne.$v8.'/';
+                   if($parTolNum == $k8+1){
+                       $parOne = $parOne.$v8;
+                       $parStrAttr[] = $parOne;
+                   }else{
+                       $parOne = $parOne.$v8.'/';
+                   }
                }
                if($k8%3 == 2){
                    $parOne = $parOne.$v8;
@@ -128,12 +139,19 @@ class ModuleModel extends Model {
                             ->find();
                     }
                 }else{
-                    $goodsData = $goodsModel->field('a.goods_name,max(b.goods_price) as price')
+                    $goodsData = $goodsModel->field('a.goods_name,max(b.img_src) as img_src,max(goods_price) as price')
                         ->alias('a')
                         ->group('b.goods_id')
                         ->where(array('a.id'=>array('eq',$v2)))
                         ->join('LEFT JOIN __GOODS_NUMBER__ b ON a.id=b.goods_id')
                         ->find();
+                    $goodsNumModel = D('goods_number');
+                    $goodsNumData = $goodsNumModel->field('goods_price,img_src')->where(array('goods_id'=>array('eq',$v2)))->select();
+                    foreach ($goodsNumData as $k3 => $v3){
+                        if($v3['img_src'] == $goodsData['img_src']){
+                            $goodsData['price'] = $v3['goods_price'];
+                        }
+                    }
                 }
                $$k2 = $goodsData['price'];
                $goodsName[$k2] = $goodsData['goods_name'];
@@ -210,7 +228,7 @@ class ModuleModel extends Model {
                        $remarkes = $v3[4];
                    }
                }else{
-                   $remarkes = '';
+                   $remarkes = '-';
                }
 
 
@@ -394,8 +412,9 @@ class ModuleModel extends Model {
                     $this->where($where)->save($saveData);
                 }
                 return true;
+            }else{
+                return false;
             }
-
         }
     }
     public function getExcel($quoteId,$isDown=false){

@@ -47,7 +47,7 @@
     }
 </style>
 <div class="main-div">
-    <form method="post" action="/jiimadeeee/index.php/Admin/Model/edit/id/2.html"enctype="multipart/form-data" >
+    <form method="post" action="/jiimadeeee/index.php/Admin/Model/edit/id/3.html"enctype="multipart/form-data" >
         <table cellspacing="1" cellpadding="3" width="100%">
             <input type="hidden" name="id" value="<?php echo $data['id']; ?>">
             <tr>

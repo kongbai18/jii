@@ -177,7 +177,7 @@ class IndexController extends Controller {
     //选择家具
     public function chooseFurniture(){
         $model = D('furniture');
-        $furData = $model->field('id,fur_name,img_src,attribute')->order('sort_id desc')->select();
+        $furData = $model->field('id,fur_name,img_src,attribute')->order('sort_id asc')->select();
         foreach ($furData as $k => $v){
             $attribute = json_decode($v['attribute'],true);
             if(empty($attribute)){

@@ -120,6 +120,36 @@ class ModelModel extends Model {
     public function _before_delete($option){
 
     }
+    //验证模型是否存在
+    public function _checkModel($furId,$gatAttr){
+        $furQuoModel = D('furniture_quote');
+        $furQuoData = $furQuoModel->field('id,model_id,img_src')->where(array(
+            'fur_attr_id' => array('eq',$gatAttr),
+            'fur_id' => array('eq',$furId)
+        ))->select();
+        if(empty($furQuoData)){
+            return false;
+        }else{
+            $data = array(
+                'fur' => $furQuoData,
+                'gat' => $gatAttr,
+            );
+            return $data;
+        }
+    }
+    public function checkModel($furId,$gat){
+        $gat = explode(',',$gat);
+        $gat[1] = $gat[1]+1;
+
+        for ($gat[1];$gat[1]<7;$gat[1]++){
+            $gatAttr = implode(',',$gat);
+            $result = $this->_checkModel($furId,$gatAttr);
+            if($result){
+                return $result;
+            }
+        }
+        return false;
+    }
     //小程序获取计价模型
     public function getFurModel(){
         $gatAttr = I('get.gatAttr');
@@ -130,41 +160,87 @@ class ModelModel extends Model {
             'fur_attr_id' => array('eq',$gatAttr),
             'fur_id' => array('eq',$furId)
         ))->select();
+
         if(empty($furQuoData)){
-            return false; //此属性不存在对应计价模型
-        }else{
+            $resData = $this->checkModel($furId,$gatAttr);
+            if($resData){
+                $furQuoData = $resData['fur'];
+                $gatAttr = $resData['gat'];
+            }else{
+                $furQuoData = array();
+            }
+        }
+
+        if(empty($furQuoData)){
+            return false;
+        }else {
             $modelData = $this->find($furQuoData[0]['model_id']);
-            $material = json_decode($modelData['material'],true);
+            $material = json_decode($modelData['material'], true);
             $goodsModel = D('goods');
-            foreach ($material as $k => &$v){
-                foreach ($v as $k1 => &$v1){
-                    $cateId = explode(',',$v1);
+            foreach ($material as $k => &$v) {
+                foreach ($v as $k1 => &$v1) {
+                    $cateId = explode(',', $v1);
                     $goodsData = $goodsModel->field('a.id,a.goods_name,max(b.img_src) as img_src')
                         ->alias('a')
                         ->join('LEFT JOIN __GOODS_NUMBER__ b ON a.id=b.goods_id')
                         ->order('a.sort_id asc')
-                        ->where(array('a.cat_id'=>array('in',$cateId),'a.is_quote'=>array('eq','1')))
+                        ->where(array('a.cat_id' => array('in', $cateId), 'a.is_quote' => array('eq', '1')))
                         ->group('a.id')
                         ->select();
                     $v1 = $goodsData;
                 }
             }
-            $parameter = json_decode($modelData['parameter'],true);
-            $ext = json_decode($modelData['ext'],true);
+            $parameter = json_decode($modelData['parameter'], true);
+            $ext = json_decode($modelData['ext'], true);
             unset($modelData['material']);
             unset($modelData['model_name']);
             unset($modelData['formula']);
             unset($modelData['parameter']);
+
+            $gatAttr = explode(',', $gatAttr);
+            $addData = '';
+            $minData = '';
+            $minVal = '';
+            if ($gatAttr[1]) {
+                $minVal = $gatAttr[1];
+                $gatAttr[1] = $gatAttr[1] - 1;
+                $minGatAttr = implode(',', $gatAttr);
+                $gatAttr[1] = $gatAttr[1] + 2;
+                $addGatAttr = implode(',', $gatAttr);
+                $minFurQuoData = $furQuoModel->field('id,model_id,img_src')->where(array(
+                    'fur_attr_id' => array('eq', $minGatAttr),
+                    'fur_id' => array('eq', $furId)
+                ))->select();
+                if (empty($minFurQuoData)) {
+                    $minData = '2';
+                } else {
+                    $minData = '1';
+                }
+                $addFurQuoData = $furQuoModel->field('id,model_id,img_src')->where(array(
+                    'fur_attr_id' => array('eq', $addGatAttr),
+                    'fur_id' => array('eq', $furId)
+                ))->select();
+                if (empty($addFurQuoData)) {
+                    $addData = '2';
+                } else {
+                    $addData = '1';
+                }
+            }
+
             $data = array(
-                'furQuoId' =>  $furQuoData[0]['id'],
+                'furQuoId' => $furQuoData[0]['id'],
                 'furQuoImg' => $furQuoData[0]['img_src'],
                 'modelData' => $modelData,
                 'material' => $material,
                 'parameter' => $parameter,
                 'ext' => $ext,
+                'minData' => $minData,
+                'addData' => $addData,
+                'minVal' => $minVal,
             );
             return $data;
         }
+
     }
 
     public function test(){
