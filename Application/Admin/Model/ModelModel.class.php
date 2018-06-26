@@ -139,7 +139,7 @@ class ModelModel extends Model {
     }
     public function checkModel($furId,$gat){
         $gat = explode(',',$gat);
-        $gat[1] = $gat[1]+1;
+        $gat[1] = 0;
 
         for ($gat[1];$gat[1]<7;$gat[1]++){
             $gatAttr = implode(',',$gat);
