@@ -250,3 +250,9 @@ INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
 INFO: [ app_init ] --END-- [ RunTime:0.001697s ]
 ERR: 无法加载模块:Public
 
+[ 2018-06-26T16:32:52+08:00 ] 127.0.0.1 /jiimadeeee/Public/Admin/Styles/.__PUBLIC__/Admin/Images/icon_add.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000143s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003541s ]
+ERR: 无法加载模块:Public
+

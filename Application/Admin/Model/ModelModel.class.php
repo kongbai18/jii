@@ -201,7 +201,7 @@ class ModelModel extends Model {
             $addData = '';
             $minData = '';
             $minVal = '';
-            if ($gatAttr[1]) {
+            if ($gatAttr[1] || ($gatAttr[1] == 0)) {
                 $minVal = $gatAttr[1];
                 $gatAttr[1] = $gatAttr[1] - 1;
                 $minGatAttr = implode(',', $gatAttr);

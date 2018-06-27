@@ -1122,3 +1122,19 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001229s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001381s ]
 
+[ 2018-06-26T16:31:24+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Admin/Furniture/ajaxDelNum/id/13
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000218s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003550s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005242s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005898s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Controller\BaseController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `made_privilege` [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `made_furniture_quote` [ RunTime:0.0025s ]
+SQL: SELECT `img_src` FROM `made_furniture_quote` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0015s ]
+SQL: DELETE FROM `made_furniture_quote` WHERE `id` = 13 [ RunTime:0.0055s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001524s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001874s ]
+
