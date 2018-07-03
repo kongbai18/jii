@@ -1,0 +1,19 @@
+<layout name="layout" />
+
+<form method="post" action="" name="listForm" onsubmit="">
+    <div class="list-div" id="listDiv">
+        <table cellpadding="3" cellspacing="1">
+            <tr>
+                <th>推广总数</th>
+                <th>本月推广数</th>
+                <th>今日推广数</th>
+            </tr>
+            <tr class="tron">
+                <td align="center"><?php echo $data['countNum']; ?></td>
+                <td align="center"><?php echo $data['monthCountNum']; ?></td>
+                <td align="center"><?php echo $data['todayCountNum']; ?></td>
+            </tr>
+        </table>
+
+    </div>
+</form>

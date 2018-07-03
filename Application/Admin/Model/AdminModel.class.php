@@ -126,4 +126,56 @@ class AdminModel extends Model {
 			));
 		} 
 	}
+    //生成个人推广二维码
+    public function get_prcode() {
+        $access = json_decode(get_access_token(),true);
+        $access_token= $access['access_token'];
+        $id = session('id');
+        $path="pages/index/spread/spread?id=".$id;
+        $width=430;
+        $post_data='{"path":"'.$path.'","width":'.$width.'}';
+        $url="https://api.weixin.qq.com/wxa/getwxacode?access_token=".$access_token;
+        $result = get_http_array($url,$post_data);
+        return $result;
+    }
+    //个人推广数据
+    public function spread(){
+	    $adminId = session('id');
+	    $userModel = D('user');
+	    $countNum = $userModel->where(array('admin_id'=>array('eq',$adminId)))->count();
+
+	    $month = strtotime(date("Y-m"),time());
+        $monthCountNum = $userModel->where(array('admin_id'=>array('eq',$adminId),'add_time'=>array('gt',$month)))->count();
+
+        $today = strtotime(date("Y-m-d"),time());
+        $todayCountNum = $userModel->where(array('admin_id'=>array('eq',$adminId),'add_time'=>array('gt',$today)))->count();
+
+        $data = array(
+            'countNum' => $countNum,
+            'monthCountNum' => $monthCountNum,
+            'todayCountNum' => $todayCountNum,
+        );
+        return $data;
+    }
+    //所有推广
+    public function allSpread(){
+	    $adminData = $this->field('id,username')->select();
+
+	    $spreadData = array();
+        $userModel = D('user');
+        $month = strtotime(date("Y-m"),time());
+        $today = strtotime(date("Y-m-d"),time());
+	    foreach ($adminData as $k => $v){
+            $countNum = $userModel->where(array('admin_id'=>array('eq',$v['id'])))->count();
+            $monthCountNum = $userModel->where(array('admin_id'=>array('eq',$v['id']),'add_time'=>array('gt',$month)))->count();
+            $todayCountNum = $userModel->where(array('admin_id'=>array('eq',$v['id']),'add_time'=>array('gt',$today)))->count();
+            $spreadData[] = array(
+                'countNum' => $countNum,
+                'monthCountNum' => $monthCountNum,
+                'todayCountNum' => $todayCountNum,
+                'userName' => $v['username'],
+            );
+        }
+        return $spreadData;
+    }
 }

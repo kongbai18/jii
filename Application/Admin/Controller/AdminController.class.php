@@ -133,4 +133,31 @@ class AdminController extends BaseController {
      }
       $this->error($model->getError());
     }
+    //个人推广二维码
+    public function myPrcode(){
+        $model = D('admin');
+        $model->get_prcode();
+    }
+    //个人推广
+    public function spread(){
+        $model = D('admin');
+        $data = $model->spread();
+        //数据assign到页面中
+        $this->assign(array(
+            'data' => $data,
+            'title' => '我的推广记录',
+        ));
+        $this->display();
+    }
+    //所有推广列表
+    public function allSpread(){
+        $model = D('admin');
+        $data = $model->allSpread();
+        //数据assign到页面中
+        $this->assign(array(
+            'data' => $data,
+            'title' => '推广列表',
+        ));
+        $this->display();
+    }
 }

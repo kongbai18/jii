@@ -1,0 +1,22 @@
+<layout name="layout" />
+
+<div class="list-div" id="listDiv">
+    <table cellpadding="3" cellspacing="1">
+        <tr>
+            <th>管理员名称</th>
+            <th>推广总数</th>
+            <th>本月推广数</th>
+            <th>今日推广数</th>
+        </tr>
+        <?php foreach($data as $k => $v): ?>
+        <tr class="tron">
+            <td align="center"><?php echo $v['userName'] ?></td>
+            <td align="center"><?php echo $v['countNum']; ?></td>
+            <td align="center"><?php echo $v['monthCountNum']; ?></td>
+            <td align="center"><?php echo $v['todayCountNum']; ?></td>
+        </tr>
+        <?php endforeach; ?>
+    </table>
+</div>
+<!--引入高亮显示-->
+<script type="text/javascript" src="__PUBLIC__/Admin/Js/tron.js"></script>

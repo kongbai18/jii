@@ -10,6 +10,7 @@ use Think\Model;
 class UserModel extends Model {
     public function login(){
          $code = I('get.code');
+         $adminId = I('get.id');
          $appId = 'wx6a73b5816054ba24';
          $secret = '143b572cbecbae4bb6c138643ac7f6e8';
          $file_contents = file_get_contents('https://api.weixin.qq.com/sns/jscode2session?appid='.$appId.'&secret='.$secret.'&js_code='.$code.'&grant_type=authorization_code');
@@ -27,18 +28,25 @@ class UserModel extends Model {
                  );
                  $result = $this->save($data);
                  if($result !== false){
+                   $data['result'] = 2;
                    unset($data['session_key']);
                    return $data;
                  }else{
                      return 'false';
                  }
              }else{
+                 if(!$adminId){
+                     $adminId = 0;
+                 }
                  $data['openid'] = $openid;
                  $data['thr_session'] = md5($wxData['session_key']);
                  $data['session_key'] = $wxData['session_key'];
+                 $data['admin_id'] = $adminId;
+                 $data['add_time'] = time();
                  $result = $this->add($data);
                  if ($result){
                      $data['id'] = $result;
+                     $data['result'] = 1;
                      unset($data['openid']);
                      unset($data['session_key']);
                      return $data;
