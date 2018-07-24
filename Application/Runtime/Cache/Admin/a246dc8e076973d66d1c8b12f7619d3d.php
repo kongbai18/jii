@@ -17,13 +17,26 @@
 </h1>
 
 
+
 <div class="main-div">
     <form method="post" action="/jiimadeeee/index.php/Admin/Carousel/add.html"enctype="multipart/form-data" >
         <table cellspacing="1" cellpadding="3" width="100%">
             <tr>
-                <td class="label">颜色图片</td>
+                <td class="label">轮播图</td>
                 <td>
                     <input type="file" name="img_src" accept="image/*" id="img" size="45">
+                    <span class="require-field">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">所属主题：</td>
+                <td>
+                    <select name="theme_id">
+                        <option value="">请选择...</option>
+                        <?php foreach($themeData as $k => $v): ?>
+                        <?php echo '<option value="'.$v['id'].'">'.$v['theme_name'].'</option>'; ?>
+                        <?php endforeach; ?>
+                    </select>
                     <span class="require-field">*</span>
                 </td>
             </tr>

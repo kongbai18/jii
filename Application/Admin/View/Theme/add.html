@@ -1,0 +1,29 @@
+<layout name="layout" />
+<div class="main-div">
+    <form method="post" action="__SELF__"enctype="multipart/form-data" >
+        <table cellspacing="1" cellpadding="3" width="100%">
+            <tr>
+            <td class="label">主题名称</td>
+            <td>
+                <input type="text" name="theme_name" maxlength="60" value="" />
+                <span class="require-field">*</span>
+            </td>
+        </tr>
+
+            <tr>
+                <td class="label">排序</td>
+                <td>
+                    <input type="text" name="sort_id" size="5" value="100"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center"><br />
+                    <input type="submit" class="button" value=" 确定 " />
+                    <input type="reset" class="button" value=" 重置 " />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+

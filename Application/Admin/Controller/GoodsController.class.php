@@ -216,6 +216,8 @@ class GoodsController extends BaseController {
             $gn = I('post.goods_number');
             $gp = I('post.goods_price');
             $dp = I('post.discount_price');
+            $reward = I('post.reward');
+            $deduction = I('post.deduction');
             //计算商品属性和库存量比例
             $gaidCount = count($gaid);
             $gnCount = count($gn);
@@ -236,6 +238,12 @@ class GoodsController extends BaseController {
                 }
                 if($dp[$k] == ''){
                     $dp[$k] = 0;
+                }
+                if($reward[$k] == ''){
+                    $reward[$k] = 0;
+                }
+                if($deduction[$k] == ''){
+                    $deduction[$k] = 0;
                 }
                 sort($_goodsAttrId,SORT_NUMERIC);//以数字形式升序
                 $_goodsAttrId = (string)implode(',',$_goodsAttrId);
@@ -270,6 +278,8 @@ class GoodsController extends BaseController {
                             'goods_price' => $gp[$k],
                             'discount_price' => $dp[$k],
                             'img_src' => $img,
+                            'reward' => $reward[$k],
+                            'deduction' => $deduction[$k],
                         );
                         $gnModel->save($data);
                     }else{
@@ -280,6 +290,8 @@ class GoodsController extends BaseController {
                             'goods_price' => $gp[$k],
                             'discount_price' => $dp[$k],
                             'img_src' => $img,
+                            'reward' => $reward[$k],
+                            'deduction' => $deduction[$k],
                         ));
                     }
                 }else{
@@ -291,6 +303,8 @@ class GoodsController extends BaseController {
                             'goods_number' => $v,
                             'goods_price' => $gp[$k],
                             'discount_price' => $dp[$k],
+                            'reward' => $reward[$k],
+                            'deduction' => $deduction[$k],
                         );
                         $gnModel->save($data);
                     }else{
@@ -300,6 +314,8 @@ class GoodsController extends BaseController {
                             'goods_number' => $v,
                             'goods_price' => $gp[$k],
                             'discount_price' => $dp[$k],
+                            'reward' => $reward[$k],
+                            'deduction' => $deduction[$k],
                         ));
                     }
                 }

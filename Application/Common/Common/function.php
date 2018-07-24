@@ -128,7 +128,7 @@ function wxorder($orderId,$price,$openid) {
         'time_expire'=>$dataLat,
         'notify_url'=>'http://8bj34k.natappfree.cc/jiiMarket/index.php',//接受微信异步通知地址
         'openid'=>$openid,
-        'out_trade_no'=>$orderId,//商户唯一订单号，可包含字母序
+        'out_trade_no'=>$orderId.rand(1000,9999),//商户唯一订单号，可包含字母序
         'total_fee'=>$price,//订单金额，单位/分
         'trade_type'=>'JSAPI',
     );

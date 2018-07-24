@@ -1,0 +1,32 @@
+<layout name="layout" />
+
+
+
+    <div class="list-div" id="listDiv">
+        <table cellpadding="3" cellspacing="1">
+            <tr>
+                <th>主题名称</th>
+                <th>排序</th>
+                <th>操作</th>
+            </tr>
+            <?php foreach($data as $k => $v): ?>
+            <tr class="tron">
+                <td align="center"><?php echo $v['theme_name'] ?></td>
+                <td align="center"><?php echo $v['sort_id'] ?></td>
+                <td align="center">
+                <a href="<?php echo U('edit?id='.$v['id']) ?>" >编辑</a> |
+                <a href="<?php echo U('delete?id='.$v['id']) ?>" onclick="return delCol()">移除</a>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </table>
+    </div>
+<script>
+    function delCol() {
+        if(confirm("确认删除嘛？")){
+            return true;
+        }else {
+            return false;
+        }
+    }
+</script>

@@ -1,0 +1,24 @@
+[ 2018-07-03T15:54:36+08:00 ] ::1 /jiimadeeee/Public/Admin/Styles/.__PUBLIC__/Admin/Images/th_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000281s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003670s ]
+ERR: 无法加载模块:Public
+
+[ 2018-07-03T15:54:36+08:00 ] ::1 /jiimadeeee/Public/Admin/Styles/.__PUBLIC__/Admin/Images/icon_add.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000196s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003726s ]
+ERR: 无法加载模块:Public
+
+[ 2018-07-03T15:54:41+08:00 ] ::1 /jiimadeeee/Public/Admin/Styles/.__PUBLIC__/Admin/Images/icon_add.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000281s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004110s ]
+ERR: 无法加载模块:Public
+
+[ 2018-07-03T15:54:41+08:00 ] ::1 /jiimadeeee/Public/Admin/Styles/.__PUBLIC__/Admin/Images/th_bg.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000082s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004184s ]
+ERR: 无法加载模块:Public
+

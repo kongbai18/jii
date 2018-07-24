@@ -5,10 +5,15 @@ class CarouselController extends BaseController {
     //类别列表
     public function lst(){
       $model = D('carousel');
-      $data = $model->select();
+      $data = $model->search(20);
+
+        $themeModel = D('theme');
+        $themeData = $themeModel->order('sort_id asc')->select();
+
       //数据assign到页面中
       $this->assign(array(
            'data'  => $data,
+          'themeData' => $themeData,
            'title' => '轮播图列表',
            'btn_name' => '添加轮播图',
            'btn_url' => U('add')
@@ -18,6 +23,9 @@ class CarouselController extends BaseController {
     //类别增加
     public function add(){
       $model = D('carousel');
+
+      $themeModel = D('theme');
+      $themeData = $themeModel->order('sort_id asc')->select();
       //判断是否接收表单
       if(IS_POST){
           if($_FILES['img_src']['size'] > 2097152){
@@ -35,6 +43,7 @@ class CarouselController extends BaseController {
       }
       //数据assign到页面中
       $this->assign(array(
+          'themeData' => $themeData,
            'title' => '添加轮播图',
            'btn_name' => '轮播图列表',
            'btn_url' => U('lst')
@@ -46,6 +55,10 @@ class CarouselController extends BaseController {
       //获取需要修改类型的ID
       $id = I('get.id');
       $model = D('carousel');
+
+        $themeModel = D('theme');
+        $themeData = $themeModel->order('sort_id asc')->select();
+
       //判断是否接收表单
       if(IS_POST){
           if($_FILES['img_src']['size'] > 2097152){
@@ -66,6 +79,7 @@ class CarouselController extends BaseController {
       //数据assign到页面中
       $this->assign(array(
            'data' => $data,
+          'themeData' => $themeData,
            'title' => '修改轮播图',
            'btn_name' => '轮播图列表',
            'btn_url' => U('lst')

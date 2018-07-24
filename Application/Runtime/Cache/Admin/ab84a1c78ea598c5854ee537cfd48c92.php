@@ -32,7 +32,7 @@
                 <td>
                     <?php foreach($priData as $k => $v): ?>
                     <?php echo str_repeat('-',4*$v['level']) ?>
-                    <input level_id="<?php echo $v['level'] ?>" type="checkbox" name="pri_id[]" value="<?php echo $v['id'] ?>"><?php echo $v['pri_name'] ?></br>
+                    <li class="menu-item"><input level_id="<?php echo $v['level'] ?>" type="checkbox" name="pri_id[]" value="<?php echo $v['id'] ?>"><?php echo $v['pri_name'] ?></li>
                     <?php endforeach; ?>
                 </td>
             </tr>
@@ -75,12 +75,12 @@ $(":checkbox").click(function(){
 			}
 		});
 		//所有上级权限取消
-		$(this).prevAll(":checkbox").each(function(k,v){
+		/*$(this).prevAll(":checkbox").each(function(k,v){
 			if($(v).attr("level_id") < tmp_level_id){
 				$(v).removeAttr("checked");
 				tmp_level_id--;
 			}
-		});
+		});*/
 	}
 });
 </script>

@@ -11,6 +11,24 @@
                 </td>
             </tr>
             <tr>
+                <td class="label">商品分类：</td>
+                <td>
+                    <select name="theme_id">
+                        <option value="">请选择...</option>
+                        <?php foreach($themeData as $k => $v):
+                        if($v['id']==$data['theme_id']){
+                        $select = 'selected="selected"';
+                        }else{
+                        $select = "";
+                        }
+                        ?>
+                        <?php echo '<option ' .$select.' value="'.$v['id'].'">'.$v['theme_name'].'</option>'; ?>
+                        <?php endforeach; ?>
+                    </select>
+                    <span class="require-field">*</span>
+                </td>
+            </tr>
+            <tr>
                 <td class="label">跳转路径</td>
                 <td>
                     <input type="text" name="url" maxlength="120" style="width: 300px;" value="<?php echo $data['url'] ?>" />

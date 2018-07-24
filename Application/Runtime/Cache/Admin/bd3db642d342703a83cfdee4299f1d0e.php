@@ -17,18 +17,36 @@
 </h1>
 
 
+
+<div class="form-div">
+    <form action="" name="searchForm">
+        <img src="/jiimadeeee/Public/Admin/Images/icon_search.gif" width="26" height="22" border="0" alt="search" />
+        <!-- 分类 -->
+        <select name="theme_id">
+            <option value="">请选择...</option>
+            <?php foreach($themeData as $k => $v): if($v['id'] == I('get.theme_id')){ $select = "selected"; }else{ $select = ""; } ?>
+            <?php echo '<option value="'.$v['id'].'" '.$select.' >'.$v['theme_name'].'</option>'; ?>
+            <?php endforeach; ?>
+        </select>
+
+        <input type="submit" value="搜索" class="button" />
+    </form>
+</div>
+
 <form method="post" action="" name="listForm">
  
     <div class="list-div" id="listDiv">
         <table cellpadding="3" cellspacing="1">
             <tr>
+                <th>所属主题</th>
                 <th>轮播图</th>
                 <th>跳转路径</th>
                 <th>排序</th>
                 <th>操作</th>
             </tr>
-            <?php foreach($data as $k => $v): ?>
+            <?php foreach($data['data'] as $k => $v): ?>
             <tr class="tron">
+                <td align="center"><?php echo $v['theme_name'] ?></td>
                 <td align="center"><image src="<?php echo $v['img_src'] ?>" width="50px" height="50px"></td>
                 <td align="center"><?php echo $v['url'] ?></td>
                 <td align="center"><?php echo $v['sort_id'] ?></td>

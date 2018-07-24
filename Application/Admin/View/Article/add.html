@@ -51,7 +51,18 @@
                         <input type="radio" name="is_index value="0"/> 否
                     </td>
                 </tr>
-
+                <tr>
+                    <td class="label">所属分类：</td>
+                    <td>
+                        <select name="cate_id">
+                            <option value="">请选择...</option>
+                            <?php foreach($catData as $k => $v): ?>
+                            <?php echo '<option value="'.$v['id'].'">'.str_repeat('-',4*$v['level']).$v['name'].'</option>'; ?>
+                            <?php endforeach; ?>
+                        </select>
+                        <span class="require-field">*</span>
+                    </td>
+                </tr>
                 <tr>
                     <td class="label">推荐排序：</td>
                     <td>

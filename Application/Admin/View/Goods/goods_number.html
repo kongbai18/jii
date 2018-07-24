@@ -41,6 +41,8 @@ foreach($gaData as $k => $v)
                 <th>商品价格</th>
                 <th>折扣价格</th>
                 <th>商品库存</th>
+                <th>奖励金额</th>
+                <th>最大积分抵扣</th>
                 <th>商品图</th>
                 <th>操作</th>
             </tr>
@@ -65,6 +67,8 @@ foreach($gaData as $k => $v)
                 <td align="center"><input type="text" name="goods_price[]" value=""></td>
                 <td align="center"><input type="text" name="discount_price[]" value=""></td>
                 <td align="center"><input type="text" name="goods_number[]" value=""></td>
+                <td align="center"><input type="text" name="reward[]" value=""></td>
+                <td align="center"><input type="text" name="deduction[]" value=""></td>
                 <td align="center"><input type="file" accept="image/*" name="goods_img[]" ></td>
                 <td align="center"><input type="button" value="添加一行" onclick="addAttr(this)"></td>
             </tr>
@@ -97,6 +101,8 @@ foreach($gaData as $k => $v)
                   <td align="center"><input type="text" name="goods_price[]" value="<?php echo $v['goods_price']; ?>"></td>
                   <td align="center"><input type="text" name="discount_price[]" value="<?php echo $v['discount_price']; ?>"></td>
                   <td align="center"><input type="text" name="goods_number[]" value="<?php echo $v['goods_number']; ?>"></td>
+                  <td align="center"><input type="text" name="reward[]" value="<?php echo $v['reward']; ?>"></td>
+                  <td align="center"><input type="text" name="deduction[]" value="<?php echo $v['deduction']; ?>"></td>
                   <td align="center"><input type="file" accept="image/*" name="goods_img[]" ><image src="<?php echo $v['img_src']; ?>" style="width: 50px;height: 50px;"></td>
                   <td align="center"><input type="button" value="删除此行" onclick="addAttr(this)"></td>
               </tr>

@@ -1,0 +1,293 @@
+[ 2018-07-06T15:43:35+08:00 ] ::1 /jiimadeeee/index.php/home/index/getFurModel/gatAttr/1,0/furId/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000206s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003676s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004945s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005583s ]
+SQL: SHOW COLUMNS FROM `made_model` [ RunTime:0.0052s ]
+SQL: SHOW COLUMNS FROM `made_furniture_quote` [ RunTime:0.0014s ]
+SQL: SELECT `id`,`model_id`,`img_src` FROM `made_furniture_quote` WHERE `fur_attr_id` = '1,0' AND `fur_id` = '1'  [ RunTime:0.0024s ]
+SQL: SELECT `id`,`model_id`,`img_src` FROM `made_furniture_quote` WHERE `fur_attr_id` = '1,0' AND `fur_id` = '1'  [ RunTime:0.0009s ]
+SQL: SELECT `id`,`model_id`,`img_src` FROM `made_furniture_quote` WHERE `fur_attr_id` = '1,1' AND `fur_id` = '1'  [ RunTime:0.0011s ]
+SQL: SELECT `id`,`model_id`,`img_src` FROM `made_furniture_quote` WHERE `fur_attr_id` = '1,2' AND `fur_id` = '1'  [ RunTime:0.0006s ]
+SQL: SELECT `id`,`model_id`,`img_src` FROM `made_furniture_quote` WHERE `fur_attr_id` = '1,3' AND `fur_id` = '1'  [ RunTime:0.0007s ]
+SQL: SELECT `id`,`model_id`,`img_src` FROM `made_furniture_quote` WHERE `fur_attr_id` = '1,4' AND `fur_id` = '1'  [ RunTime:0.0008s ]
+SQL: SELECT `id`,`model_id`,`img_src` FROM `made_furniture_quote` WHERE `fur_attr_id` = '1,5' AND `fur_id` = '1'  [ RunTime:0.0008s ]
+SQL: SELECT `id`,`model_id`,`img_src` FROM `made_furniture_quote` WHERE `fur_attr_id` = '1,6' AND `fur_id` = '1'  [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001883s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002124s ]
+
+[ 2018-07-06T15:45:04+08:00 ] ::1 /jiimadeeee/index.php/home/index/moduleToCart/cateId/2/sortId/1/userId/8/thr_session/6eed80f310e1511631ff2d21bf25fc98
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000569s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001295s ]
+SQL: SHOW COLUMNS FROM `made_module` [ RunTime:0.0096s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0059s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `made_quote` [ RunTime:0.0075s ]
+SQL: SELECT `id` FROM `made_quote` WHERE `user_id` = '8' LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT `fur_quo_id`,`attr`,`space`,`fur_name`,`material`,`parameter`,`ext` FROM `made_module` WHERE `quote_id` = null AND `cate_id` = '2' AND `sort_id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+ERR: 1146:Table 'jiimade.made_cart_module' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `made_cart_module`
+ERR: 1146:Table 'jiimade.made_cart_module' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `made_cart_module`
+
+[ 2018-07-06T15:45:37+08:00 ] ::1 /jiimadeeee/index.php/home/index/moduleToCart/cateId/2/sortId/1/userId/8/thr_session/6eed80f310e1511631ff2d21bf25fc98
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000602s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001483s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001765s ]
+SQL: SHOW COLUMNS FROM `made_module` [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0080s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `made_quote` [ RunTime:0.0012s ]
+SQL: SELECT `id` FROM `made_quote` WHERE `user_id` = '8' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `fur_quo_id`,`attr`,`space`,`fur_name`,`material`,`parameter`,`ext` FROM `made_module` WHERE `quote_id` = null AND `cate_id` = '2' AND `sort_id` = '1' LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `made_cart_module` [ RunTime:0.0021s ]
+ERR: 1364:Field 'fur_quo_id' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `made_cart_module` (`space_fur_name`) VALUES ('-')
+ERR: 1364:Field 'fur_quo_id' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `made_cart_module` (`space_fur_name`) VALUES ('-')
+
+[ 2018-07-06T15:46:50+08:00 ] ::1 /jiimadeeee/index.php/home/index/moduleToCart/cateId/2/sortId/1/userId/8/thr_session/6eed80f310e1511631ff2d21bf25fc98
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000497s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000857s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001019s ]
+SQL: SHOW COLUMNS FROM `made_module` [ RunTime:0.0074s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0024s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `made_quote` [ RunTime:0.0074s ]
+SQL: SELECT `id` FROM `made_quote` WHERE `user_id` = '8' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `fur_quo_id`,`attr`,`space`,`fur_name`,`material`,`parameter`,`ext` FROM `made_module` WHERE `quote_id` = null AND `cate_id` = '2' AND `sort_id` = '1' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `made_cart_module` [ RunTime:0.0047s ]
+ERR: 1364:Field 'fur_quo_id' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `made_cart_module` (`space_fur_name`) VALUES ('-')
+ERR: 1364:Field 'fur_quo_id' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `made_cart_module` (`space_fur_name`) VALUES ('-')
+
+[ 2018-07-06T15:47:20+08:00 ] ::1 /jiimadeeee/index.php/home/index/moduleToCart/cateId/2/sortId/1/userId/8/thr_session/6eed80f310e1511631ff2d21bf25fc98
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000231s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004222s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005065s ]
+SQL: SHOW COLUMNS FROM `made_module` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0033s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `made_quote` [ RunTime:0.0028s ]
+SQL: SELECT `id` FROM `made_quote` WHERE `user_id` = '8' LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT `fur_quo_id`,`attr`,`space`,`fur_name`,`material`,`parameter`,`ext` FROM `made_module` WHERE `quote_id` = null AND `cate_id` = '2' AND `sort_id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `made_cart_module` [ RunTime:0.0079s ]
+ERR: 1364:Field 'fur_quo_id' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `made_cart_module` (`space_fur_name`) VALUES ('-')
+ERR: 1364:Field 'fur_quo_id' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `made_cart_module` (`space_fur_name`) VALUES ('-')
+
+[ 2018-07-06T15:47:30+08:00 ] ::1 /jiimadeeee/index.php/home/index/moduleToCart/cateId/2/sortId/1/userId/8/thr_session/6eed80f310e1511631ff2d21bf25fc98
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000492s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001222s ]
+SQL: SHOW COLUMNS FROM `made_module` [ RunTime:0.0079s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0058s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `made_quote` [ RunTime:0.0063s ]
+SQL: SELECT `id` FROM `made_quote` WHERE `user_id` = '8' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT `fur_quo_id`,`attr`,`space`,`fur_name`,`material`,`parameter`,`ext` FROM `made_module` WHERE `quote_id` = null AND `cate_id` = '2' AND `sort_id` = '1' LIMIT 1   [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `made_cart_module` [ RunTime:0.0085s ]
+SQL: SHOW COLUMNS FROM `made_cart` [ RunTime:0.0071s ]
+SQL: INSERT INTO `made_cart` (`user_id`,`goods_id`,`goods_attr_id`,`cart_number`) VALUES ('8','0','','1') [ RunTime:0.0060s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003662s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004521s ]
+
+[ 2018-07-06T15:48:18+08:00 ] ::1 /jiimadeeee/index.php/home/index/moduleToCart/cateId/2/sortId/1/userId/8/thr_session/6eed80f310e1511631ff2d21bf25fc98
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000314s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001580s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002122s ]
+SQL: SHOW COLUMNS FROM `made_module` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0031s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `made_quote` [ RunTime:0.0023s ]
+SQL: SELECT `id` FROM `made_quote` WHERE `user_id` = '8' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT `fur_quo_id`,`attr`,`space`,`fur_name`,`material`,`parameter`,`ext` FROM `made_module` WHERE `quote_id` = null AND `cate_id` = '2' AND `sort_id` = '1' LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `made_cart_module` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `made_cart` [ RunTime:0.0020s ]
+SQL: INSERT INTO `made_cart` (`user_id`,`goods_id`,`goods_attr_id`,`cart_number`) VALUES ('8','0','','1') [ RunTime:0.0071s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003288s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004767s ]
+
+[ 2018-07-06T15:48:29+08:00 ] ::1 /jiimadeeee/index.php/home/index/moduleToCart/cateId/2/sortId/1/userId/8/thr_session/6eed80f310e1511631ff2d21bf25fc98
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000284s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003606s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004997s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006554s ]
+SQL: SHOW COLUMNS FROM `made_module` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0081s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `made_quote` [ RunTime:0.0082s ]
+SQL: SELECT `id` FROM `made_quote` WHERE `user_id` = '8'  [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: id D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Model\ModuleModel.class.php 第 811 行.
+SQL: SELECT `fur_quo_id`,`attr`,`space`,`fur_name`,`material`,`parameter`,`ext` FROM `made_module` WHERE `quote_id` = null AND `cate_id` = '2' AND `sort_id` = '1' LIMIT 1   [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `made_cart_module` [ RunTime:0.0075s ]
+SQL: SHOW COLUMNS FROM `made_cart` [ RunTime:0.0049s ]
+SQL: INSERT INTO `made_cart` (`user_id`,`goods_id`,`goods_attr_id`,`cart_number`) VALUES ('8','0','','1') [ RunTime:0.0078s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000874s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001031s ]
+
+[ 2018-07-06T15:52:12+08:00 ] ::1 /jiimadeeee/index.php/home/index/moduleToCart/cateId/2/sortId/1/userId/8/thr_session/6eed80f310e1511631ff2d21bf25fc98
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000958s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001179s ]
+SQL: SHOW COLUMNS FROM `made_module` [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0046s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `made_quote` [ RunTime:0.0072s ]
+SQL: SELECT `id` FROM `made_quote` WHERE `user_id` = '8'  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: id D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Model\ModuleModel.class.php 第 812 行.
+SQL: SELECT `fur_quo_id`,`attr`,`space`,`fur_name`,`material`,`parameter`,`ext` FROM `made_module` WHERE `quote_id` = null AND `cate_id` = '2' AND `sort_id` = '1' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `made_cart_module` [ RunTime:0.0055s ]
+SQL: SHOW COLUMNS FROM `made_cart` [ RunTime:0.0020s ]
+SQL: INSERT INTO `made_cart` (`user_id`,`goods_id`,`goods_attr_id`,`cart_number`) VALUES ('8','0','','1') [ RunTime:0.0159s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003313s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004335s ]
+
+[ 2018-07-06T15:55:48+08:00 ] ::1 /jiimadeeee/index.php/home/index/moduleToCart/cateId/2/sortId/1/userId/8/thr_session/6eed80f310e1511631ff2d21bf25fc98
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000630s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001193s ]
+SQL: SHOW COLUMNS FROM `made_module` [ RunTime:0.0037s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0019s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `made_quote` [ RunTime:0.0026s ]
+SQL: SELECT `id` FROM `made_quote` WHERE `user_id` = '8'  [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: id D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Model\ModuleModel.class.php 第 812 行.
+SQL: SELECT `fur_quo_id`,`attr`,`space`,`fur_name`,`material`,`parameter`,`ext` FROM `made_module` WHERE `quote_id` = null AND `cate_id` = '2' AND `sort_id` = '1' LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `made_cart_module` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `made_cart` [ RunTime:0.0075s ]
+SQL: INSERT INTO `made_cart` (`user_id`,`goods_id`,`goods_attr_id`,`cart_number`) VALUES ('8','0','','1') [ RunTime:0.0073s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005774s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007484s ]
+
+[ 2018-07-06T15:56:20+08:00 ] ::1 /jiimadeeee/index.php/home/index/moduleToCart/cateId/2/sortId/1/userId/8/thr_session/6eed80f310e1511631ff2d21bf25fc98
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000233s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003364s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005337s ]
+SQL: SHOW COLUMNS FROM `made_module` [ RunTime:0.0048s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0019s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `made_quote` [ RunTime:0.0036s ]
+SQL: SELECT `id` FROM `made_quote` WHERE `user_id` = '8' LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT `fur_quo_id`,`attr`,`space`,`fur_name`,`material`,`parameter`,`ext` FROM `made_module` WHERE `quote_id` = '20180619091115818689' AND `cate_id` = '2' AND `sort_id` = '1' LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `made_cart_module` [ RunTime:0.0079s ]
+SQL: INSERT INTO `made_cart_module` (`fur_quo_id`,`attr`,`material`,`parameter`,`ext`) VALUES ('11','开门','{\"p1\":[\"6\",\"23\"],\"p2\":[\"7\"]}','{\"W\":\"1\",\"D\":\"0.6\",\"H\":\"2\"}','[]') [ RunTime:0.0051s ]
+SQL: SHOW COLUMNS FROM `made_cart` [ RunTime:0.0076s ]
+SQL: INSERT INTO `made_cart` (`user_id`,`goods_id`,`goods_attr_id`,`cart_number`) VALUES ('8','0','1','1') [ RunTime:0.0087s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003658s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004463s ]
+
+[ 2018-07-06T15:56:31+08:00 ] ::1 /jiimadeeee/index.php/home/index/moduleToCart/cateId/2/sortId/1/userId/8/thr_session/6eed80f310e1511631ff2d21bf25fc98
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000775s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001270s ]
+SQL: SHOW COLUMNS FROM `made_module` [ RunTime:0.0078s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0031s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `made_quote` [ RunTime:0.0035s ]
+SQL: SELECT `id` FROM `made_quote` WHERE `user_id` = '8' LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT `fur_quo_id`,`attr`,`space`,`fur_name`,`material`,`parameter`,`ext` FROM `made_module` WHERE `quote_id` = '20180619091115818689' AND `cate_id` = '2' AND `sort_id` = '1' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `made_cart_module` [ RunTime:0.0055s ]
+SQL: INSERT INTO `made_cart_module` (`fur_quo_id`,`attr`,`material`,`parameter`,`ext`,`space_fur_name`) VALUES ('11','开门','{\"p1\":[\"6\",\"23\"],\"p2\":[\"7\"]}','{\"W\":\"1\",\"D\":\"0.6\",\"H\":\"2\"}','[]','主卧-门板') [ RunTime:0.0045s ]
+SQL: SHOW COLUMNS FROM `made_cart` [ RunTime:0.0064s ]
+SQL: INSERT INTO `made_cart` (`user_id`,`goods_id`,`goods_attr_id`,`cart_number`) VALUES ('8','0','2','1') [ RunTime:0.0082s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001088s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001348s ]
+
+[ 2018-07-06T16:14:47+08:00 ] ::1 /jiimadeeee/index.php/home/index/listCart/userId/8/thr_session/6eed80f310e1511631ff2d21bf25fc98
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000619s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000839s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001028s ]
+SQL: SHOW COLUMNS FROM `made_cart` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `made_cart` WHERE `user_id` = '8'  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `made_goods_number` [ RunTime:0.0055s ]
+SQL: SHOW COLUMNS FROM `made_goods_attr` [ RunTime:0.0076s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `made_color` [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0029s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT `goods_price`,`goods_number`,`img_src` FROM `made_goods_number` WHERE `goods_id` = '0' AND `goods_attr_id` = '' AND `goods_number` > '0' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT `goods_price`,`goods_number`,`img_src` FROM `made_goods_number` WHERE `goods_id` = '0' AND `goods_attr_id` = '' AND `goods_number` > '0' LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT `goods_price`,`goods_number`,`img_src` FROM `made_goods_number` WHERE `goods_id` = '0' AND `goods_attr_id` = '' AND `goods_number` > '0' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `goods_price`,`goods_number`,`img_src` FROM `made_goods_number` WHERE `goods_id` = '0' AND `goods_attr_id` = '' AND `goods_number` > '0' LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT `goods_price`,`goods_number`,`img_src` FROM `made_goods_number` WHERE `goods_id` = '0' AND `goods_attr_id` = '' AND `goods_number` > '0' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT `goods_price`,`goods_number`,`img_src` FROM `made_goods_number` WHERE `goods_id` = '0' AND `goods_attr_id` = '1' AND `goods_number` > '0' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT `goods_price`,`goods_number`,`img_src` FROM `made_goods_number` WHERE `goods_id` = '0' AND `goods_attr_id` = '2' AND `goods_number` > '0' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000908s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001066s ]
+
+[ 2018-07-06T16:15:44+08:00 ] ::1 /jiimadeeee/index.php/home/index/listCart/userId/8/thr_session/6eed80f310e1511631ff2d21bf25fc98
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000100s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003109s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003819s ]
+SQL: SHOW COLUMNS FROM `made_cart` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `made_cart` WHERE `user_id` = '8'  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `made_goods_number` [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `made_goods_attr` [ RunTime:0.0087s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `made_color` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0029s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT `goods_price`,`goods_number`,`img_src` FROM `made_goods_number` WHERE `goods_id` = '0' AND `goods_attr_id` = '' AND `goods_number` > '0' LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT `goods_price`,`goods_number`,`img_src` FROM `made_goods_number` WHERE `goods_id` = '0' AND `goods_attr_id` = '' AND `goods_number` > '0' LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT `goods_price`,`goods_number`,`img_src` FROM `made_goods_number` WHERE `goods_id` = '0' AND `goods_attr_id` = '' AND `goods_number` > '0' LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT `goods_price`,`goods_number`,`img_src` FROM `made_goods_number` WHERE `goods_id` = '0' AND `goods_attr_id` = '' AND `goods_number` > '0' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `goods_price`,`goods_number`,`img_src` FROM `made_goods_number` WHERE `goods_id` = '0' AND `goods_attr_id` = '' AND `goods_number` > '0' LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT `goods_price`,`goods_number`,`img_src` FROM `made_goods_number` WHERE `goods_id` = '0' AND `goods_attr_id` = '1' AND `goods_number` > '0' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `goods_price`,`goods_number`,`img_src` FROM `made_goods_number` WHERE `goods_id` = '0' AND `goods_attr_id` = '2' AND `goods_number` > '0' LIMIT 1   [ RunTime:0.0013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004095s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005101s ]
+

@@ -32,11 +32,6 @@ class IndexController extends Controller {
         $model = D('Admin/category');
         echo json_encode($model->getCate());
     }
-    //获取设计文章
-    public function getArticle(){
-        $model = D('Admin/article');
-        echo json_encode($model->getArticle());
-    }
     //获取单篇文章
     public function getOneArt(){
         $model = D('Admin/article');
@@ -240,8 +235,45 @@ class IndexController extends Controller {
         $fileName = I('get.fileName');
         unlink(APP_PATH.'../Public/Excel/'.$fileName);
     }
-    public function test(){
-       unlink(APP_PATH.'../Public/Excel/201806071728084265.xlsx');
+    //获取个人推广二维码
+    public function userPrcode(){
+        $model = D('Admin/user');
+        echo json_decode($model->get_prcode());
     }
-
+    //获取三级推广数
+    public function getThrChild(){
+        $model = D('Admin/user');
+        echo json_encode($model->thrSpread());
+    }
+    //报价单加入购物车
+    public function moduleToCart(){
+        $model = D('Admin/module');
+        echo json_encode($model->moduleToCart());
+    }
+    //积分以及推广奖励
+    public function integration(){
+        $model = D('user');
+        echo json_encode($model->integration());
+    }
+    //首页主题
+    public function theme(){
+        $model = D('Admin/theme');
+        $data = $model->order('sort_id asc')->select();
+        echo json_encode($data);
+    }
+    //根据主题获取轮播图
+    public function getCarousel(){
+        $model = D('Admin/carousel');
+        echo json_encode($model->getCarousel());
+    }
+    //获取文章分类
+    public function getArticleCate(){
+        $model = D('Admin/article_category');
+        echo json_encode($model->getArticleCate());
+    }
+    //获取分类对应文章
+    public function getArticle(){
+        $model = D('Admin/article');
+        echo json_encode($model->getArticle());
+    }
 }

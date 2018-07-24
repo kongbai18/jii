@@ -159,7 +159,7 @@ class ModuleModel extends Model {
             $module = array();
             $formula = json_decode($v['formula'],true);
 
-            $projectArea = eval($v['project_area']);//投影面积
+            $projectArea = eval($v['project_area']);//投影面积0
 
             if($v['cate_id'] == '2'){
                 $furAttrId = explode(',',$v['fur_attr_id']);
@@ -329,7 +329,7 @@ class ModuleModel extends Model {
         if($user){
             $quoteModel = D('quote');
             $furModel = D('furniture');
-            $quoteId = $quoteModel->field('id')->where(array('user_id'=>array('eq',$userId)))->find();
+            $quoteData = $quoteModel->field('id,is_quote')->where(array('user_id'=>array('eq',$userId)))->find();
             $furData = $furModel->field('fur_name,cate_id')->find($furId);
 
 
@@ -343,7 +343,7 @@ class ModuleModel extends Model {
             }
 
             $data = array(
-                'quote_id' => $quoteId['id'],
+                'quote_id' => $quoteData['id'],
                 'fur_quo_id' => $furQuoId,
                 'attr' => $attr,
                 'cate_id' => $furData['cate_id'],
@@ -352,7 +352,7 @@ class ModuleModel extends Model {
             );
 
 
-            $_POST['quote_id'] = $quoteId['id'];
+            $_POST['quote_id'] = $quoteData['id'];
             $_POST['cate_id'] = $furData['cate_id'];
             $_POST['material'] = $chooseGoods;
             $_POST['parameter'] = $parData;
@@ -360,6 +360,39 @@ class ModuleModel extends Model {
 
             $result = $this->add($data);
             if($result){
+                if($quoteData['is_quote'] == 0){
+                    $userData = $this->find($userId);
+
+                    if($userData['parent_id'] != 0){
+                        $fp = fopen('./lockOrd.text','r');
+                        flock($fp,LOCK_EX);         //锁机制
+
+                        $integrationModel = D('integration');
+                        $integrationData = $integrationModel->find($userId);
+
+                        //获取第一次报价增加积分数
+                        $rewardModel = D('reward');
+                        $rewardData = $rewardModel->find('3');
+
+                        $integrationModel->save(array(
+                            'id' => $userId,
+                            'integration' => $integrationData['integration'] + $rewardData['integration'],
+                        ));
+
+
+                        flock($fp,LOCK_UN);
+                        fclose($fp);
+
+                        $integrationRecordModel = D('integration_record');
+                        $integrationRecordModel->add(array(
+                            'user_id' => $userId,
+                            'integration' => $rewardData['integration'],
+                            'add_time' => time(),
+                            'message' => '首次报价',
+                        ));
+                    }
+                }
+
                 return true;
             }else{
                 return false;
@@ -796,5 +829,41 @@ class ModuleModel extends Model {
         return $fileName;
 
     }
+    //报价加入购物车
+    public function moduleToCart(){
+        $cateId = I('get.cateId');
+        $sortId = I('get.sortId');
+        $userId = I('get.userId');
+        $thr_session = I('get.thr_session');
+        $user = checkUser($userId,$thr_session);
+        if($user){
 
+            $quoteModel  = D('quote');
+            $quoteData = $quoteModel->field('id')->where(array('user_id'=>array('eq',$userId)))->find();
+
+            $modulData = $this->field('fur_quo_id,attr,space,fur_name,material,parameter,ext')->where(array(
+                'quote_id' => array('eq',$quoteData['id']),
+                'cate_id' => array('eq',$cateId),
+                'sort_id' => array('eq',$sortId),
+            ))->find();
+            $modulData['space_fur_name'] = $modulData['space'].'-'.$modulData['fur_name'];
+            unset($modulData['space']);
+            unset($modulData['fur_name']);
+
+            $cartModuleModel = D('cart_module');
+            $result = $cartModuleModel->add($modulData);
+
+            $cartModel = D('cart');
+            $cartData = array(
+                'user_id' => $userId,
+                'goods_id' => 0,
+                'goods_attr_id' => $result,
+                'cart_number' => 1,
+            );
+            if($cartModel->add($cartData)){
+                return true;
+            }
+            return false;
+        }
+    }
 }

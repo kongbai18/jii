@@ -86,9 +86,10 @@
             dataType: 'json',
             data: {orderId:id},
             success: function(data){
-               var  tr = "<input type='hidden' id='choose-order' value='"+id+"'><table cellpadding='3' cellspacing='1'><tr><th>商品图片</th><th>商品名称</th><th>商品规格</th><th>购买数量</th></tr>";
+               var  tr = "<input type='hidden' id='choose-order' value='"+id+"'><table cellpadding='3' cellspacing='1'><tr><th><input name='split' type='checkbox' value='1' onclick='judgeSplit(this)' />拆分发货</th><th>商品图片</th><th>商品名称</th><th>商品规格</th><th>购买数量</th></tr>";
                $(data).each(function (k,v) {
                    tr += "<tr class='tron'>";
+                   tr += "<td align='center'><input name='id' type='checkbox' value='"+v.id+"' class='goods_list' style='display: none' /></td>";
                    tr += "<td align='center'><image src="+v.img_src+" width='50px' height='50px'></td>";
                    tr += "<td align='center'>"+v.goods_name+"</td>";
                    tr += "<td align='center'>"+v.goods_attr_val+"</td>";
@@ -107,19 +108,42 @@
     function comDeli() {
         express = $('#express').val();
         orderId = $('#choose-order').val();
-        $.ajax({
+
+        var id_array=new Array();
+        $('input[name="id"]:checked').each(function(){
+            id_array.push($(this).val());//向数组中添加元素
+        });
+          idstr=id_array.join(',');//将数组元素连接起来以构建一个字符串
+
+          split = 0;
+        $('input[name="split"]:checked').each(function(){
+           split = $(this).val();
+        });
+
+
+            $.ajax({
             type: 'post',
             url: "<?php echo U('Order/orderDeli') ?>",
             dataType: 'json',
-            data: {express:express,orderId:orderId},
+            data: {express:express,orderId:orderId,split:split,idstr:idstr},
             success: function(data) {
+                window.parent.frames.main-frame.location.reload();
                 if (data == 'success'){
                     $('#goods-list').css('display','none');
                     alert('发货成功!');
+                }else if(data == 'noGoodsId'){
+                    alert('请选择拆分发货商品!');
                 }else{
                     alert('发货失败！');
                 }
             }
         });
+    }
+    function judgeSplit(obj) {
+        if($(obj).is(':checked')){
+            $('.goods_list').css('display','inline');
+        }else{
+            $('.goods_list').css('display','none');
+        }
     }
 </script>

@@ -6,9 +6,13 @@ class ArticleController extends BaseController {
     public function lst(){
       $model = D('article');
       $data = $model->search(10);
+        //获取分类
+        $articleCatModel = D('article_category');
+        $catData = $articleCatModel->getTree();
       //数据assign到页面中
       $this->assign(array(
            'data'  => $data,
+          'catData' => $catData,
            'title' => '文章列表',
            'btn_name' => '发布文章',
            'btn_url' => U('add')
@@ -30,14 +34,18 @@ class ArticleController extends BaseController {
       	if($model->create(I('post.'),1)){
       		//判断是否添加成功
       		if($model->add()){
-      			$this->success('文章添加成功！');
+      			$this->success('文章添加成功！',U('lst'));
       		}
       	}
       	//添加失败
       	$this->error($model->getError());
       }
+      //获取分类
+        $articleCatModel = D('article_category');
+      $catData = $articleCatModel->getTree();
       //数据assign到页面中
       $this->assign(array(
+           'catData' => $catData,
            'title' => '发布文章',
            'btn_name' => '文章列表',
            'btn_url' => U('lst')
@@ -58,7 +66,7 @@ class ArticleController extends BaseController {
       	if($model->create(I('post.'),2)){
       		//判断是否修改成功
       		if(FALSE !== $model->save()){
-      			$this->success('文章修改成功！');
+      			$this->success('文章修改成功！',U('lst'));
       		}
       	}
       	//添加失败
@@ -74,11 +82,15 @@ class ArticleController extends BaseController {
       foreach (explode(',',$data['goods']) as $v){
           $goodsData[] = $goodsModel->field('id,goods_name')->find($v);
       }
+        //获取分类
+        $articleCatModel = D('article_category');
+        $catData = $articleCatModel->getTree();
       //数据assign到页面中
       $this->assign(array(
            'data' => $data,
            'descData' => $descData,
            'goodsData' => $goodsData,
+          'catData' => $catData,
            'title' => '修改文章',
            'btn_name' => '文章列表',
            'btn_url' => U('lst')

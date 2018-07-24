@@ -29,6 +29,17 @@ class OrderController extends BaseController {
         ));
         $this->display();
     }
+    //待付款列表
+    public function waitPay(){
+        $model = D('order');
+        $data = $model->search(20,0);
+        //数据assign到页面中
+        $this->assign(array(
+            'data' => $data,
+            'title' => '待付款列表',
+        ));
+        $this->display();
+    }
     //AJAX获取订单中得商品
     public function orderGoods(){
         $model = D('order');
@@ -39,6 +50,12 @@ class OrderController extends BaseController {
     public function orderDeli(){
         $model = D('order');
         $data = $model->orderDeli();
+        echo json_encode($data);
+    }
+    //后台修改价格
+    public function editPrice(){
+        $model = D('order');
+        $data = $model->editPrice();
         echo json_encode($data);
     }
 }

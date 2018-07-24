@@ -1,0 +1,1768 @@
+[ 2018-07-20T11:23:45+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getArticle?num=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000561s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000843s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001064s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_article` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `made_article` WHERE `is_index` = '1' ORDER BY sort_id asc LIMIT 5   [ RunTime:0.0024s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003265s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004116s ]
+
+[ 2018-07-20T11:23:45+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=3&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000682s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001102s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001349s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '3' ORDER BY order_id asc  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0024s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '1' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0063s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000920s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001109s ]
+
+[ 2018-07-20T11:23:45+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=1&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000726s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000998s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001283s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '1' ORDER BY order_id asc  [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0010s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '3' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0076s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001277s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001524s ]
+
+[ 2018-07-20T11:23:45+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getCarouselImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000788s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000970s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001199s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_carousel` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `made_carousel` ORDER BY sort_id asc  [ RunTime:0.0011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002172s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002450s ]
+
+[ 2018-07-20T11:23:45+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=4&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000679s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001255s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '4' ORDER BY order_id asc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0024s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '7' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0048s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '8' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0015s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003098s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003725s ]
+
+[ 2018-07-20T11:23:45+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=2&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000306s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001214s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007602s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '2' ORDER BY order_id asc  [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0030s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '5' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0019s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '6' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0015s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002507s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003657s ]
+
+[ 2018-07-20T11:23:46+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getCarouselImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000096s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001090s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001680s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002127s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_carousel` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `made_carousel` ORDER BY sort_id asc  [ RunTime:0.0016s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003925s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004710s ]
+
+[ 2018-07-20T11:23:46+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=3&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000830s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001149s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001459s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '3' ORDER BY order_id asc  [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0064s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '1' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0031s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003900s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005022s ]
+
+[ 2018-07-20T11:23:46+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=4&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000645s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001190s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001487s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '4' ORDER BY order_id asc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0024s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '7' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0020s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '8' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001239s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001460s ]
+
+[ 2018-07-20T11:23:46+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=2&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000827s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001073s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001415s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '2' ORDER BY order_id asc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0024s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '5' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0023s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '6' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0019s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001024s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001260s ]
+
+[ 2018-07-20T11:23:46+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=1&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000764s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001241s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001528s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '1' ORDER BY order_id asc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0025s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '3' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0042s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001336s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001613s ]
+
+[ 2018-07-20T11:23:46+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getArticle?num=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001206s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010569s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011135s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_article` [ RunTime:0.0781s ]
+SQL: SELECT * FROM `made_article` WHERE `is_index` = '1' ORDER BY sort_id asc LIMIT 5   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001469s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001701s ]
+
+[ 2018-07-20T11:23:47+08:00 ] 127.0.0.1 /jiimadeeee/index.php/home/index/login?code=061DjbYP1rGxK9101DYP1SIaYP1DjbYk
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000752s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005232s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005530s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0042s ]
+SQL: SELECT `id` FROM `made_user` WHERE `openid` = 'ojUv941YOJMStCvC71fzUK4iqE8g' LIMIT 1   [ RunTime:0.0013s ]
+SQL: UPDATE `made_user` SET `thr_session`='75b3cc2488e4a4cf5b9ccdbb9851d109',`session_key`='HKsSB8YTTAjD6NEEvIf/qA==' WHERE `id` = 13 [ RunTime:0.0056s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002310s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002545s ]
+
+[ 2018-07-20T11:23:59+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getGoodsDetail?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000656s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001602s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0026s ]
+SQL: SELECT a.id,a.goods_name,a.tag,a.type_id,b.id as cat_id,b.name as cat_name FROM made_goods a LEFT JOIN made_category b ON a.cat_id = b.id  WHERE a.id = '3' LIMIT 1   [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `made_goods_number` [ RunTime:0.0026s ]
+SQL: SELECT min(goods_attr_id) as goods_attr_id,max(goods_price) as max_goods_price,min(goods_price) as min_goods_price,max(discount_price) as max_discount_price,min(discount_price) as min_discount_price,max(img_src) as img_src FROM `made_goods_number` WHERE `goods_id` = '3' GROUP BY goods_id LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT `goods_attr_id`,`goods_number` FROM `made_goods_number` WHERE `goods_id` = '3' AND `goods_attr_id` = '17' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `made_goods_img` [ RunTime:0.0026s ]
+SQL: SELECT `img_src` FROM `made_goods_img` WHERE `goods_id` = '3'  [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `made_goods_attr` [ RunTime:0.0029s ]
+SQL: SELECT a.*,b.attr_name,b.attr_type FROM made_goods_attr a LEFT JOIN made_attribute b ON a.attr_id=b.id  WHERE `goods_id` = '3'  [ RunTime:0.0047s ]
+SQL: SHOW COLUMNS FROM `made_color` [ RunTime:0.0028s ]
+SQL: SELECT `img_src` FROM `made_color` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `img_src` FROM `made_color` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `img_src` FROM `made_color` WHERE `id` = 6 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `img_src` FROM `made_color` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: attrNouniData D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Model\GoodsModel.class.php 第 449 行.
+NOTIC: [8] Undefined variable: attrNouniData D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Model\GoodsModel.class.php 第 450 行.
+SQL: SELECT `goods_number` FROM `made_goods_number` WHERE `goods_attr_id` = '17' AND `goods_id` = 3  [ RunTime:0.0013s ]
+SQL: SELECT `goods_number` FROM `made_goods_number` WHERE `goods_attr_id` = '18' AND `goods_id` = 3  [ RunTime:0.0010s ]
+SQL: SELECT `goods_number` FROM `made_goods_number` WHERE `goods_attr_id` = '19' AND `goods_id` = 3  [ RunTime:0.0012s ]
+SQL: SELECT `goods_number` FROM `made_goods_number` WHERE `goods_attr_id` = '20' AND `goods_id` = 3  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `made_goods_desc` [ RunTime:0.0041s ]
+SQL: SELECT `img_src` FROM `made_goods_desc` WHERE `goods_id` = '3' ORDER BY sort_id asc  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: attrNouniData D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Model\GoodsModel.class.php 第 484 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001207s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001550s ]
+
+[ 2018-07-20T11:24:01+08:00 ] 127.0.0.1 /jiimadeeee/index.php/home/index/changeAttr?goodsId=3&goodsAttrId=%2C18
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000711s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000711s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `made_goods_number` [ RunTime:0.0067s ]
+SQL: SELECT `id`,`goods_price`,`discount_price`,`goods_number`,`goods_attr_id`,`img_src` FROM `made_goods_number` WHERE `goods_id` = '3' AND `goods_attr_id` = '18' LIMIT 1   [ RunTime:0.0015s ]
+SQL: SELECT `goods_attr_id`,`discount_price`,`goods_price` FROM `made_goods_number` WHERE `goods_id` = '3' AND `goods_number` > '0'  [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `made_goods_attr` [ RunTime:0.0024s ]
+SQL: SELECT a.*,b.attr_name,b.attr_type FROM made_goods_attr a LEFT JOIN made_attribute b ON a.attr_id=b.id  WHERE a.goods_id = '3' AND b.attr_type IN (2,3)  [ RunTime:0.0069s ]
+SQL: SELECT `goods_number` FROM `made_goods_number` WHERE `goods_attr_id` = '17' AND `goods_id` = 3  [ RunTime:0.0007s ]
+SQL: SELECT `goods_number` FROM `made_goods_number` WHERE `goods_attr_id` = '18' AND `goods_id` = 3  [ RunTime:0.0008s ]
+SQL: SELECT `goods_number` FROM `made_goods_number` WHERE `goods_attr_id` = '19' AND `goods_id` = 3  [ RunTime:0.0008s ]
+SQL: SELECT `goods_number` FROM `made_goods_number` WHERE `goods_attr_id` = '20' AND `goods_id` = 3  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `made_color` [ RunTime:0.0093s ]
+SQL: SELECT `img_src` FROM `made_color` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `img_src` FROM `made_color` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `img_src` FROM `made_color` WHERE `id` = 6 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT `img_src` FROM `made_color` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002691s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003456s ]
+
+[ 2018-07-20T11:24:03+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/addCart?userId=13&thr_session=75b3cc2488e4a4cf5b9ccdbb9851d109&attrId=18&goodsId=3&goodsNum=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000173s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002293s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003106s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004012s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_cart` [ RunTime:0.0068s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0087s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `made_goods_number` [ RunTime:0.0075s ]
+SQL: SELECT `id` FROM `made_goods_number` WHERE `goods_id` = '3' AND `goods_attr_id` = '18' AND `goods_number` > 0  [ RunTime:0.0010s ]
+SQL: SELECT `cart_number` FROM `made_cart` WHERE `user_id` = 13 AND `goods_id` = 3 AND `goods_attr_id` = '18'  [ RunTime:0.0010s ]
+SQL: INSERT INTO `made_cart` (`user_id`,`goods_id`,`goods_attr_id`,`cart_number`) VALUES ('13','3','18','1') [ RunTime:0.0055s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002206s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003299s ]
+
+[ 2018-07-20T11:24:06+08:00 ] 127.0.0.1 /jiimadeeee/index.php/home/index/changeAttr?goodsId=3&goodsAttrId=%2C17
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000159s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003432s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001907s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002448s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0058s ]
+SQL: SHOW COLUMNS FROM `made_goods_number` [ RunTime:0.0029s ]
+SQL: SELECT `id`,`goods_price`,`discount_price`,`goods_number`,`goods_attr_id`,`img_src` FROM `made_goods_number` WHERE `goods_id` = '3' AND `goods_attr_id` = '17' LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT `goods_attr_id`,`discount_price`,`goods_price` FROM `made_goods_number` WHERE `goods_id` = '3' AND `goods_number` > '0'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `made_goods_attr` [ RunTime:0.0026s ]
+SQL: SELECT a.*,b.attr_name,b.attr_type FROM made_goods_attr a LEFT JOIN made_attribute b ON a.attr_id=b.id  WHERE a.goods_id = '3' AND b.attr_type IN (2,3)  [ RunTime:0.0074s ]
+SQL: SELECT `goods_number` FROM `made_goods_number` WHERE `goods_attr_id` = '17' AND `goods_id` = 3  [ RunTime:0.0017s ]
+SQL: SELECT `goods_number` FROM `made_goods_number` WHERE `goods_attr_id` = '18' AND `goods_id` = 3  [ RunTime:0.0013s ]
+SQL: SELECT `goods_number` FROM `made_goods_number` WHERE `goods_attr_id` = '19' AND `goods_id` = 3  [ RunTime:0.0018s ]
+SQL: SELECT `goods_number` FROM `made_goods_number` WHERE `goods_attr_id` = '20' AND `goods_id` = 3  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `made_color` [ RunTime:0.0029s ]
+SQL: SELECT `img_src` FROM `made_color` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT `img_src` FROM `made_color` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT `img_src` FROM `made_color` WHERE `id` = 6 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `img_src` FROM `made_color` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001061s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001281s ]
+
+[ 2018-07-20T11:24:07+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/addCart?userId=13&thr_session=75b3cc2488e4a4cf5b9ccdbb9851d109&attrId=17&goodsId=3&goodsNum=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000766s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003201s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004047s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_cart` [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0024s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `made_goods_number` [ RunTime:0.0018s ]
+SQL: SELECT `id` FROM `made_goods_number` WHERE `goods_id` = '3' AND `goods_attr_id` = '17' AND `goods_number` > 0  [ RunTime:0.0009s ]
+SQL: SELECT `cart_number` FROM `made_cart` WHERE `user_id` = 13 AND `goods_id` = 3 AND `goods_attr_id` = '17'  [ RunTime:0.0011s ]
+SQL: INSERT INTO `made_cart` (`user_id`,`goods_id`,`goods_attr_id`,`cart_number`) VALUES ('13','3','17','1') [ RunTime:0.0037s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000918s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001143s ]
+
+[ 2018-07-20T11:24:09+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getCarouselImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000246s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003463s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008153s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_carousel` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `made_carousel` ORDER BY sort_id asc  [ RunTime:0.0011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001228s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001473s ]
+
+[ 2018-07-20T11:24:09+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getArticle?num=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001368s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003410s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_article` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `made_article` WHERE `is_index` = '1' ORDER BY sort_id asc LIMIT 5   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001211s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001443s ]
+
+[ 2018-07-20T11:24:09+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=1&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000704s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001403s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '1' ORDER BY order_id asc  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0024s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '3' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001018s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001285s ]
+
+[ 2018-07-20T11:24:09+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=2&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000789s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000917s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001144s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '2' ORDER BY order_id asc  [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0016s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '5' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0015s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '6' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001283s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001626s ]
+
+[ 2018-07-20T11:24:09+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=4&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000802s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000922s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001142s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '4' ORDER BY order_id asc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0043s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '7' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0014s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '8' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004778s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005389s ]
+
+[ 2018-07-20T11:24:09+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=3&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000335s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003349s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002253s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003086s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '3' ORDER BY order_id asc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0032s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '1' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0014s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001377s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001675s ]
+
+[ 2018-07-20T11:24:10+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getGoodsDetail?id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000846s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001141s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001417s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0013s ]
+SQL: SELECT a.id,a.goods_name,a.tag,a.type_id,b.id as cat_id,b.name as cat_name FROM made_goods a LEFT JOIN made_category b ON a.cat_id = b.id  WHERE a.id = '4' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `made_goods_number` [ RunTime:0.0013s ]
+SQL: SELECT min(goods_attr_id) as goods_attr_id,max(goods_price) as max_goods_price,min(goods_price) as min_goods_price,max(discount_price) as max_discount_price,min(discount_price) as min_discount_price,max(img_src) as img_src FROM `made_goods_number` WHERE `goods_id` = '4' GROUP BY goods_id LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT `goods_attr_id`,`goods_number` FROM `made_goods_number` WHERE `goods_id` = '4' AND `goods_attr_id` = '23' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `made_goods_img` [ RunTime:0.0079s ]
+SQL: SELECT `img_src` FROM `made_goods_img` WHERE `goods_id` = '4'  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `made_goods_attr` [ RunTime:0.0026s ]
+SQL: SELECT a.*,b.attr_name,b.attr_type FROM made_goods_attr a LEFT JOIN made_attribute b ON a.attr_id=b.id  WHERE `goods_id` = '4'  [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `made_color` [ RunTime:0.0026s ]
+SQL: SELECT `img_src` FROM `made_color` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT `img_src` FROM `made_color` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT `img_src` FROM `made_color` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `img_src` FROM `made_color` WHERE `id` = 6 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `img_src` FROM `made_color` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0009s ]
+NOTIC: [8] Undefined variable: attrNouniData D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Model\GoodsModel.class.php 第 449 行.
+NOTIC: [8] Undefined variable: attrNouniData D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Model\GoodsModel.class.php 第 450 行.
+SQL: SELECT `goods_number` FROM `made_goods_number` WHERE `goods_attr_id` = '23' AND `goods_id` = 4  [ RunTime:0.0014s ]
+SQL: SELECT `goods_number` FROM `made_goods_number` WHERE `goods_attr_id` = '24' AND `goods_id` = 4  [ RunTime:0.0014s ]
+NOTIC: [8] Undefined offset: 0 D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Model\GoodsModel.class.php 第 463 行.
+SQL: SELECT `goods_number` FROM `made_goods_number` WHERE `goods_attr_id` = '25' AND `goods_id` = 4  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Model\GoodsModel.class.php 第 463 行.
+SQL: SELECT `goods_number` FROM `made_goods_number` WHERE `goods_attr_id` = '26' AND `goods_id` = 4  [ RunTime:0.0014s ]
+NOTIC: [8] Undefined offset: 0 D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Model\GoodsModel.class.php 第 463 行.
+SQL: SELECT `goods_number` FROM `made_goods_number` WHERE `goods_attr_id` = '27' AND `goods_id` = 4  [ RunTime:0.0012s ]
+NOTIC: [8] Undefined offset: 0 D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Model\GoodsModel.class.php 第 463 行.
+SQL: SHOW COLUMNS FROM `made_goods_desc` [ RunTime:0.0032s ]
+SQL: SELECT `img_src` FROM `made_goods_desc` WHERE `goods_id` = '4' ORDER BY sort_id asc  [ RunTime:0.0018s ]
+NOTIC: [8] Undefined variable: attrNouniData D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Model\GoodsModel.class.php 第 484 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001418s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001715s ]
+
+[ 2018-07-20T11:24:13+08:00 ] 127.0.0.1 /jiimadeeee/index.php/home/index/changeAttr?goodsId=4&goodsAttrId=%2C23
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000212s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002822s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003726s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004937s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `made_goods_number` [ RunTime:0.0015s ]
+SQL: SELECT `id`,`goods_price`,`discount_price`,`goods_number`,`goods_attr_id`,`img_src` FROM `made_goods_number` WHERE `goods_id` = '4' AND `goods_attr_id` = '23' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT `goods_attr_id`,`discount_price`,`goods_price` FROM `made_goods_number` WHERE `goods_id` = '4' AND `goods_number` > '0'  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `made_goods_attr` [ RunTime:0.0092s ]
+SQL: SELECT a.*,b.attr_name,b.attr_type FROM made_goods_attr a LEFT JOIN made_attribute b ON a.attr_id=b.id  WHERE a.goods_id = '4' AND b.attr_type IN (2,3)  [ RunTime:0.0067s ]
+SQL: SELECT `goods_number` FROM `made_goods_number` WHERE `goods_attr_id` = '23' AND `goods_id` = 4  [ RunTime:0.0014s ]
+SQL: SELECT `goods_number` FROM `made_goods_number` WHERE `goods_attr_id` = '24' AND `goods_id` = 4  [ RunTime:0.0014s ]
+NOTIC: [8] Undefined offset: 0 D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Model\GoodsModel.class.php 第 605 行.
+SQL: SELECT `goods_number` FROM `made_goods_number` WHERE `goods_attr_id` = '25' AND `goods_id` = 4  [ RunTime:0.0009s ]
+NOTIC: [8] Undefined offset: 0 D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Model\GoodsModel.class.php 第 605 行.
+SQL: SELECT `goods_number` FROM `made_goods_number` WHERE `goods_attr_id` = '26' AND `goods_id` = 4  [ RunTime:0.0013s ]
+NOTIC: [8] Undefined offset: 0 D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Model\GoodsModel.class.php 第 605 行.
+SQL: SELECT `goods_number` FROM `made_goods_number` WHERE `goods_attr_id` = '27' AND `goods_id` = 4  [ RunTime:0.0015s ]
+NOTIC: [8] Undefined offset: 0 D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Model\GoodsModel.class.php 第 605 行.
+SQL: SHOW COLUMNS FROM `made_color` [ RunTime:0.0052s ]
+SQL: SELECT `img_src` FROM `made_color` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT `img_src` FROM `made_color` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT `img_src` FROM `made_color` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT `img_src` FROM `made_color` WHERE `id` = 6 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `img_src` FROM `made_color` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001231s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001482s ]
+
+[ 2018-07-20T11:24:14+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/addCart?userId=13&thr_session=75b3cc2488e4a4cf5b9ccdbb9851d109&attrId=23&goodsId=4&goodsNum=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000494s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000661s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000836s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_cart` [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0029s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `made_goods_number` [ RunTime:0.0028s ]
+SQL: SELECT `id` FROM `made_goods_number` WHERE `goods_id` = '4' AND `goods_attr_id` = '23' AND `goods_number` > 0  [ RunTime:0.0013s ]
+SQL: SELECT `cart_number` FROM `made_cart` WHERE `user_id` = 13 AND `goods_id` = 4 AND `goods_attr_id` = '23'  [ RunTime:0.0009s ]
+SQL: INSERT INTO `made_cart` (`user_id`,`goods_id`,`goods_attr_id`,`cart_number`) VALUES ('13','4','23','1') [ RunTime:0.0055s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001285s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001539s ]
+
+[ 2018-07-20T11:24:16+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getCarouselImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001621s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001619s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_carousel` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `made_carousel` ORDER BY sort_id asc  [ RunTime:0.0019s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001685s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002075s ]
+
+[ 2018-07-20T11:24:16+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=3&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000767s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000834s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001075s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '3' ORDER BY order_id asc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0011s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '1' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000866s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001091s ]
+
+[ 2018-07-20T11:24:16+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getArticle?num=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000646s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000879s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001107s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_article` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `made_article` WHERE `is_index` = '1' ORDER BY sort_id asc LIMIT 5   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000986s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001195s ]
+
+[ 2018-07-20T11:24:16+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=1&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000905s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001072s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001319s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '1' ORDER BY order_id asc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0011s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '3' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0019s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001769s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002497s ]
+
+[ 2018-07-20T11:24:16+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=2&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000751s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000994s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001253s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '2' ORDER BY order_id asc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0029s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '5' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '6' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001405s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001648s ]
+
+[ 2018-07-20T11:24:16+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=4&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000795s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001024s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001293s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '4' ORDER BY order_id asc  [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0015s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '7' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0007s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '8' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001218s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001460s ]
+
+[ 2018-07-20T11:24:18+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/listCart?userId=13&thr_session=75b3cc2488e4a4cf5b9ccdbb9851d109
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000422s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000765s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_cart` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `made_cart` WHERE `user_id` = '13'  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `made_goods_number` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `made_goods_attr` [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `made_color` [ RunTime:0.0061s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0011s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `made_cart_module` [ RunTime:0.0028s ]
+SQL: SELECT `goods_price`,`goods_number`,`img_src` FROM `made_goods_number` WHERE `goods_id` = '3' AND `goods_attr_id` = '18' AND `goods_number` > '0' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT `is_on_sale`,`goods_name` FROM `made_goods` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT a.attr_value,b.attr_type FROM made_goods_attr a LEFT JOIN made_attribute b ON a.attr_id = b.id  WHERE a.id = '18' LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT `color_name` FROM `made_color` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `goods_price`,`goods_number`,`img_src` FROM `made_goods_number` WHERE `goods_id` = '3' AND `goods_attr_id` = '17' AND `goods_number` > '0' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT `is_on_sale`,`goods_name` FROM `made_goods` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT a.attr_value,b.attr_type FROM made_goods_attr a LEFT JOIN made_attribute b ON a.attr_id = b.id  WHERE a.id = '17' LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT `color_name` FROM `made_color` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT `goods_price`,`goods_number`,`img_src` FROM `made_goods_number` WHERE `goods_id` = '4' AND `goods_attr_id` = '23' AND `goods_number` > '0' LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT `is_on_sale`,`goods_name` FROM `made_goods` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT a.attr_value,b.attr_type FROM made_goods_attr a LEFT JOIN made_attribute b ON a.attr_id = b.id  WHERE a.id = '23' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `color_name` FROM `made_color` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003524s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004394s ]
+
+[ 2018-07-20T11:24:18+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/listCart?userId=13&thr_session=75b3cc2488e4a4cf5b9ccdbb9851d109
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001216s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003907s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001148s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001474s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_cart` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `made_cart` WHERE `user_id` = '13'  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `made_goods_number` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `made_goods_attr` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `made_color` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0021s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `made_cart_module` [ RunTime:0.0028s ]
+SQL: SELECT `goods_price`,`goods_number`,`img_src` FROM `made_goods_number` WHERE `goods_id` = '3' AND `goods_attr_id` = '18' AND `goods_number` > '0' LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT `is_on_sale`,`goods_name` FROM `made_goods` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT a.attr_value,b.attr_type FROM made_goods_attr a LEFT JOIN made_attribute b ON a.attr_id = b.id  WHERE a.id = '18' LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT `color_name` FROM `made_color` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT `goods_price`,`goods_number`,`img_src` FROM `made_goods_number` WHERE `goods_id` = '3' AND `goods_attr_id` = '17' AND `goods_number` > '0' LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT `is_on_sale`,`goods_name` FROM `made_goods` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT a.attr_value,b.attr_type FROM made_goods_attr a LEFT JOIN made_attribute b ON a.attr_id = b.id  WHERE a.id = '17' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT `color_name` FROM `made_color` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `goods_price`,`goods_number`,`img_src` FROM `made_goods_number` WHERE `goods_id` = '4' AND `goods_attr_id` = '23' AND `goods_number` > '0' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `is_on_sale`,`goods_name` FROM `made_goods` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT a.attr_value,b.attr_type FROM made_goods_attr a LEFT JOIN made_attribute b ON a.attr_id = b.id  WHERE a.id = '23' LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT `color_name` FROM `made_color` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001178s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001410s ]
+
+[ 2018-07-20T11:24:21+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/addressDef?userId=13&thr_session=75b3cc2488e4a4cf5b9ccdbb9851d109
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000533s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000912s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001160s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_address` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0024s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `made_address` WHERE `user_id` = '13' AND `status` = '1'  [ RunTime:0.0015s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001553s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001829s ]
+
+[ 2018-07-20T11:24:29+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/addOrder?userId=13&thr_session=75b3cc2488e4a4cf5b9ccdbb9851d109&mes=&address=%E6%9D%8E%E9%92%A2%2C18720920196%2C%E5%8C%97%E4%BA%AC%E5%B8%82%E5%B8%82%E8%BE%96%E5%8C%BA%E4%B8%9C%E5%9F%8E%E5%8C%BA%E6%95%85%E5%AE%AB&goods=%5B%7B%22user_id%22%3A%2213%22%2C%22goods_id%22%3A%223%22%2C%22goods_attr_id%22%3A%2218%22%2C%22cart_number%22%3A%221%22%2C%22goods_name%22%3A%22PLUTO%22%2C%22goods_attr%22%3A%5B%22%E9%BB%84%E9%93%9C%E8%89%B2%22%5D%2C%22goods_price%22%3A%22999%22%2C%22img_src%22%3A%22http%3A%2F%2Fp5koaz6je.bkt.clouddn.com%2Fjiimade%2Fview%2Fimages%2FgoodsNumImg%2F2018%2F04%2F23%2F7880superfront-handle-knob-solid-brass_1-2.jpg%3F%22%2C%22max_num%22%3A%222%22%2C%22choose%22%3Atrue%7D%2C%7B%22user_id%22%3A%2213%22%2C%22goods_id%22%3A%223%22%2C%22goods_attr_id%22%3A%2217%22%2C%22cart_number%22%3A%221%22%2C%22goods_name%22%3A%22PLUTO%22%2C%22goods_attr%22%3A%5B%22%E9%BB%91%E8%89%B2%22%5D%2C%22goods_price%22%3A%22999%22%2C%22img_src%22%3A%22http%3A%2F%2Fp5koaz6je.bkt.clouddn.com%2Fjiimade%2Fview%2Fimages%2FgoodsNumImg%2F2018%2F04%2F23%2F2672superfront-handle-knob-deep-black.jpg%3F%22%2C%22max_num%22%3A%2253%22%2C%22choose%22%3Atrue%7D%2C%7B%22user_id%22%3A%2213%22%2C%22goods_id%22%3A%224%22%2C%22goods_attr_id%22%3A%2223%22%2C%22cart_number%22%3A%221%22%2C%22goods_name%22%3A%22BALLS%22%2C%22goods_attr%22%3A%5B%22%E7%99%BD%E8%89%B2%22%5D%2C%22goods_price%22%3A%22999%22%2C%22img_src%22%3A%22http%3A%2F%2Fp5koaz6je.bkt.clouddn.com%2Fjiimade%2Fview%2Fimages%2FgoodsNumImg%2F2018%2F04%2F23%2F32707superfront-handle-ball-super-white.jpg%3F%22%2C%22max_num%22%3A%2248%22%2C%22choose%22%3Atrue%7D%5D
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000699s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000952s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001224s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_order` [ RunTime:0.0088s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0069s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] fopen(./lockOrd.text): failed to open stream: No such file or directory D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Model\OrderModel.class.php 第 184 行.
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Model\OrderModel.class.php 第 185 行.
+SQL: SHOW COLUMNS FROM `made_goods_number` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `made_order_goods` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `made_cart` [ RunTime:0.0028s ]
+SQL: SELECT `goods_number`,`goods_price`,`discount_price`,`deduction`,`reward` FROM `made_goods_number` WHERE `goods_id` = '3' AND `goods_attr_id` = '18'  [ RunTime:0.0013s ]
+SQL: UPDATE `made_goods_number` SET `goods_number`='1' WHERE `goods_id` = '3' AND `goods_attr_id` = '18' [ RunTime:0.0012s ]
+SQL: INSERT INTO `made_order_goods` (`order_id`,`goods_id`,`goods_attr_id`,`price`,`cart_number`) VALUES ('20180720112428701682','3','18','999','1') [ RunTime:0.0012s ]
+SQL: DELETE FROM `made_cart` WHERE `user_id` = '13' AND `goods_id` = '3' AND `goods_attr_id` = '18' [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: deduction D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Model\OrderModel.class.php 第 247 行.
+SQL: SELECT `goods_number`,`goods_price`,`discount_price`,`deduction`,`reward` FROM `made_goods_number` WHERE `goods_id` = '3' AND `goods_attr_id` = '17'  [ RunTime:0.0010s ]
+SQL: UPDATE `made_goods_number` SET `goods_number`='52' WHERE `goods_id` = '3' AND `goods_attr_id` = '17' [ RunTime:0.0014s ]
+SQL: INSERT INTO `made_order_goods` (`order_id`,`goods_id`,`goods_attr_id`,`price`,`cart_number`) VALUES ('20180720112428701682','3','17','999','1') [ RunTime:0.0006s ]
+SQL: DELETE FROM `made_cart` WHERE `user_id` = '13' AND `goods_id` = '3' AND `goods_attr_id` = '17' [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: deduction D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Model\OrderModel.class.php 第 247 行.
+SQL: SELECT `goods_number`,`goods_price`,`discount_price`,`deduction`,`reward` FROM `made_goods_number` WHERE `goods_id` = '4' AND `goods_attr_id` = '23'  [ RunTime:0.0014s ]
+SQL: UPDATE `made_goods_number` SET `goods_number`='47' WHERE `goods_id` = '4' AND `goods_attr_id` = '23' [ RunTime:0.0009s ]
+SQL: INSERT INTO `made_order_goods` (`order_id`,`goods_id`,`goods_attr_id`,`price`,`cart_number`) VALUES ('20180720112428701682','4','23','999','1') [ RunTime:0.0010s ]
+SQL: DELETE FROM `made_cart` WHERE `user_id` = '13' AND `goods_id` = '4' AND `goods_attr_id` = '23' [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: deduction D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Model\OrderModel.class.php 第 247 行.
+SQL: INSERT INTO `made_order` (`order_id`,`user_id`,`message`,`address`,`price`,`deduction`,`last_price`,`add_time`,`status`) VALUES ('20180720112428701682','13','','李钢,18720920196,北京市市辖区东城区故宫','2997','0','2997','1532057068','0') [ RunTime:0.0011s ]
+NOTIC: [2] flock() expects parameter 1 to be resource, boolean given D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Model\OrderModel.class.php 第 310 行.
+NOTIC: [2] fclose() expects parameter 1 to be resource, boolean given D:\wamp\wamp64\www\jiimadeeee\Application\Admin\Model\OrderModel.class.php 第 311 行.
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0036s ]
+SQL: SELECT `openid` FROM `made_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0009s ]
+SQL: UPDATE `made_order` SET `prepay_id`='wx201124496643299b250397a44197011092' WHERE `order_id` = '20180720112428701682' [ RunTime:0.0047s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001062s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001276s ]
+
+[ 2018-07-20T11:24:34+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/userOrder?userId=13&thr_session=75b3cc2488e4a4cf5b9ccdbb9851d109&status=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001145s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005510s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_order` [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0057s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM made_order a WHERE `user_id` = '13' AND `status` = '0'  [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `made_order_goods` [ RunTime:0.0086s ]
+SQL: SHOW COLUMNS FROM `made_goods_number` [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `made_goods_attr` [ RunTime:0.0092s ]
+SQL: SELECT a.*,b.img_src,c.goods_name FROM made_order_goods a LEFT JOIN made_goods_number b ON a.goods_id = b.goods_id AND a.goods_attr_id = b.goods_attr_id
+                            LEFT JOIN made_goods c ON a.goods_id = c.id  WHERE a.order_id = '20180720112428701682'  [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `made_color` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `made_cart_module` [ RunTime:0.0064s ]
+SQL: SELECT a.attr_value,b.attr_type FROM made_goods_attr a LEFT JOIN made_attribute b ON a.attr_id = b.id  WHERE a.id = '18' AND a.goods_id = '3' LIMIT 1   [ RunTime:0.0027s ]
+SQL: SELECT `color_name` FROM `made_color` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT a.attr_value,b.attr_type FROM made_goods_attr a LEFT JOIN made_attribute b ON a.attr_id = b.id  WHERE a.id = '17' AND a.goods_id = '3' LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT `color_name` FROM `made_color` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT a.attr_value,b.attr_type FROM made_goods_attr a LEFT JOIN made_attribute b ON a.attr_id = b.id  WHERE a.id = '23' AND a.goods_id = '4' LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT `color_name` FROM `made_color` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001485s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002266s ]
+
+[ 2018-07-20T17:22:53+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=1&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001891s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002640s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003388s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '1' ORDER BY order_id asc  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0026s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '3' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0028s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001752s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001942s ]
+
+[ 2018-07-20T17:23:34+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000439s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000994s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001206s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '' ORDER BY order_id asc  [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0025s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '2' AND `is_on_sale` = '1' GROUP BY a.id  [ RunTime:0.0008s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '4' AND `is_on_sale` = '1' GROUP BY a.id  [ RunTime:0.0017s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '9' AND `is_on_sale` = '1' GROUP BY a.id  [ RunTime:0.0019s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001016s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001210s ]
+
+[ 2018-07-20T17:23:51+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getArticle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000476s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001240s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_article` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `made_article` WHERE `is_index` = '1' ORDER BY sort_id asc  [ RunTime:0.0013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001133s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001369s ]
+
+[ 2018-07-20T17:30:37+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=3&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000917s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001558s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001869s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '3' ORDER BY order_id asc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0013s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '1' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002685s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004316s ]
+
+[ 2018-07-20T17:30:37+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getCarouselImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000692s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000957s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001218s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_carousel` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `made_carousel` ORDER BY sort_id asc  [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001006s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001200s ]
+
+[ 2018-07-20T17:30:37+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=1&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001065s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001089s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001374s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '1' ORDER BY order_id asc  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0012s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '3' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002828s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003140s ]
+
+[ 2018-07-20T17:30:37+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getArticle?num=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000858s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001007s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001308s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_article` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `made_article` WHERE `is_index` = '1' ORDER BY sort_id asc LIMIT 5   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000857s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001067s ]
+
+[ 2018-07-20T17:30:37+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getCarouselImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000659s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001907s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002183s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_carousel` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `made_carousel` ORDER BY sort_id asc  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001260s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001507s ]
+
+[ 2018-07-20T17:30:37+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getArticle?num=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000724s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000987s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001294s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_article` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `made_article` WHERE `is_index` = '1' ORDER BY sort_id asc LIMIT 5   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001179s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001383s ]
+
+[ 2018-07-20T17:30:37+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=1&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001104s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003112s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004770s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '1' ORDER BY order_id asc  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0012s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '3' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001297s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001582s ]
+
+[ 2018-07-20T17:30:37+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=2&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000771s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001213s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001498s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '2' ORDER BY order_id asc  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0010s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '5' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0013s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '6' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003842s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004959s ]
+
+[ 2018-07-20T17:30:37+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=2&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000970s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001212s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '2' ORDER BY order_id asc  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0011s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '5' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0024s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '6' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002336s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003449s ]
+
+[ 2018-07-20T17:30:37+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=4&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000836s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001156s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001432s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '4' ORDER BY order_id asc  [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0016s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '7' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0011s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '8' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001359s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001601s ]
+
+[ 2018-07-20T17:30:37+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=3&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000893s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001467s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '3' ORDER BY order_id asc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0011s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '1' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001178s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001422s ]
+
+[ 2018-07-20T17:30:37+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=4&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000775s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003791s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004622s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '4' ORDER BY order_id asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0014s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '7' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0010s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '8' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0018s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001241s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001456s ]
+
+[ 2018-07-20T17:30:38+08:00 ] 127.0.0.1 /jiimadeeee/index.php/home/index/login?code=021u2yDm1pmPgk09tqBm1AcvDm1u2yDn
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000919s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001782s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002982s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0034s ]
+SQL: SELECT `id` FROM `made_user` WHERE `openid` = 'ojUv941YOJMStCvC71fzUK4iqE8g' LIMIT 1   [ RunTime:0.0012s ]
+SQL: UPDATE `made_user` SET `thr_session`='3a6681e0a07db11792014baf0e91616b',`session_key`='NcEjSjcvQ4ItjoeX5EsSWQ==' WHERE `id` = 13 [ RunTime:0.0080s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001117s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001305s ]
+
+[ 2018-07-20T17:31:17+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getArticle?num=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000761s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001124s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001424s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_article` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `made_article` WHERE `is_index` = '1' ORDER BY sort_id asc LIMIT 5   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000956s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001177s ]
+
+[ 2018-07-20T17:31:17+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getCarouselImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000183s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004094s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.011279s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012388s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_carousel` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `made_carousel` ORDER BY sort_id asc  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001032s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001333s ]
+
+[ 2018-07-20T17:31:17+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=4&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000675s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001153s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001470s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '4' ORDER BY order_id asc  [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0009s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '7' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0016s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '8' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004049s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004895s ]
+
+[ 2018-07-20T17:31:17+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=3&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000609s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000810s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001036s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '3' ORDER BY order_id asc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0025s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '1' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001134s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001316s ]
+
+[ 2018-07-20T17:31:17+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getArticle?num=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000834s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001100s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001356s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_article` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `made_article` WHERE `is_index` = '1' ORDER BY sort_id asc LIMIT 5   [ RunTime:0.0014s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001871s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002668s ]
+
+[ 2018-07-20T17:31:18+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getCarouselImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001103s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000835s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001088s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_carousel` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `made_carousel` ORDER BY sort_id asc  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001341s ]
+
+[ 2018-07-20T17:31:18+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=3&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001891s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000937s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001202s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '3' ORDER BY order_id asc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0009s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '1' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001318s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001605s ]
+
+[ 2018-07-20T17:31:18+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=1&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000097s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000756s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000992s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '1' ORDER BY order_id asc  [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0015s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '3' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000895s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001076s ]
+
+[ 2018-07-20T17:31:18+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=2&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003059s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001866s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002115s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '2' ORDER BY order_id asc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0010s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '5' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0012s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '6' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002442s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003048s ]
+
+[ 2018-07-20T17:31:18+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=1&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000549s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000874s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001152s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '1' ORDER BY order_id asc  [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0022s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '3' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0015s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001029s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001258s ]
+
+[ 2018-07-20T17:31:18+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=2&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000880s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000921s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001180s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '2' ORDER BY order_id asc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0012s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '5' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0026s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '6' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000940s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001088s ]
+
+[ 2018-07-20T17:31:18+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=4&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000736s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001548s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001886s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '4' ORDER BY order_id asc  [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0011s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '7' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0011s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '8' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001756s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002758s ]
+
+[ 2018-07-20T17:31:18+08:00 ] 127.0.0.1 /jiimadeeee/index.php/home/index/login?code=061qC92w1GIPMa0dvR1w1zVL1w1qC92w
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000892s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001372s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0026s ]
+SQL: SELECT `id` FROM `made_user` WHERE `openid` = 'ojUv941YOJMStCvC71fzUK4iqE8g' LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `made_user` SET `thr_session`='3a6681e0a07db11792014baf0e91616b',`session_key`='NcEjSjcvQ4ItjoeX5EsSWQ==' WHERE `id` = 13 [ RunTime:0.0051s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001014s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001224s ]
+
+[ 2018-07-20T17:31:21+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/checkQuote?userId=13&thr_session=3a6681e0a07db11792014baf0e91616b
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000693s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001349s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_quote` [ RunTime:0.0067s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0027s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `made_quote` WHERE `user_id` = '13'  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001088s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001301s ]
+
+[ 2018-07-20T17:31:21+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/orderState?userId=13&thr_session=3a6681e0a07db11792014baf0e91616b
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000840s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001100s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001402s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_order` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0011s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `made_order` WHERE `user_id` = '13'  [ RunTime:0.0019s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003380s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003755s ]
+
+[ 2018-07-20T17:31:21+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/orderState?userId=13&thr_session=3a6681e0a07db11792014baf0e91616b
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000783s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001025s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_order` [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0021s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `made_order` WHERE `user_id` = '13'  [ RunTime:0.0013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001276s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001582s ]
+
+[ 2018-07-20T17:31:21+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/checkQuote?userId=13&thr_session=3a6681e0a07db11792014baf0e91616b
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000867s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000948s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001174s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_quote` [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0045s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `made_quote` WHERE `user_id` = '13'  [ RunTime:0.0013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005117s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005570s ]
+
+[ 2018-07-20T17:31:24+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/userOrder?userId=13&thr_session=3a6681e0a07db11792014baf0e91616b&status=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001205s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001453s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_order` [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0022s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM made_order a WHERE `user_id` = '13' AND `status` = '0'  [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `made_order_goods` [ RunTime:0.0064s ]
+SQL: SHOW COLUMNS FROM `made_goods_number` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `made_goods_attr` [ RunTime:0.0076s ]
+SQL: SELECT a.*,b.img_src,c.goods_name FROM made_order_goods a LEFT JOIN made_goods_number b ON a.goods_id = b.goods_id AND a.goods_attr_id = b.goods_attr_id
+                            LEFT JOIN made_goods c ON a.goods_id = c.id  WHERE a.order_id = '20180720112428701682'  [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `made_color` [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `made_cart_module` [ RunTime:0.0076s ]
+SQL: SELECT a.attr_value,b.attr_type FROM made_goods_attr a LEFT JOIN made_attribute b ON a.attr_id = b.id  WHERE a.id = '18' AND a.goods_id = '3' LIMIT 1   [ RunTime:0.0069s ]
+SQL: SELECT `color_name` FROM `made_color` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT a.attr_value,b.attr_type FROM made_goods_attr a LEFT JOIN made_attribute b ON a.attr_id = b.id  WHERE a.id = '17' AND a.goods_id = '3' LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT `color_name` FROM `made_color` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT a.attr_value,b.attr_type FROM made_goods_attr a LEFT JOIN made_attribute b ON a.attr_id = b.id  WHERE a.id = '23' AND a.goods_id = '4' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT `color_name` FROM `made_color` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001994s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002605s ]
+
+[ 2018-07-20T17:31:28+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/payOrder?prepay=wx201719190158517470222f7b0913808975
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000154s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003633s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003991s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004568s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_order` [ RunTime:0.0017s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003982s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005186s ]
+
+[ 2018-07-20T17:31:37+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/orderState?userId=13&thr_session=3a6681e0a07db11792014baf0e91616b
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000089s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003256s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004074s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_order` [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0011s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT * FROM `made_order` WHERE `user_id` = '13'  [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000916s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001129s ]
+
+[ 2018-07-20T17:31:37+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/checkQuote?userId=13&thr_session=3a6681e0a07db11792014baf0e91616b
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000149s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001382s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004382s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005206s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_quote` [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0082s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT * FROM `made_quote` WHERE `user_id` = '13'  [ RunTime:0.0017s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003020s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003745s ]
+
+[ 2018-07-20T17:38:51+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/checkQuote?userId=13&thr_session=3a6681e0a07db11792014baf0e91616b
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000691s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000728s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000946s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_quote` [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0031s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `made_quote` WHERE `user_id` = '13'  [ RunTime:0.0016s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005100s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006140s ]
+
+[ 2018-07-20T17:38:51+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/orderState?userId=13&thr_session=3a6681e0a07db11792014baf0e91616b
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000682s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000988s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001410s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_order` [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0012s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `made_order` WHERE `user_id` = '13'  [ RunTime:0.0011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003859s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004913s ]
+
+[ 2018-07-20T17:38:55+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/userOrder?userId=13&thr_session=3a6681e0a07db11792014baf0e91616b&status=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000190s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003373s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003128s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003858s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_order` [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0023s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM made_order a WHERE `user_id` = '13' AND `status` = '0'  [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `made_order_goods` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `made_goods_number` [ RunTime:0.0074s ]
+SQL: SHOW COLUMNS FROM `made_goods_attr` [ RunTime:0.0064s ]
+SQL: SELECT a.*,b.img_src,c.goods_name FROM made_order_goods a LEFT JOIN made_goods_number b ON a.goods_id = b.goods_id AND a.goods_attr_id = b.goods_attr_id
+                            LEFT JOIN made_goods c ON a.goods_id = c.id  WHERE a.order_id = '20180720112428701682'  [ RunTime:0.0077s ]
+SQL: SHOW COLUMNS FROM `made_color` [ RunTime:0.0073s ]
+SQL: SHOW COLUMNS FROM `made_cart_module` [ RunTime:0.0073s ]
+SQL: SELECT a.attr_value,b.attr_type FROM made_goods_attr a LEFT JOIN made_attribute b ON a.attr_id = b.id  WHERE a.id = '18' AND a.goods_id = '3' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT `color_name` FROM `made_color` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT a.attr_value,b.attr_type FROM made_goods_attr a LEFT JOIN made_attribute b ON a.attr_id = b.id  WHERE a.id = '17' AND a.goods_id = '3' LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT `color_name` FROM `made_color` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT a.attr_value,b.attr_type FROM made_goods_attr a LEFT JOIN made_attribute b ON a.attr_id = b.id  WHERE a.id = '23' AND a.goods_id = '4' LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT `color_name` FROM `made_color` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005283s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006750s ]
+
+[ 2018-07-20T17:38:58+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/payOrder?prepay=wx201738537181298d433909470544810443
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000616s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000792s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_order` [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001091s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001358s ]
+
+[ 2018-07-20T17:55:18+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/payOrder?prepay=wx201738537181298d433909470544810443
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000854s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001014s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001304s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_order` [ RunTime:0.0036s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001090s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001332s ]
+
+[ 2018-07-20T17:55:31+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/orderState?userId=13&thr_session=3a6681e0a07db11792014baf0e91616b
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000552s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000814s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001002s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_order` [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0037s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `made_order` WHERE `user_id` = '13'  [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000755s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000897s ]
+
+[ 2018-07-20T17:55:31+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/checkQuote?userId=13&thr_session=3a6681e0a07db11792014baf0e91616b
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000485s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000789s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_quote` [ RunTime:0.0067s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0017s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `made_quote` WHERE `user_id` = '13'  [ RunTime:0.0012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004110s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004902s ]
+
+[ 2018-07-20T17:55:33+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/userOrder?userId=13&thr_session=3a6681e0a07db11792014baf0e91616b&status=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000258s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003932s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004634s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_order` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0027s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM made_order a WHERE `user_id` = '13' AND `status` = '0'  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `made_order_goods` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `made_goods_number` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `made_goods_attr` [ RunTime:0.0035s ]
+SQL: SELECT a.*,b.img_src,c.goods_name FROM made_order_goods a LEFT JOIN made_goods_number b ON a.goods_id = b.goods_id AND a.goods_attr_id = b.goods_attr_id
+                            LEFT JOIN made_goods c ON a.goods_id = c.id  WHERE a.order_id = '20180720112428701682'  [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `made_color` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `made_cart_module` [ RunTime:0.0026s ]
+SQL: SELECT a.attr_value,b.attr_type FROM made_goods_attr a LEFT JOIN made_attribute b ON a.attr_id = b.id  WHERE a.id = '18' AND a.goods_id = '3' LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT `color_name` FROM `made_color` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT a.attr_value,b.attr_type FROM made_goods_attr a LEFT JOIN made_attribute b ON a.attr_id = b.id  WHERE a.id = '17' AND a.goods_id = '3' LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT `color_name` FROM `made_color` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT a.attr_value,b.attr_type FROM made_goods_attr a LEFT JOIN made_attribute b ON a.attr_id = b.id  WHERE a.id = '23' AND a.goods_id = '4' LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT `color_name` FROM `made_color` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003516s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004394s ]
+
+[ 2018-07-20T17:55:34+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/payOrder?prepay=wx20175355621997a1dd9f26923666129018
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000407s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005139s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003979s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005831s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_order` [ RunTime:0.0030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002848s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003123s ]
+
+[ 2018-07-20T17:55:40+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/orderState?userId=13&thr_session=3a6681e0a07db11792014baf0e91616b
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000777s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_order` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0012s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `made_order` WHERE `user_id` = '13'  [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001126s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001372s ]
+
+[ 2018-07-20T17:55:40+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/checkQuote?userId=13&thr_session=3a6681e0a07db11792014baf0e91616b
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000510s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000658s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000880s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_quote` [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0039s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `made_quote` WHERE `user_id` = '13'  [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001060s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001279s ]
+
+[ 2018-07-20T17:55:41+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getCarouselImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000685s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000881s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001138s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_carousel` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `made_carousel` ORDER BY sort_id asc  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001213s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001420s ]
+
+[ 2018-07-20T17:55:41+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=1&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000673s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000823s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001040s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '1' ORDER BY order_id asc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0018s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '3' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0024s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001141s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001394s ]
+
+[ 2018-07-20T17:55:41+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=2&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000665s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001072s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001369s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '2' ORDER BY order_id asc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0012s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '5' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0024s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '6' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001446s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001718s ]
+
+[ 2018-07-20T17:55:41+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getArticle?num=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000306s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004844s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001964s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003226s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_article` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `made_article` WHERE `is_index` = '1' ORDER BY sort_id asc LIMIT 5   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000949s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001147s ]
+
+[ 2018-07-20T17:55:41+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=3&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000539s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000699s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '3' ORDER BY order_id asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0020s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '1' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000903s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001081s ]
+
+[ 2018-07-20T17:55:41+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=4&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000501s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004842s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006001s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '4' ORDER BY order_id asc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0035s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '7' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0012s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '8' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0015s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003378s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004223s ]
+
+[ 2018-07-20T17:55:42+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/orderState?userId=13&thr_session=3a6681e0a07db11792014baf0e91616b
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000777s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000550s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000694s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_order` [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0008s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `made_order` WHERE `user_id` = '13'  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001014s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001208s ]
+
+[ 2018-07-20T17:55:42+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/checkQuote?userId=13&thr_session=3a6681e0a07db11792014baf0e91616b
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000280s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004495s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005089s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_quote` [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `made_user` [ RunTime:0.0019s ]
+SQL: SELECT `thr_session` FROM `made_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `made_quote` WHERE `user_id` = '13'  [ RunTime:0.0015s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004120s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005252s ]
+
+[ 2018-07-20T17:55:45+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=1&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000610s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000786s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000991s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '1' ORDER BY order_id asc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0010s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '3' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000848s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001040s ]
+
+[ 2018-07-20T17:55:45+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=3&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000887s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001085s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '3' ORDER BY order_id asc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0009s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '1' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001160s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001389s ]
+
+[ 2018-07-20T17:55:45+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=2&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000555s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000581s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000806s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '2' ORDER BY order_id asc  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0008s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '5' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0008s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '6' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001484s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003050s ]
+
+[ 2018-07-20T17:55:45+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getCarouselImg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000633s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000860s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001094s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_carousel` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `made_carousel` ORDER BY sort_id asc  [ RunTime:0.0012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001118s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001385s ]
+
+[ 2018-07-20T17:55:45+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getArticle?num=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000312s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003577s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004663s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_article` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `made_article` WHERE `is_index` = '1' ORDER BY sort_id asc LIMIT 5   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001064s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001295s ]
+
+[ 2018-07-20T17:55:45+08:00 ] 127.0.0.1 /jiimadeeee/index.php/Home/index/getBlockInfo?block=4&goodsNum=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000331s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003014s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002589s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003233s ]
+NOTIC: [2048] Declaration of Home\Controller\IndexController::theme() should be compatible with Think\Controller::theme($theme) D:\wamp\wamp64\www\jiimadeeee\Application\Home\Controller\IndexController.class.php 第 274 行.
+SQL: SHOW COLUMNS FROM `made_category` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `made_category` WHERE `index_block` = '4' ORDER BY order_id asc  [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `made_goods` [ RunTime:0.0014s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '7' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0019s ]
+SQL: SELECT a.id,a.goods_name,a.tag,max(b.goods_price) as max_goods_price,min(b.goods_price) as min_goods_price,max(b.discount_price) as max_discount_price,min(b.discount_price) as min_discount_price,max(b.img_src) as img_src FROM made_goods a LEFT JOIN made_goods_number b ON a.id = b.goods_id  WHERE `cat_id` = '8' AND `is_on_sale` = '1' GROUP BY a.id LIMIT 8   [ RunTime:0.0014s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004340s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005601s ]
+

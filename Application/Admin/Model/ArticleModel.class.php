@@ -3,9 +3,9 @@ namespace Admin\Model;
 use Think\Model;
 class ArticleModel extends Model {
     //添加类别时允许接收的表单
-    protected $insertFields = array('article_name','is_index','sort_id','article_brief','goods');
+    protected $insertFields = array('article_name','is_index','cate_id','sort_id','article_brief','goods');
     //修改类别时允许接收的字段
-    protected $updateFields = array('id','article_name','is_index','sort_id','article_brief','goods');
+    protected $updateFields = array('id','article_name','is_index','cate_id','sort_id','article_brief','goods');
     //验证码规则
     protected $_validate = array(
            array('article_name','require','文章标题不能为空！',1),
@@ -13,9 +13,14 @@ class ArticleModel extends Model {
     //搜索品牌信息
     public function search($perPage){
     	$where = array();
+        //分类搜索
+        $catId = I('get.cate_id');
+        if($catId){
+            $where['cate_id'] = array('eq',$catId);
+        }
     	//类别名搜索
-    	$articleName = I('get.article_name');
-    	if($typeName){
+    	$articleName = I('get.keyword');
+    	if($articleName){
     		$where['article_name'] = array('like',"%$articleName%");
     	}
     	/*************翻页************************/
@@ -29,7 +34,12 @@ class ArticleModel extends Model {
     	//获取翻页字符串
     	$pageString = $pageObj->show();
     	/**************取某一页数据********************/
-    	$data = $this->where($where)->order('sort_id asc')->limit($pageObj->firstRow.','.$pageObj->listRows)->select();
+    	$data = $this->field('a.*,b.name as cate_name')
+                ->alias('a')
+                ->join('LEFT JOIN __ARTICLE_CATEGORY__ b ON a.cate_id=b.id')
+                ->where($where)->order('sort_id asc')
+                ->limit($pageObj->firstRow.','.$pageObj->listRows)
+                ->select();
     	return array(
     	    'data' => $data,
     	    'page' => $pageString,
@@ -149,6 +159,8 @@ class ArticleModel extends Model {
     //APP获取文章列表
     public function getArticle(){
         $limit = I('get.num');
+        $cateId = I('get.cateId');
+        $where['cate_id'] = array('eq',$cateId);
         $where['is_index'] = array('eq','1');
         $data = $this->where($where)->order('sort_id asc')->limit($limit)->select();
         return $data;

@@ -120,6 +120,7 @@ CREATE TABLE `made_user` (
   `telephone` varchar(20) NOT NULL DEFAULT '' COMMENT '手机号',
   `thr_session` varchar(150) NOT NULL DEFAULT '' COMMENT '登陆标识',
   `session_key` varchar(150) NOT NULL DEFAULT '' COMMENT '密钥',
+  `add_time` varchar(30) NOT NULL COMMENT '添加时间',
   PRIMARY KEY (`id`),
   KEY `thr_session` (`thr_session`),
   KEY `openid` (`openid`)
@@ -145,14 +146,14 @@ CREATE TABLE `made_address` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='收货地址';
 
 CREATE TABLE `made_order` (
-  `order_id` varchar(20) NOT NULL COMMENT '订单编号',
+  `order_id` varchar(25) NOT NULL COMMENT '订单编号',
   `user_id` mediumint(8) UNSIGNED NOT NULL COMMENT '用户Id',
   `message` varchar(200) NOT NULL DEFAULT '' COMMENT '用户留言',
   `address` varchar(200) NOT NULL COMMENT '收件信息',
   `price` decimal(10,2) NOT NULL COMMENT '总价格',
   `add_time` varchar(20) NOT NULL DEFAULT '' COMMENT '添加时间',
   `update_time` varchar(20) NOT NULL DEFAULT '' COMMENT '更新时间',
-  `status` tinyint(3) UNSIGNED NOT NULL DEFAULT '0' COMMENT '订单状态 ',
+  `status` tinyint(3) NOT NULL DEFAULT '0' COMMENT '订单状态 ',
   `prepay_id` varchar(50) NOT NULL DEFAULT '' COMMENT '微信订单号',
   `express` varchar(40) NOT NULL DEFAULT '' COMMENT '快递单号',
   PRIMARY KEY (`order_id`)
