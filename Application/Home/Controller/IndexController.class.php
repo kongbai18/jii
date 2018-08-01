@@ -252,7 +252,7 @@ class IndexController extends Controller {
     }
     //积分以及推广奖励
     public function integration(){
-        $model = D('user');
+        $model = D('Admin/user');
         echo json_encode($model->integration());
     }
     //首页主题
@@ -275,5 +275,20 @@ class IndexController extends Controller {
     public function getArticle(){
         $model = D('Admin/article');
         echo json_encode($model->getArticle());
+    }
+    //报价转客户
+    public function quoteToUser(){
+        $model = D('Admin/quote');
+        echo json_encode($model->quoteToUser());
+    }
+    //个人信息
+    public function userInfo(){
+        $model = D('Admin/user');
+        echo json_encode($model->userInfo());
+    }
+    //提现
+    public function withdraw(){
+        $model = D('Admin/user');
+        echo json_encode($model->withdraw());
     }
 }

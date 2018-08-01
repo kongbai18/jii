@@ -51,6 +51,7 @@
                 <td align="center">
                 <a href="<?php echo U('detail?id='.$v['id']) ?>" >报价单详情</a> |
                 <a href="<?php echo U('getExcel?id='.$v['id']) ?>" >下载报价表</a> |
+                <a href="<?php echo U('getPrcode?id='.$v['id']) ?>" >推送二维码</a> |
                 <a href="<?php echo U('delete?id='.$v['id']) ?>" onclick="return delMol()">移除</a>
                 </td>
             </tr>

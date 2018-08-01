@@ -347,6 +347,93 @@ function refund($orderId,$price,$aHeader=array())
         return 'false';
     }
 }
+//退款
+function transfers($openId,$price)
+{
+    $chars = "abcdefghijklmnopqrstuvwxyz0123456789";
+    $str = "";
+    for ($i = 0; $i < 32; $i++) {
+        $str .= substr($chars, mt_rand(0, strlen($chars) - 1), 1);
+    }
+
+    $orderId = date("YmdHis");
+
+    $data = array(
+        'mch_appid' => 'wx6a73b5816054ba24',
+        'mchid' => '1501109211',
+        'nonce_str' => $str,
+        'partner_trade_no' => $orderId.rand(1000,9999),//商户唯一订单号，可包含字母序
+        'openid' => $openId,
+        'check_name' => 'NO_CHECK',//订单金额，单位/分
+        'amount' => $price,
+        'desc' => '用户奖励',
+        'spbill_create_ip' => $_SERVER['SERVER_ADDR'],
+    );
+
+    ksort($data);
+
+    $sign = '';
+    foreach ($data as $k => $v) {
+        $sign = $sign . $k . '=' . $v . '&';
+    }
+
+    $sign = $sign . 'key=JBkjkj54adDSskjKL54SDjsd35sdsJHs';
+    $sign = md5($sign);
+    //转大写
+    $sign = strtoupper($sign);
+    $data['sign'] = $sign;
+    //转换成一维XML格式
+    $xml = '<xml>';
+    foreach ($data as $k => $v) {
+        $xml .= '<' . $k . '>' . $v . '</' . $k . '>';
+    }
+    $xml .= '</xml>';
+
+    $ch = curl_init();
+    //超时时间
+    curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    //这里设置代理，如果有的话
+    //curl_setopt($ch,CURLOPT_PROXY, '10.206.30.98');
+    //curl_setopt($ch,CURLOPT_PROXYPORT, 8080);
+    curl_setopt($ch, CURLOPT_URL, 'https://api.mch.weixin.qq.com/mmpaymkttransfers/promotion/transfers');
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+
+    //以下两种方式需选择一种
+
+    //第一种方法，cert 与 key 分别属于两个.pem文件
+    //默认格式为PEM，可以注释
+    curl_setopt($ch, CURLOPT_SSLCERTTYPE, 'PEM');
+    curl_setopt($ch, CURLOPT_SSLCERT, 'D:\wamp\wamp64\www\jiiMarket\Public\cert\apiclient_cert.pem');
+    //默认格式为PEM，可以注释
+    curl_setopt($ch, CURLOPT_SSLKEYTYPE, 'PEM');
+    curl_setopt($ch, CURLOPT_SSLKEY, 'D:\wamp\wamp64\www\jiiMarket\Public\cert\apiclient_key.pem');
+
+    //第二种方式，两个文件合成一个.pem文件
+    //curl_setopt($ch,CURLOPT_SSLCERT,'http://www.jiixcx.com/Public/cert/apiclient_key.pem');
+
+    if (count($aHeader) >= 1) {
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $aHeader);
+    }
+
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $xml);
+    $data = curl_exec($ch);
+
+    //将xml格式的$response 转成数组
+    $data = json_decode(json_encode(simplexml_load_string($data, 'SimpleXMLElement', LIBXML_NOCDATA)), true);
+
+    if ($data['return_code'] === 'SUCCESS' && $data['result_code'] === 'SUCCESS') {
+        curl_close($ch);
+        return 'success';
+    } else {
+        //$error = curl_errno($ch);
+        //echo "call faild, errorCode:$error\n";
+        curl_close($ch);
+        return 'false';
+    }
+}
 //获取access_token
 function get_access_token(){
     $appid = 'wx6a73b5816054ba24';

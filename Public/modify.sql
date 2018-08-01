@@ -19,6 +19,8 @@ CREATE TABLE `made_integration` (
   `sum` VARCHAR(50) NOT NULL DEFAULT 0 COMMENT '总金额',
   `cash` VARCHAR(50) NOT NULL DEFAULT 0 COMMENT '提现中',
   `surplus` VARCHAR(50) NOT NULL DEFAULT 0 COMMENT '可提现',
+  `custom` VARCHAR(50) NOT NULL DEFAULT 0 COMMENT '直接推广数',
+  `total_custom` VARCHAR(50) NOT NULL DEFAULT 0 COMMENT '客户总数',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='积分和推广奖励';
 
@@ -78,7 +80,7 @@ CREATE TABLE `made_reward` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='积分表';
 
-INSERT INTO `made_reward` (`id`, `integration`) VALUES ('1','1'),('2','2'),('3','4'),('4','5');
+INSERT INTO `made_reward` (`id`, `integration`) VALUES ('1','1'),('2','2'),('3','4'),('4','5'),('5','2');
 
 drop table if exists `made_quote`;
 CREATE TABLE `made_quote` (

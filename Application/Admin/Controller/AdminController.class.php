@@ -160,4 +160,23 @@ class AdminController extends BaseController {
         ));
         $this->display();
     }
+    //积分设置
+    public function setIntegration(){
+        $model = D('reward');
+        if(IS_POST){
+            $integration = I('post.integration');
+            foreach ($integration as $k => $v){
+                $model->save(array(
+                    'id' => $k+1,
+                    'integration' => $v,
+                ));
+            }
+        }
+        $data = $model->select();
+        $this->assign(array(
+            'data' => $data,
+            'title' => '积分设定',
+        ));
+        $this->display();
+    }
 }

@@ -101,8 +101,9 @@ class CartModel extends Model {
                     $cartData[$k]['goods_price'] = $result['price'];
                     $cartData[$k]['img_src'] = $result['img_src'];
                     $cartData[$k]['max_num'] = 10;
+                    $cartData[$k]['deduction'] = 0;
                 }else{
-                    $gnData = $gnModel->field('goods_price,goods_number,img_src')->where(array(
+                    $gnData = $gnModel->field('goods_price,discount_price,goods_number,img_src,deduction')->where(array(
                         'goods_id' => array('eq',$v['goods_id']),
                         'goods_attr_id' => array('eq',$v['goods_attr_id']),
                         'goods_number' => array('gt','0')
@@ -136,11 +137,17 @@ class CartModel extends Model {
                                     $cartDa[] = '默认';
                                 }
                             }
+                            if($gnData['discount_price'] > 0){
+                                $price = $gnData['discount_price'];
+                            }else{
+                                $price = $gnData['goods_price'];
+                            }
                             $cartData[$k]['goods_name'] = $goodsData['goods_name'];
                             $cartData[$k]['goods_attr'] = $cartDa;
-                            $cartData[$k]['goods_price'] = $gnData['goods_price'];
+                            $cartData[$k]['goods_price'] = $price;
                             $cartData[$k]['img_src'] = $gnData['img_src'];
                             $cartData[$k]['max_num'] = $gnData['goods_number'];
+                            $cartData[$k]['deduction'] = $gnData['deduction'];
                         }
                     }
                 }

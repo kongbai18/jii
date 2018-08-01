@@ -377,6 +377,7 @@ class ModuleModel extends Model {
                         $integrationModel->save(array(
                             'id' => $userId,
                             'integration' => $integrationData['integration'] + $rewardData['integration'],
+                            'surplus' => $integrationData['surplus'] + 0.1*$rewardData['integration'],
                         ));
 
 
@@ -831,39 +832,51 @@ class ModuleModel extends Model {
     }
     //报价加入购物车
     public function moduleToCart(){
-        $cateId = I('get.cateId');
-        $sortId = I('get.sortId');
+        $sortData = I('get.sort');
+        $cate = I('get.cate');
         $userId = I('get.userId');
         $thr_session = I('get.thr_session');
         $user = checkUser($userId,$thr_session);
         if($user){
 
             $quoteModel  = D('quote');
+            $cartModuleModel = D('cart_module');
+            $cartModel = D('cart');
             $quoteData = $quoteModel->field('id')->where(array('user_id'=>array('eq',$userId)))->find();
 
-            $modulData = $this->field('fur_quo_id,attr,space,fur_name,material,parameter,ext')->where(array(
-                'quote_id' => array('eq',$quoteData['id']),
-                'cate_id' => array('eq',$cateId),
-                'sort_id' => array('eq',$sortId),
-            ))->find();
-            $modulData['space_fur_name'] = $modulData['space'].'-'.$modulData['fur_name'];
-            unset($modulData['space']);
-            unset($modulData['fur_name']);
+            $trans = M();
+            $trans->startTrans();   // 开启事务
 
-            $cartModuleModel = D('cart_module');
-            $result = $cartModuleModel->add($modulData);
+            $sortData = rtrim($sortData,',');
+            $sortData = explode(',',$sortData);
 
-            $cartModel = D('cart');
-            $cartData = array(
-                'user_id' => $userId,
-                'goods_id' => 0,
-                'goods_attr_id' => $result,
-                'cart_number' => 1,
-            );
-            if($cartModel->add($cartData)){
-                return true;
+            foreach ($sortData as $k => $v){
+                $modulData = $this->field('fur_quo_id,attr,space,fur_name,material,parameter,ext')->where(array(
+                    'quote_id' => array('eq',$quoteData['id']),
+                    'cate_id' => array('eq',$cate),
+                    'sort_id' => array('eq',$v),
+                ))->find();
+                $modulData['space_fur_name'] = $modulData['space'].'-'.$modulData['fur_name'];
+                unset($modulData['space']);
+                unset($modulData['fur_name']);
+
+                $result = $cartModuleModel->add($modulData);
+
+                $cartData = array(
+                    'user_id' => $userId,
+                    'goods_id' => 0,
+                    'goods_attr_id' => $result,
+                    'cart_number' => 1,
+                );
+                if($cartModel->add($cartData)){
+                    continue;
+                }else{
+                    $trans->rollback();
+                    return false;
+                }
             }
-            return false;
+            $trans->commit();
+            return true;
         }
     }
 }

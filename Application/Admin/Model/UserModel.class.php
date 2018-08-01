@@ -11,8 +11,8 @@ class UserModel extends Model {
     public function login(){
          $code = I('get.code');
          $userId = I('get.id');
-         $appId = 'wx6a73b5816054ba24';
-         $secret = '143b572cbecbae4bb6c138643ac7f6e8';
+         $appId = 'wx6bf5eec027a0fe45';
+         $secret = 'd8d44854cbefe9989123167cdabcab42';
          $file_contents = file_get_contents('https://api.weixin.qq.com/sns/jscode2session?appid='.$appId.'&secret='.$secret.'&js_code='.$code.'&grant_type=authorization_code');
          $wxData = json_decode($file_contents,true);
          $openid = $wxData['openid'];
@@ -45,6 +45,15 @@ class UserModel extends Model {
                  $data['add_time'] = time();
                  $result = $this->add($data);
                  if ($result){
+                     $integrationModel = D('integration');
+                     $inteData = array(
+                         'id' => $result,
+                         'integration' => 0,
+                         'sum' => 0,
+                         'cash' => 0,
+                         'surplus' => 0,
+                     );
+                     $integrationModel->add($inteData);
                      if($userId != 0){
                          $fp = fopen('./lockOrd.text','r');
                          flock($fp,LOCK_EX);         //锁机制
@@ -56,17 +65,11 @@ class UserModel extends Model {
                          $rewardModel = D('reward');
                          $rewardData = $rewardModel->find('1');
 
-                         if(empty($integrationData)){
-                             $integrationModel->add(array(
-                                 'id' => $userId,
-                                 'integration' => $rewardData['integration'],
-                             ));
-                         }else{
                              $integrationModel->save(array(
                                  'id' => $userId,
                                  'integration' => $integrationData['integration'] + $rewardData['integration'],
+                                 'surplus' => $integrationData['surplus'] + 0.1*$rewardData['integration'],
                              ));
-                         }
 
                          flock($fp,LOCK_UN);
                          fclose($fp);
@@ -143,7 +146,30 @@ class UserModel extends Model {
                             $integrationModel->save(array(
                                 'id' => $userId,
                                 'integration' => $integrationData['integration'] + $rewardData['integration'],
+                                'surplus' => $integrationData['surplus'] + 0.1*$rewardData['integration'],
+                                'custom' => $integrationData['custom'] + 1,
+                                'total_custom' => $integrationData['total_custom'] + 1,
                             ));
+
+                            $userOne = $this->find($userData['parent_id']);
+                            if($userOne['parent_id'] != 0){
+                                $oneData = $integrationModel->find($userOne['id']);
+
+                                $integrationModel->save(array(
+                                    'id' => $userOne['id'],
+                                    'total_custom' => $oneData['total_custom'] + 1,
+                                ));
+
+                                $userTwo = $this->find($userOne['parent_id']);
+                                if($userTwo['parent_id'] != 0){
+                                    $twoData = $integrationModel->find($userTwo['id']);
+
+                                    $integrationModel->save(array(
+                                        'id' => $userTwo['id'],
+                                        'total_custom' => $twoData['total_custom'] + 1,
+                                ));
+                                }
+                            }
 
 
                             flock($fp,LOCK_UN);
@@ -228,4 +254,70 @@ class UserModel extends Model {
             return $data;
         }
     }
+    //个人积分信息
+    public function userInfo(){
+        $userId = I('get.userId');
+        $thr_session = I('get.thr_session');
+        $user = checkUser($userId,$thr_session);
+        if($user){
+            $integrationModel = D('integration');
+            $integrationData = $integrationModel->find($userId);
+
+            $today = strtotime(date("Y-m-d"),time());
+            $integrationRecordModel = D('integration_record');
+            $integrationRecordData = $integrationRecordModel->where(array('id'=>array('eq',$userId),'add_time'=>array('gt',$today)))->select();
+
+            $todaySum = $integrationRecordModel->field('sum(integration) as todaySum')->where(array('id'=>array('eq',$userId),'add_time'=>array('gt',$today)))->select();
+
+            if(empty($todaySum)){
+                $todaySum = $todaySum[0]['todaySum'];
+            }else{
+                $todaySum = 0;
+            }
+
+            $data = array(
+                'integration' => $integrationData,
+                'integrationRecord' => $integrationRecordData,
+                'todaySum' => $todaySum,
+                'child' => $child,
+            );
+            return $data;
+        }
+    }
+
+    //提现
+    public function withdraw(){
+        $userId = I('get.userId');
+        $thr_session = I('get.thr_session');
+        $withdraw = I('get.withdraw');
+        $user = checkUser($userId,$thr_session);
+        if($user){
+            $userData = $this->find($userId);
+
+            $integrationModel = D('integration');
+            $integrationData = $integrationModel->find($userId);
+            if($withdraw < $integrationData['surplus'] || $withdraw < $integrationData['sum']){
+                var_dump($userData['openid']);
+                $result = transfers($userData['openid'],$withdraw);
+                if($result){
+                    $data = array(
+                        'flag' => '1',
+                    );
+                }else{
+                    $data = array(
+                        'flag' => '0',
+                        'msg' => '提现失败！',
+                    );
+                }
+            }else{
+                $data = array(
+                    'flag' => '0',
+                    'msg' => '提现超额！',
+                );
+            }
+            return $data;
+        }
+    }
+
+
 }

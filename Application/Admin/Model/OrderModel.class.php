@@ -223,12 +223,12 @@ class OrderModel extends Model {
                             'goods_attr_id' =>array('eq',$v['goods_attr_id']),
                         ))->save(array('goods_number' => $num));
 
-                        if($gnData[0]['discount_price'] == 0){
-                            $totalPrice = $totalPrice + $gnData[0]['goods_price'] * $v['cart_number'];
-                            $price = $gnData[0]['goods_price'];
-                        }else{
+                        if($gnData[0]['discount_price'] > 0){
                             $totalPrice = $totalPrice + $gnData[0]['discount_price'] * $v['cart_number'];
                             $price = $gnData[0]['discount_price'];
+                        }else{
+                            $totalPrice = $totalPrice + $gnData[0]['goods_price'] * $v['cart_number'];
+                            $price = $gnData[0]['goods_price'];
                         }
                         $orgoodsModel->add(array(
                             'order_id' => $orderId,
@@ -367,9 +367,9 @@ class OrderModel extends Model {
             foreach ($orderData as $k => &$v){
                 if($status == '0'){
                      if($date-$v['add_time'] > 60*60*24){
-                         $this->delete(array(
+                         $this->where(array(
                              'order_id' => $v['order_id']
-                         ));
+                         ))->delete();
                          unset($orderData[$k]);
                          
                          $orGoods = $orGoodsModel->where(array(
@@ -389,22 +389,25 @@ class OrderModel extends Model {
                              ))->save(array('goods_number' => $goodsNuData['goods_number']+$v1['cart_number']));
                          }
 
-                         $integrationModel = D('integration');
-                         $integrationData = $integrationModel->find($userId);
+                         if($v['deduction'] > 0){
+                             $integrationModel = D('integration');
+                             $integrationData = $integrationModel->find($userId);
 
 
-                         $integrationModel->save(array(
-                             'id' => $userId,
-                             'integration' => $integrationData['integration'] + $v['deduction']*10,
-                         ));
+                             $integrationModel->save(array(
+                                 'id' => $userId,
+                                 'integration' => $integrationData['integration'] + $v['deduction']*10,
+                             ));
 
-                         $integrationRecordModel = D('integration_record');
-                         $integrationRecordModel->add(array(
-                             'user_id' => $userId,
-                             'integration' => $v['deduction']*10,
-                             'add_time' => time(),
-                             'message' => '订单退回',
-                         ));
+                             $integrationRecordModel = D('integration_record');
+                             $integrationRecordModel->add(array(
+                                 'user_id' => $userId,
+                                 'integration' => $v['deduction']*10,
+                                 'add_time' => time(),
+                                 'message' => '订单退回',
+                             ));
+                         }
+
                          flock($fp,LOCK_UN);
                          fclose($fp);
                          continue;
@@ -421,28 +424,26 @@ class OrderModel extends Model {
                            $userModel = D('user');
                            $userData = $userModel->find($userId);
                            if($userData['parent_id'] != 0){
-                               $orderGoodsModel = D('order_goods');
-                               $orderGoods = $orderGoodsModel->where(array('order_id'=>array('eq',$v['order_id'])))->select();
+                               $rewardModel = D('reward');
+                               $rewardData = $rewardModel->find('4');
+
                                $fp = fopen('./lockOrd.text','r');
                                flock($fp,LOCK_EX);         //锁机制
 
                                $integrationModel = D('integration');
                                $integrationData = $integrationModel->find($userId);
-                               $integration = $integrationData['integration'];
-                        foreach($orderGoods as $k1 => $v1){
-                            if($v1['goods_id'] == 0){
-                                $integration = $integration + 4;
+                               $integration = $integrationData['integration'] + 0.01*$v['last_price']*$rewardData['integration'];
+
+                                $integrationModel->save(array(
+                                    'id' => $userId,
+                                    'integration' => $integration,
+                                ));
+
+                                $this->debate($userId,$v['last_price']);
+
+                                flock($fp,LOCK_UN);
+                                fclose($fp);
                             }
-                        }
-
-                        $integrationModel->save(array(
-                            'id' => $userId,
-                            'integration' => $integration,
-                        ));
-
-                        flock($fp,LOCK_UN);
-                        fclose($fp);
-                    }
                        }
                        unset($orderData[$k]);
                        continue;
@@ -570,14 +571,23 @@ class OrderModel extends Model {
                 $fp = fopen('./lockOrd.text','r');
                 flock($fp,LOCK_EX);         //锁机制
                 foreach ($orGoods as $k1 => $v1){
-                    $goodsNuData = $goodsNuModel->where(array(
-                        'goods_id' => array('eq',$v1['goods_id']),
-                        'goods_attr_id' => array('eq',$v1['goods_attr_id'])
-                    ))->find();
-                    $goodsNuModel->where(array(
-                        'goods_id' => array('eq',$v1['goods_id']),
-                        'goods_attr_id' => array('eq',$v1['goods_attr_id'])
-                    ))->save(array('goods_number' => $goodsNuData['goods_number']+$v1['cart_number']));
+                    if($v1['goods_id'] == 0){
+                        $trans->rollback();
+                        flock($fp,LOCK_UN);
+                        fclose($fp);
+                        $data = '10';   //退款失败
+                        return $data;
+                    }else{
+                        $goodsNuData = $goodsNuModel->where(array(
+                            'goods_id' => array('eq',$v1['goods_id']),
+                            'goods_attr_id' => array('eq',$v1['goods_attr_id'])
+                        ))->find();
+                        $goodsNuModel->where(array(
+                            'goods_id' => array('eq',$v1['goods_id']),
+                            'goods_attr_id' => array('eq',$v1['goods_attr_id'])
+                        ))->save(array('goods_number' => $goodsNuData['goods_number']+$v1['cart_number']));
+                    }
+
                 }
                 flock($fp,LOCK_UN);
                 fclose($fp);
@@ -704,24 +714,22 @@ class OrderModel extends Model {
                     $userModel = D('user');
                     $userData = $userModel->find($userId);
                     if($userData['parent_id'] != 0){
-                        $orderGoodsModel = D('order_goods');
-                        $orderGoods = $orderGoodsModel->where(array('order_id'=>array('eq',$orderId)))->select();
+                        $rewardModel = D('reward');
+                        $rewardData = $rewardModel->find('4');
+
                         $fp = fopen('./lockOrd.text','r');
                         flock($fp,LOCK_EX);         //锁机制
 
                         $integrationModel = D('integration');
                         $integrationData = $integrationModel->find($userId);
-                        $integration = $integrationData['integration'];
-                        foreach ($orderGoods as $k => $v){
-                            if($v['goods_id'] == 0){
-                                $integration = $integration + 4;
-                            }
-                        }
+                        $integration = $integrationData['integration'] + 0.01*$v['last_price']*$rewardData['integration'];
 
                         $integrationModel->save(array(
                             'id' => $userId,
                             'integration' => $integration,
                         ));
+
+                        $this->debate($userId,$v['last_price']);
 
                         flock($fp,LOCK_UN);
                         fclose($fp);
@@ -832,6 +840,41 @@ class OrderModel extends Model {
             }
         }else{
             return false;
+        }
+    }
+
+    //返利计算
+    public function rebate($userId,$price){
+        $userModel = D('user');
+        $userOne = $userModel->find($userId);
+
+        $integrationModel = D('integration');
+        $rewardModel = D('reward');
+
+        $rewardData = $rewardModel->find('5');
+        $price = $price * $rewardData['integration'] * 0.01;
+        if($userOne['parent_id'] != 0){
+            $oneData = $integrationModel->find($userOne['parent_id']);
+            $integrationModel->save(array(
+                'id' => $userOne['parent_id'],
+                'sum' => $oneData['sum'] + $price*0.6,
+            ));
+            $userTwo = $userModel->find($userOne['parent_id']);
+            if($userTwo['parent_id'] != 0){
+                $twoData = $integrationModel->find($userTwo['parent_id']);
+                $integrationModel->save(array(
+                    'id' => $userTwo['parent_id'],
+                    'sum' => $twoData['sum'] + $price*0.3,
+            ));
+                $userThree = $userModel->find($userTwo['parent_id']);
+                if($userThree['parent_id'] != 0){
+                    $threeData = $integrationModel->find($userThree['parent_id']);
+                    $integrationModel->save(array(
+                        'id' => $userThree['parent_id'],
+                        'sum' => $threeData['sum'] + $price*0.1,
+                ));
+                }
+            }
         }
     }
 }

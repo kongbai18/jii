@@ -1,0 +1,43 @@
+<layout name="layout" />
+<div class="main-div">
+    <form method="post" action="__SELF__"enctype="multipart/form-data" >
+        <table cellspacing="1" cellpadding="3" width="100%">
+            <tr>
+                <td class="label">注册奖励 :</td>
+                <td>
+                    <input type="text" name="integration[]" maxlength="60" value="<?php echo $data[0]['integration'] ?>" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">绑定手机奖励 :</td>
+                <td>
+                    <input type="text" name="integration[]" maxlength="60" value="<?php echo $data[1]['integration'] ?>" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">第一次报价奖励 :</td>
+                <td>
+                    <input type="text" name="integration[]" maxlength="60" value="<?php echo $data[2]['integration'] ?>" />
+                </td>
+            </tr>
+            <tr>
+                <td class="label">订单奖励积分 :</td>
+                <td>
+                    <input type="text" name="integration[]" maxlength="60" value="<?php echo $data[3]['integration'] ?>" />
+                    <span class="require-field">此项为订单金额百分比</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">订单返利 :</td>
+                <td>
+                    <input type="text" name="integration[]" maxlength="60" value="<?php echo $data[4]['integration'] ?>" />
+                    <span class="require-field">此项为订单金额百分比</span>
+                </td>
+            </tr>
+        </table>
+        <div class="button-div">
+                    <input type="submit" class="button" value=" 确定 " />
+                    <input type="reset" class="button" value=" 重置 " />
+        </div>
+    </form>
+</div>

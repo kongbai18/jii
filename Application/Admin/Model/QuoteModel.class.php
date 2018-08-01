@@ -119,4 +119,75 @@ class QuoteModel extends Model {
             return $data;
         }
     }
+    //生成订单推广二维码
+    public function getPrcode() {
+        $quoteId = I('get.id');
+
+        $access = json_decode(get_access_token(),true);
+        $access_token= $access['access_token'];
+        $path="pages/my/quote/spread/spread?id=".$quoteId;
+        $width=430;
+        $post_data='{"path":"'.$path.'","width":'.$width.'}';
+        $url="https://api.weixin.qq.com/wxa/getwxacode?access_token=".$access_token;
+        $result = get_http_array($url,$post_data);
+        return $result;
+
+    }
+    //报价推送给用户
+    public function quoteToUser(){
+        $quoteId = I('get.id');
+        $userId = I('get.userId');
+        $thr_session = I('get.thr_session');
+        $user = checkUser($userId,$thr_session);
+        if($user){
+            $data = $this->find($quoteId);
+            if($data['user_id'] == 0){
+               $userData = $this->where(array('user_id'=>array('eq',$userId)))->find();
+
+
+               if(empty($userData)){
+                   $data['user_id'] = $userId;
+                   $data['admin_id'] = 0;
+                   $result = $this->save($data);
+                   if($result){
+                       return ture;
+                   }else{
+                       return false;
+                   }
+               }else{
+                   $trans = M();
+                   $trans->startTrans();   // 开启事务
+
+                   $moduleModel = D('module');
+                   $moduleData = $moduleModel->where(array('quote_id'=>array('eq',$quoteId)))->select();
+
+                   $this->delete($quoteId);
+                   foreach ($moduleData as $k => $v){
+                       $num = $moduleModel->field('max(sort_id) as num')->where(array('quote_id'=>array('eq',$userData['id']),'cate_id'=>array('eq',$v['cate_id'])))->group('quote_id')->select();
+                       if(empty($num)){
+                           $sort = 1;
+                       }else{
+                           $sort = $num[0]['num']+1;
+                       }
+                       $sortId = $v['sort_id'];
+                       $v['quote_id'] = $userData['id'];
+                       $v['sort_id'] = $sort;
+                       $moduleResult = $moduleModel->where(array(
+                           'quote_id' => $quoteId,
+                           'cate_id' => $v['cate_id'],
+                           'sort_id' => $sortId,
+                       ))->save($v);
+                       if(!$moduleResult){
+                           $trans->rollback();
+                           return false;
+                       }
+                   }
+                   $trans->commit();
+                   return true;
+               }
+            }
+        }
+        return false;
+
+    }
 }

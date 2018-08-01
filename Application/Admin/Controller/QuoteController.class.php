@@ -51,7 +51,7 @@ class QuoteController extends BaseController {
             if($model->create(I('post.'),1)){
                 //判断是否添加成功
                 if($model->add()){
-                    $this->success('类型添加成功！',U('detail?id='.$_POST['id']));
+                    $this->success('报价单添加成功！',U('lst'));
                 }
             }
             //添加失败
@@ -366,6 +366,11 @@ class QuoteController extends BaseController {
             $data[0]['material'] = $material;
         }
         echo json_encode($data);
+    }
+    //获取报价二维码
+    public function getPrcode(){
+        $model = D('quote');
+        echo json_encode($model->getPrcode());
     }
 
 }
