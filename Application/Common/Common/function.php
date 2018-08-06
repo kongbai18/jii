@@ -119,8 +119,8 @@ function wxorder($orderId,$price,$openid) {
     $dataNow = strval(date('YmdHis',time()));
     $dataLat = strval(date('YmdHis',time()+60*60*24));
     $order = array(
-        'appid'=>'wx6a73b5816054ba24',
-        'body'=>'jiihome定制',
+        'appid'=>'wx6bf5eec027a0fe45',
+        'body'=>'几和家居',
         'device_info'=>'WEB',
         'mch_id'=>'1501109211',
         'nonce_str'=>$str,

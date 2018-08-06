@@ -359,23 +359,25 @@ class ModuleModel extends Model {
             $_POST['ext'] = $ext;
 
             $result = $this->add($data);
+
             if($result){
                 if($quoteData['is_quote'] == 0){
-                    $userData = $this->find($userId);
 
+                    $userModel = D('user');
+                    $userData = $userModel->field('parent_id')->find($userId);
                     if($userData['parent_id'] != 0){
                         $fp = fopen('./lockOrd.text','r');
                         flock($fp,LOCK_EX);         //锁机制
 
                         $integrationModel = D('integration');
-                        $integrationData = $integrationModel->find($userId);
+                        $integrationData = $integrationModel->find($userData['parent_id']);
 
                         //获取第一次报价增加积分数
                         $rewardModel = D('reward');
                         $rewardData = $rewardModel->find('3');
 
                         $integrationModel->save(array(
-                            'id' => $userId,
+                            'id' => $userData['parent_id'],
                             'integration' => $integrationData['integration'] + $rewardData['integration'],
                             'surplus' => $integrationData['surplus'] + 0.1*$rewardData['integration'],
                         ));
@@ -392,6 +394,9 @@ class ModuleModel extends Model {
                             'message' => '首次报价',
                         ));
                     }
+                    $quoteModel->where(array('id'=>array('eq',$quoteData['id'])))->save(array(
+                        'is_quote' => 1,
+                    ));
                 }
 
                 return true;

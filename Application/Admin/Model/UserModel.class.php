@@ -41,7 +41,7 @@ class UserModel extends Model {
                  $data['openid'] = $openid;
                  $data['thr_session'] = md5($wxData['session_key']);
                  $data['session_key'] = $wxData['session_key'];
-                 $data['admin_id'] = $userId;
+                 $data['parent_id'] = $userId;
                  $data['add_time'] = time();
                  $result = $this->add($data);
                  if ($result){
@@ -69,7 +69,29 @@ class UserModel extends Model {
                                  'id' => $userId,
                                  'integration' => $integrationData['integration'] + $rewardData['integration'],
                                  'surplus' => $integrationData['surplus'] + 0.1*$rewardData['integration'],
+                                 'custom' => $integrationData['custom'] + 1,
+                                 'total_custom' => $integrationData['total_custom'] + 1,
                              ));
+
+                         $userOne = $this->find($userId);
+                         if($userOne['parent_id'] != 0){
+                             $oneData = $integrationModel->find($userOne['parent_id']);
+
+                             $integrationModel->save(array(
+                                 'id' => $userOne['parent_id'],
+                                 'total_custom' => $oneData['total_custom'] + 1,
+                             ));
+
+                             $userTwo = $this->find($userOne['parent_id']);
+                             if($userTwo['parent_id'] != 0){
+                                 $twoData = $integrationModel->find($userTwo['parent_id']);
+
+                                 $integrationModel->save(array(
+                                     'id' => $userTwo['parent_id'],
+                                     'total_custom' => $twoData['total_custom'] + 1,
+                                 ));
+                             }
+                         }
 
                          flock($fp,LOCK_UN);
                          fclose($fp);
@@ -81,6 +103,7 @@ class UserModel extends Model {
                              'add_time' => time(),
                              'message' => '推广注册',
                          ));
+
                      }
 
                      $data['id'] = $result;
@@ -137,39 +160,17 @@ class UserModel extends Model {
                             flock($fp,LOCK_EX);         //锁机制
 
                             $integrationModel = D('integration');
-                            $integrationData = $integrationModel->find($userId);
+                            $integrationData = $integrationModel->find($userData['parent_id']);
 
                             //获取授权手机号增加积分数
                             $rewardModel = D('reward');
                             $rewardData = $rewardModel->find('2');
 
                             $integrationModel->save(array(
-                                'id' => $userId,
+                                'id' => $userData['parent_id'],
                                 'integration' => $integrationData['integration'] + $rewardData['integration'],
                                 'surplus' => $integrationData['surplus'] + 0.1*$rewardData['integration'],
-                                'custom' => $integrationData['custom'] + 1,
-                                'total_custom' => $integrationData['total_custom'] + 1,
                             ));
-
-                            $userOne = $this->find($userData['parent_id']);
-                            if($userOne['parent_id'] != 0){
-                                $oneData = $integrationModel->find($userOne['id']);
-
-                                $integrationModel->save(array(
-                                    'id' => $userOne['id'],
-                                    'total_custom' => $oneData['total_custom'] + 1,
-                                ));
-
-                                $userTwo = $this->find($userOne['parent_id']);
-                                if($userTwo['parent_id'] != 0){
-                                    $twoData = $integrationModel->find($userTwo['id']);
-
-                                    $integrationModel->save(array(
-                                        'id' => $userTwo['id'],
-                                        'total_custom' => $twoData['total_custom'] + 1,
-                                ));
-                                }
-                            }
 
 
                             flock($fp,LOCK_UN);
@@ -265,9 +266,9 @@ class UserModel extends Model {
 
             $today = strtotime(date("Y-m-d"),time());
             $integrationRecordModel = D('integration_record');
-            $integrationRecordData = $integrationRecordModel->where(array('id'=>array('eq',$userId),'add_time'=>array('gt',$today)))->select();
+            $integrationRecordData = $integrationRecordModel->where(array('user_id'=>array('eq',$userId),'add_time'=>array('gt',$today)))->select();
 
-            $todaySum = $integrationRecordModel->field('sum(integration) as todaySum')->where(array('id'=>array('eq',$userId),'add_time'=>array('gt',$today)))->select();
+            $todaySum = $integrationRecordModel->field('sum(integration) as todaySum')->where(array('user_id'=>array('eq',$userId),'add_time'=>array('gt',$today)))->select();
 
             if(empty($todaySum)){
                 $todaySum = $todaySum[0]['todaySum'];

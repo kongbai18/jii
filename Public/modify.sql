@@ -1,4 +1,6 @@
-truncate table made_article_desc;
+truncate table made_module;
+
+truncate table made_quote;
 
 truncate table made_user;
 
