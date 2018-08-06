@@ -66,7 +66,7 @@
                     <td class="label">是否显示：</td>
                     <td>
                         <input type="radio" name="is_index" value="1" checked="checked"/> 是
-                        <input type="radio" name="is_index value="0"/> 否
+                        <input type="radio" name="is_index" value="0"/> 否
                     </td>
                 </tr>
                 <tr>

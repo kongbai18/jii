@@ -436,8 +436,8 @@ function transfers($openId,$price)
 }
 //获取access_token
 function get_access_token(){
-    $appid = 'wx6a73b5816054ba24';
-    $secret = '143b572cbecbae4bb6c138643ac7f6e8';
+    $appid = 'wx6bf5eec027a0fe45';
+    $secret = 'd8d44854cbefe9989123167cdabcab42';
     $url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={$appid}&secret={$secret}";
     $curl = curl_init();
     curl_setopt($curl, CURLOPT_URL, $url);
@@ -473,7 +473,7 @@ function decryptData( $encryptedData, $iv,$sessionKey, &$data )
     if (strlen($sessionKey) != 24) {
         return false;
     }
-    $appid = 'wx6a73b5816054ba24';
+    $appid = 'wx6bf5eec027a0fe45';
     $aesKey=base64_decode($sessionKey);
 
 
